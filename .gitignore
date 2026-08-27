@@ -29,3 +29,7 @@ credentials*.json
 **/obs*password*
 *.mp4
 *.MP4
+
+!build/
+!build/entitlements.mac.plist
+
