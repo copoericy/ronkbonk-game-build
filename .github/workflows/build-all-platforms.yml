@@ -1,0 +1,49 @@
+# Build Windows + Linux + macOS game archives (download via gh run download)
+name: Build All Platforms
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            build: win
+            artifact: 'steam-build-fresh/*win64.zip'
+          - os: ubuntu-latest
+            build: linux
+            artifact: 'steam-build-fresh/*linux64.tar.gz'
+          - os: macos-latest
+            build: mac
+            artifact: 'steam-build-fresh/*.zip'
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Install deps
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
+        shell: bash
+      - name: Build Windows
+        if: matrix.build == 'win'
+        run: npm run build:win
+      - name: Build Linux
+        if: matrix.build == 'linux'
+        run: npx electron-builder --linux tar.gz --x64 && node scripts/copy-builds.js linux
+      - name: Build macOS (unsigned arm64)
+        if: matrix.build == 'mac'
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+        run: npx electron-builder --mac zip --arm64 && node scripts/copy-builds.js mac
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build-${{ matrix.build }}
+          path: ${{ matrix.artifact }}
+          if-no-files-found: error
+          retention-days: 5

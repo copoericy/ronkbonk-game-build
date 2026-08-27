@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 520">
+  <defs>
+    <linearGradient id="body" x1="180" y1="28" x2="180" y2="490" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#ffe8f4"/>
+      <stop offset="100%" stop-color="#ffb6d7"/>
+    </linearGradient>
+    <radialGradient id="shine" cx="34%" cy="28%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shade" cx="55%" cy="82%" r="60%">
+      <stop offset="0%" stop-color="#e56aa8" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#d24a90" stop-opacity="0.24"/>
+    </radialGradient>
+    <filter id="lift" x="-22%" y="-12%" width="144%" height="130%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+      <feOffset in="blur" dy="8" result="off"/>
+      <feFlood flood-color="#c44a88" flood-opacity="0.26" result="color"/>
+      <feComposite in="color" in2="off" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#lift)">
+    <path fill="url(#body)" d="M92 428C52 418 36 368 50 328C26 308 24 258 54 238C32 208 38 158 74 144C62 108 86 70 128 68C138 34 182 18 222 38C246 20 292 28 306 66C342 72 358 116 342 154C362 178 364 228 340 256C360 288 352 338 320 358C342 394 322 438 276 444C252 478 182 488 132 466C110 476 80 458 92 428Z"/>
+    <path fill="url(#shine)" d="M92 428C52 418 36 368 50 328C26 308 24 258 54 238C32 208 38 158 74 144C62 108 86 70 128 68C138 34 182 18 222 38C246 20 292 28 306 66C342 72 358 116 342 154C362 178 364 228 340 256C360 288 352 338 320 358C342 394 322 438 276 444C252 478 182 488 132 466C110 476 80 458 92 428Z"/>
+    <path fill="url(#shade)" d="M92 428C52 418 36 368 50 328C26 308 24 258 54 238C32 208 38 158 74 144C62 108 86 70 128 68C138 34 182 18 222 38C246 20 292 28 306 66C342 72 358 116 342 154C362 178 364 228 340 256C360 288 352 338 320 358C342 394 322 438 276 444C252 478 182 488 132 466C110 476 80 458 92 428Z"/>
+  </g>
+</svg>

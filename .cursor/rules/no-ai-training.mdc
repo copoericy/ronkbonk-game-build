@@ -1,0 +1,15 @@
+---
+description: No in-game AI training in RonkBonk (Steam or local)
+alwaysApply: true
+---
+
+# No AI training
+
+RonkBonk does **not** train neural nets during play. This is the Steam game and the local game.
+
+- Do **not** add TensorFlow, `model.fit`, replay buffers, imitation recorders, or mid-match training.
+- Elite may load a **play-only** pretrained brain (`ai_learning/elite-pretrained.json` via `elite-brain.js`) that only picks among already-safe heuristic moves.
+- Easy / medium / hard stay **heuristic only** (`ai_learning/ai_logic.js`).
+- Do **not** load ML training libraries in `index.html` or `game.js`.
+- Put performance work into gameplay, drawing, and input — never into a trainer.
+- Never max Elite flood/aggression/think-every-tick on the render thread (that froze the UI). Keep floods tiny; stagger AI thinks.

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Theme button demo — Pixel / Hacker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Press+Start+2P&family=VT323&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #e8e4dc;
+      --muted: #9a9488;
+      --panel: #121018;
+      --line: #2a2633;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 420px at 10% -10%, #2a1a28 0%, transparent 55%),
+        radial-gradient(700px 380px at 90% 0%, #142228 0%, transparent 50%),
+        #0b0a0e;
+      padding: 2rem clamp(1rem, 3vw, 2.5rem) 3rem;
+    }
+    h1 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin: 0 0 0.35rem;
+    }
+    .lede {
+      color: var(--muted);
+      max-width: 42rem;
+      line-height: 1.45;
+      margin: 0 0 1.75rem;
+    }
+    .grid {
+      display: grid;
+      gap: 1.1rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    section {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 1.1rem 1.15rem 1.25rem;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    section.ref { opacity: 0.88; }
+    .tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .name {
+      font-size: 1.05rem;
+      margin: 0;
+      letter-spacing: 0.02em;
+    }
+    .blurb {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.4;
+      margin: 0;
+      flex: 1;
+    }
+    .stage {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      align-items: stretch;
+      padding: 1.1rem;
+      border: 1px dashed #3a3545;
+      min-height: 150px;
+      justify-content: center;
+    }
+    .pick {
+      margin-top: auto;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .pick label {
+      display: inline-flex;
+      gap: 0.4rem;
+      align-items: center;
+      font-size: 0.85rem;
+      cursor: pointer;
+      user-select: none;
+    }
+    .footer {
+      margin-top: 1.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      align-items: center;
+    }
+    #choice {
+      color: var(--ink);
+      font-weight: 500;
+    }
+    a { color: #c9b8ff; }
+
+    /* ——— Reference: Ronk ——— */
+    .stage-ronk {
+      background: #050202;
+      background-image:
+        linear-gradient(180deg, transparent 60%, rgba(255,40,40,0.08)),
+        repeating-linear-gradient(90deg, transparent, transparent 24px, rgba(255,60,60,0.05) 24px, rgba(255,60,60,0.05) 25px);
+    }
+    .btn-ronk {
+      font-family: Orbitron, sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #ff5555;
+      background: rgba(12, 2, 2, 0.85);
+      border: 1px solid #ff5050;
+      padding: 0.85rem 1rem;
+      box-shadow: 0 0 18px rgba(255, 40, 40, 0.25), inset 0 0 20px rgba(0,0,0,0.5);
+      cursor: pointer;
+    }
+    .btn-ronk:hover {
+      color: #fff;
+      border-color: #ff8080;
+      box-shadow: 0 0 28px rgba(255, 50, 50, 0.45);
+    }
+
+    /* ——— Reference: Bapbap ——— */
+    .stage-bap {
+      background: #0a0814;
+      background-image: radial-gradient(circle at 30% 20%, rgba(168,110,255,0.18), transparent 50%);
+    }
+    .btn-bap {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #f2eaff;
+      background: #0a0814;
+      border: 1px solid rgba(168, 110, 255, 0.55);
+      padding: 0.85rem 1rem;
+      box-shadow: inset 0 1px 0 rgba(168,110,255,0.12), 4px 4px 0 #1a0f2e;
+      cursor: pointer;
+    }
+    .btn-bap:hover {
+      background: #8b5cf6;
+      color: #0a0814;
+      border-color: #c4a6ff;
+    }
+
+    /* ——— Pixel A: NES cartridge ——— */
+    .stage-px-a {
+      background: #70c5ce;
+      image-rendering: pixelated;
+    }
+    .btn-px-a {
+      font-family: "Press Start 2P", monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #ffec27;
+      background: #ff0040;
+      border: 4px solid #000;
+      box-shadow:
+        inset -3px -3px 0 #990028,
+        inset 3px 3px 0 #ff6688,
+        6px 6px 0 #000;
+      padding: 0.95rem 0.85rem;
+      cursor: pointer;
+      image-rendering: pixelated;
+    }
+    .btn-px-a:hover {
+      background: #ffec27;
+      color: #1a1a1a;
+      box-shadow:
+        inset -3px -3px 0 #c4b000,
+        inset 3px 3px 0 #fff7a0,
+        8px 8px 0 #000;
+      transform: translate(-2px, -2px);
+    }
+    .btn-px-a:active {
+      transform: translate(4px, 4px);
+      box-shadow:
+        inset 3px 3px 0 #990028,
+        inset -1px -1px 0 #ff6688,
+        2px 2px 0 #000;
+    }
+
+    /* ——— Pixel B: Game Boy LCD ——— */
+    .stage-px-b {
+      background: #9bbc0f;
+      image-rendering: pixelated;
+    }
+    .btn-px-b {
+      font-family: "Press Start 2P", monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #0f380f;
+      background: #8bac0f;
+      border: 3px solid #0f380f;
+      outline: 3px solid #306230;
+      outline-offset: 3px;
+      box-shadow: none;
+      padding: 0.9rem 0.75rem;
+      cursor: pointer;
+    }
+    .btn-px-b:hover {
+      background: #0f380f;
+      color: #9bbc0f;
+      outline-color: #0f380f;
+    }
+    .btn-px-b:active {
+      transform: translateY(2px);
+    }
+
+    /* ——— Hacker A: bracket terminal ——— */
+    .stage-hk-a {
+      background: #000;
+      background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 255, 65, 0.03) 2px,
+        rgba(0, 255, 65, 0.03) 4px
+      );
+    }
+    .btn-hk-a {
+      font-family: VT323, monospace;
+      font-size: 1.35rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #00ff41;
+      background: transparent;
+      border: 1px dashed #00ff41;
+      border-left: 3px solid #00ff41;
+      box-shadow: none;
+      text-shadow: 0 0 6px rgba(0, 255, 65, 0.55);
+      padding: 0.55rem 1rem;
+      cursor: pointer;
+      position: relative;
+    }
+    .btn-hk-a::before { content: "[ "; opacity: 0.7; }
+    .btn-hk-a::after { content: " ]"; opacity: 0.7; }
+    .btn-hk-a:hover {
+      background: #00ff41;
+      color: #001408;
+      text-shadow: none;
+      border-style: solid;
+    }
+
+    /* ——— Hacker B: CRT prompt ——— */
+    .stage-hk-b {
+      background: #020a02;
+    }
+    .btn-hk-b {
+      font-family: VT323, monospace;
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #33ff66;
+      background: rgba(0, 20, 0, 0.85);
+      border: none;
+      border-bottom: 2px solid #00ff41;
+      box-shadow: none;
+      text-align: left;
+      padding: 0.65rem 0.75rem;
+      cursor: pointer;
+    }
+    .btn-hk-b::before {
+      content: "> ";
+      color: #00ff41;
+    }
+    .btn-hk-b:hover {
+      background: rgba(0, 40, 0, 0.95);
+      box-shadow: inset 0 0 0 1px #00ff41;
+    }
+    .btn-hk-b:hover::after {
+      content: "_";
+      animation: blink 0.8s steps(1) infinite;
+      margin-left: 2px;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .group-title {
+      grid-column: 1 / -1;
+      margin: 0.6rem 0 0;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <h1>Pixel &amp; Hacker — button demo</h1>
+  <p class="lede">
+    Short preview only — nothing in the real game is changed yet.
+    Hover the buttons, pick one Pixel look and one Hacker look, then tell me which to apply.
+  </p>
+
+  <div class="grid">
+    <p class="group-title">Reference (keep as-is)</p>
+
+    <section class="ref">
+      <span class="tag">Current · Ronk</span>
+      <h2 class="name">Thin red cyber outline</h2>
+      <p class="blurb">Glow + inset dark plate. The “sharp HUD” baseline.</p>
+      <div class="stage stage-ronk">
+        <button type="button" class="btn-ronk">START</button>
+        <button type="button" class="btn-ronk">SETTINGS</button>
+      </div>
+    </section>
+
+    <section class="ref">
+      <span class="tag">Current · Bapbap</span>
+      <h2 class="name">Dark plate → solid purple</h2>
+      <p class="blurb">Hard offset shadow, fills purple on hover.</p>
+      <div class="stage stage-bap">
+        <button type="button" class="btn-bap">START</button>
+        <button type="button" class="btn-bap">SETTINGS</button>
+      </div>
+    </section>
+
+    <p class="group-title">Pixel — pick A or B</p>
+
+    <section>
+      <span class="tag">Pixel · Option A</span>
+      <h2 class="name">NES / arcade chunk</h2>
+      <p class="blurb">Hot magenta + yellow, true pixel bevel (light/dark inset), hard black drop. Loud, toy-like, not Ronk/Bap.</p>
+      <div class="stage stage-px-a">
+        <button type="button" class="btn-px-a">START</button>
+        <button type="button" class="btn-px-a">SETTINGS</button>
+      </div>
+      <div class="pick">
+        <label><input type="radio" name="pixel" value="A" checked /> Use Pixel A</label>
+      </div>
+    </section>
+
+    <section>
+      <span class="tag">Pixel · Option B</span>
+      <h2 class="name">Game Boy LCD</h2>
+      <p class="blurb">Olive 4-tone palette, double frame, no neon. Quiet retro handheld feel.</p>
+      <div class="stage stage-px-b">
+        <button type="button" class="btn-px-b">START</button>
+        <button type="button" class="btn-px-b">SETTINGS</button>
+      </div>
+      <div class="pick">
+        <label><input type="radio" name="pixel" value="B" /> Use Pixel B</label>
+      </div>
+    </section>
+
+    <p class="group-title">Hacker — pick A or B</p>
+
+    <section>
+      <span class="tag">Hacker · Option A</span>
+      <h2 class="name">Bracket terminal</h2>
+      <p class="blurb">Dashed border, left accent bar, <code>[ START ]</code> brackets. Invert fill on hover. No purple/red shadow language.</p>
+      <div class="stage stage-hk-a">
+        <button type="button" class="btn-hk-a">START</button>
+        <button type="button" class="btn-hk-a">SETTINGS</button>
+      </div>
+      <div class="pick">
+        <label><input type="radio" name="hacker" value="A" checked /> Use Hacker A</label>
+      </div>
+    </section>
+
+    <section>
+      <span class="tag">Hacker · Option B</span>
+      <h2 class="name">CRT prompt</h2>
+      <p class="blurb">Underline-only command line, <code>&gt;</code> prefix, blinking cursor on hover. Most different from every other theme.</p>
+      <div class="stage stage-hk-b">
+        <button type="button" class="btn-hk-b">START</button>
+        <button type="button" class="btn-hk-b">SETTINGS</button>
+      </div>
+      <div class="pick">
+        <label><input type="radio" name="hacker" value="B" /> Use Hacker B</label>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">
+    <span>Your pick: <span id="choice">Pixel A + Hacker A</span></span>
+    <span>Open: <a href="/_theme_distinct_demo.html">/_theme_distinct_demo.html</a> · Game: <a href="/">/</a></span>
+  </div>
+
+  <script>
+    function update() {
+      const p = document.querySelector('input[name="pixel"]:checked')?.value || 'A';
+      const h = document.querySelector('input[name="hacker"]:checked')?.value || 'A';
+      document.getElementById('choice').textContent = `Pixel ${p} + Hacker ${h}`;
+    }
+    document.querySelectorAll('input[type="radio"]').forEach((el) => el.addEventListener('change', update));
+    update();
+  </script>
+</body>
+</html>

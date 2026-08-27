@@ -1,0 +1,197 @@
+{
+  "name": "ronkbonk",
+  "productName": "RonkBonk",
+  "version": "1.0.0",
+  "description": "RonkBonk - A 3D Grid-based battle game",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "serve": "npx --yes serve . -p 8888",
+    "patch:apps": "node scripts/patch-app-asar.js",
+    "stage:www": "node scripts/stage-www.js",
+    "setup:android": "npm run stage:www && npx cap add android",
+    "build": "electron-builder -mwl",
+    "build:mac": "electron-builder --mac zip --x64 --arm64 && node scripts/copy-builds.js mac",
+    "build:mac:universal": "electron-builder --mac zip --universal && node scripts/copy-builds.js mac",
+    "build:win": "electron-builder --win zip --x64 && node scripts/copy-builds.js win",
+    "build:linux": "electron-builder --linux tar.gz AppImage --x64 && node scripts/copy-builds.js linux",
+    "build:android": "node scripts/build-android.js",
+    "build:steam": "node scripts/sync-vendor.js && npx electron-builder --win zip --x64 && npx electron-builder --linux tar.gz --x64 && npx electron-builder --mac zip --arm64 && node scripts/copy-builds.js all",
+    "build:steam:zip": "node scripts/sync-vendor.js && node scripts/package-steam-depot-zip.js",
+    "build:output": "node scripts/build-output.js --build",
+    "build:output:package": "node scripts/build-output.js --skip-build",
+    "icons": "node icon/generate-cube-icon.js && python3 icon/generate-icon.py",
+    "capture:screenshots": "node scripts/capture-steam-screenshots.js",
+    "capture:trailer:full": "node scripts/capture-trailer-full-walkthrough.js",
+    "capture:all-media": "node scripts/capture-all-theme-media.js",
+    "capture:4k-media": "node scripts/capture-4k-theme-media.js",
+    "prepare:github-release": "node scripts/prepare-github-full-release.js",
+    "stitch:theme-videos": "node scripts/stitch-theme-full-videos.js",
+    "capture:steam-page": "node scripts/capture-steam-page-browser.js",
+    "capture:trailer": "RONK_TRAILER_THEME=ronk node scripts/capture-trailer-clips.js",
+    "capture:trailer:all": "node scripts/capture-trailer-clips.js",
+    "build:trailer": "node scripts/build-steam-page-trailer.js",
+    "curate:screenshots": "node scripts/curate-steam-page-screenshots.js"
+  },
+  "build": {
+    "appId": "com.copoeric.ronkbonk",
+    "productName": "RonkBonk",
+    "directories": {
+      "output": "steam-build-fresh",
+      "buildResources": "build"
+    },
+    "compression": "maximum",
+    "electronLanguages": [
+      "en",
+      "en-US",
+      "zh-CN",
+      "zh-TW",
+      "ja",
+      "ko",
+      "de",
+      "fr",
+      "es",
+      "pt-BR",
+      "ru"
+    ],
+    "files": [
+      "main.js",
+      "steam-bridge.js",
+      "steam-achievements.js",
+      "index.html",
+      "game.js",
+      "intro-animation.js",
+      "anti-cheat.js",
+      "content-safety.js",
+      "protection.js",
+      "COPYRIGHT.txt",
+      "style.css",
+      "theme-ambience.css",
+      "theme-trailer-capture.css",
+      "ui-refinement.css",
+      "theme-windows.css",
+      "assets/ui/**/*",
+      "package.json",
+      "steam_appid.txt",
+      "vendor/peerjs.min.js",
+      "icon/icon.png",
+      "icon/icon.ico",
+      "icon/icon.icns",
+      "ai_learning/ai_logic.js",
+      "ai_learning/elite-brain.js",
+      "ai_learning/elite-pretrained.json",
+      "*.mp3",
+      "!_audio*/**",
+      "!_audio_bak/**",
+      "!_audio_work/**",
+      "node_modules/steamworks.js/**/*",
+      "!**/*.map",
+      "!**/README*",
+      "!**/readme*",
+      "!**/LICENSE*",
+      "!**/license*",
+      "!**/__test__/**",
+      "!**/test/**",
+      "!icon/icon.iconset/**",
+      "!icon/generate-*.js",
+      "!icon/convert-icons.js",
+      "!icon/generate-icon.py",
+      "!icon/cube-icon.png",
+      "!**/app.asar.packed",
+      "!**/*.packed"
+    ],
+    "asar": true,
+    "asarUnpack": [
+      "node_modules/steamworks.js/**/*"
+    ],
+    "electronFuses": {
+      "runAsNode": false,
+      "enableCookieEncryption": true,
+      "enableNodeOptionsEnvironmentVariable": false,
+      "enableNodeCliInspectArguments": false,
+      "enableEmbeddedAsarIntegrityValidation": true,
+      "onlyLoadAppFromAsar": true
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "icon": "icon/icon.icns",
+      "category": "public.app-category.games",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist",
+      "notarize": false,
+      "extendInfo": {
+        "LSMinimumSystemVersion": "10.13.0"
+      }
+    },
+    "win": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "icon/icon.ico",
+      "artifactName": "RonkBonk-${version}-win64.${ext}"
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "tar.gz",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "icon/icon.png",
+      "category": "Game",
+      "executableName": "RonkBonk",
+      "artifactName": "RonkBonk-${version}-linux64.${ext}",
+      "synopsis": "RonkBonk grid battle game",
+      "description": "RonkBonk - 3D grid battle game"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "keywords": [
+    "game",
+    "tron",
+    "battle",
+    "multiplayer"
+  ],
+  "author": "CopoEric",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/cli": "^6.2.1",
+    "@capacitor/core": "^6.2.1",
+    "electron": "^41.0.3",
+    "electron-builder": "^26.8.1",
+    "ffmpeg-static": "^5.3.0"
+  },
+  "dependencies": {
+    "peerjs": "^1.5.4",
+    "steamworks.js": "^0.4.0"
+  }
+}

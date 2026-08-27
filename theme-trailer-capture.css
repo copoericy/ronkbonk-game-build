@@ -1,0 +1,31 @@
+/* Full-bleed trailer capture — theme backgrounds visible, no black letterbox panels */
+body.trailer-capture-active #loadout-page {
+    background: transparent !important;
+    backdrop-filter: none !important;
+}
+
+body.trailer-capture-active .loadout-picker-panel {
+    background: transparent !important;
+}
+
+body.trailer-capture-active .loadout-layout {
+    min-height: 100vh;
+}
+
+body.trailer-capture-active .loadout-left,
+body.trailer-capture-active .loadout-right {
+    min-height: 100vh;
+}
+
+body.trailer-capture-active #menu {
+    width: 100vw;
+    height: 100vh;
+}
+
+body.trailer-capture-active #theme-btn,
+body.trailer-capture-active #display-mode-btn,
+body.trailer-capture-active #intro-skip-hint,
+body.trailer-capture-active #steam-capture-hint {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}

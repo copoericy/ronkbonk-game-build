@@ -1,0 +1,22 @@
+---
+description: Never die to your own laser, trail, or friend wall (same army)
+alwaysApply: true
+---
+
+# No self-kills from own laser / trail / wall
+
+Your cube and your clones must **never** die to:
+
+- **Your own laser** — only if you picked the **Laser** skill (one skill per loadout)
+- **Your own trail** / ally clone trail / infinite-trails paint
+- **Your own Friend Walls**
+
+Enemy lasers, enemy trails, and enemy walls still kill.
+
+## Clones ≠ Laser
+
+- Loadout is **one skill**: Clones **or** Laser (or Charge / Invisible / Trails) — never both.
+- **Clone cubes have no skill** — they do not fire lasers, do not re-clone, do not activate anything.
+- Saying “clone lasers” is wrong. Friendly-fire only applies to lasers from the Laser-skill owner (and same-army id checks).
+
+Do **not** reintroduce “own-trail death,” Tron-style self-collision, or phantom kills from visual lerp / charge landing paint. If something feels like a random self-death, treat it as a bug and harden friendly-fire checks (`isFriendlyLaserOwner`, `isFriendlyWallOwner`, `isSameArmy`) — never add self-lethal collision back.

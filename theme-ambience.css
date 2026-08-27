@@ -1,0 +1,1638 @@
+/* Theme ambience layer — remove this file + its link in index.html to revert */
+
+/* ========== STRONGER THEME VARIABLES (grid + borders) ========== */
+body.theme-ronk {
+    --ronk-void: #000000;
+    --ronk-deep: #3a0a0a;
+    --ronk-dark: #5a1414;
+    --ronk-mid: #8a2828;
+    --ronk-base: #c84040;
+    --ronk-accent: #d85858;
+    --ronk-hot: #e04040;
+    --ronk-glow: rgba(160, 36, 36, 0.4);
+    --ronk-glow-soft: rgba(120, 24, 24, 0.28);
+    --ronk-glow-mid: rgba(140, 30, 30, 0.35);
+    --ronk-btn-scanlines: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.42) 0px,
+        rgba(0, 0, 0, 0.42) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    --grid-color: rgba(120, 30, 30, 0.28);
+    --border-color: #c84040;
+    --canvas-bg: #050101;
+}
+
+body.theme-hacker {
+    --grid-color: rgba(0, 255, 65, 0.35);
+    --border-color: #00ff41;
+    --canvas-bg: #050f05;
+}
+
+body.theme-white-black {
+    --grid-color: rgba(160, 120, 200, 0.16);
+    --border-color: rgba(180, 140, 220, 0.42);
+    --canvas-bg: transparent;
+}
+
+/* ========== RONK — Tron-style perspective grid (red neon, dark void) ========== */
+body.theme-ronk {
+    background:
+        radial-gradient(ellipse at 50% 52%, rgba(90, 12, 22, 0.35) 0%, transparent 42%),
+        linear-gradient(180deg, #000000 0%, #050101 48%, #0a0204 100%) !important;
+}
+
+/* No filter on body — filter repaints the whole UI and causes hover lag */
+@keyframes ronk-bg-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 1; }
+}
+
+body.theme-switching,
+body.theme-switching * {
+    transition: none !important;
+}
+
+.ronk-container {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    contain: layout style paint;
+    background: transparent;
+}
+
+/* Visible on Ronk menu/loadout; intro-active still hides via style.css (higher when both match via :not) */
+body.theme-ronk:not(.intro-active) .ronk-container,
+body.theme-ronk.tutorial-gate-active .ronk-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+body.in-game.theme-ronk .ronk-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+}
+
+/* Quiet chrome during matches — keep Tron + scanlines + vignette */
+body.in-game .ronk-grid-glow,
+body.in-game.theme-ronk .ronk-grid-glow,
+body.in-game.theme-ronk .ronk-noise,
+body.in-game.theme-ronk .ronk-flash,
+body.in-game.theme-ronk .ronk-hud,
+body.in-game.theme-ronk .ronk-corner {
+    display: none !important;
+}
+
+/* ----- Tron tunnel: floor + ceiling grids, tilted (not flat-straight) ----- */
+.ronk-tron-scene {
+    position: absolute;
+    inset: -12%;
+    overflow: hidden;
+    pointer-events: none;
+    background: #000;
+    /* Slight roll so it isn't a flat level horizon */
+    transform: rotate(-9deg) scale(1.12);
+    transform-origin: 50% 50%;
+}
+
+.ronk-tron-sky {
+    position: absolute;
+    inset: 0;
+    background: #000000;
+}
+
+.ronk-tron-horizon {
+    position: absolute;
+    left: -25%;
+    right: -25%;
+    top: 50%;
+    /* Tall soft band so the floor/ceiling join dissolves instead of a hard seam */
+    height: 22%;
+    transform: translateY(-50%);
+    background:
+        /* Dark fog kills the sharp mid-line where grids meet */
+        radial-gradient(ellipse 95% 70% at 50% 50%,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.55) 32%,
+            rgba(0, 0, 0, 0.18) 58%,
+            transparent 78%),
+        /* Soft red glow behind the fog */
+        radial-gradient(ellipse 70% 85% at 50% 50%,
+            rgba(160, 40, 55, 0.28) 0%,
+            rgba(90, 16, 28, 0.14) 42%,
+            transparent 74%);
+    opacity: 0.82;
+    pointer-events: none;
+    filter: blur(10px);
+    z-index: 2;
+}
+
+.ronk-tron-plane-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* Slight overlap + soft masks so halves don't clip into a hard horizon line */
+    height: 52%;
+    overflow: hidden;
+    perspective: 560px;
+}
+
+.ronk-tron-plane-wrap.is-floor {
+    bottom: 0;
+    perspective-origin: 50% 0%;
+    -webkit-mask-image: linear-gradient(to bottom,
+        transparent 0%,
+        transparent 3%,
+        rgba(0, 0, 0, 0.25) 12%,
+        rgba(0, 0, 0, 0.7) 22%,
+        #000 34%,
+        #000 100%);
+    mask-image: linear-gradient(to bottom,
+        transparent 0%,
+        transparent 3%,
+        rgba(0, 0, 0, 0.25) 12%,
+        rgba(0, 0, 0, 0.7) 22%,
+        #000 34%,
+        #000 100%);
+}
+
+.ronk-tron-plane-wrap.is-ceiling {
+    top: 0;
+    perspective-origin: 50% 100%;
+    -webkit-mask-image: linear-gradient(to top,
+        transparent 0%,
+        transparent 3%,
+        rgba(0, 0, 0, 0.25) 12%,
+        rgba(0, 0, 0, 0.7) 22%,
+        #000 34%,
+        #000 100%);
+    mask-image: linear-gradient(to top,
+        transparent 0%,
+        transparent 3%,
+        rgba(0, 0, 0, 0.25) 12%,
+        rgba(0, 0, 0, 0.7) 22%,
+        #000 34%,
+        #000 100%);
+}
+
+.ronk-tron-plane,
+.ronk-tron-plane-glow {
+    position: absolute;
+    left: -80%;
+    width: 260%;
+    height: 180%;
+    background-repeat: repeat;
+    will-change: background-position;
+    backface-visibility: hidden;
+}
+
+/* Same roll + grid scale on both boards so vanishing lines align */
+.ronk-tron-plane-wrap.is-floor .ronk-tron-plane,
+.ronk-tron-plane-wrap.is-floor .ronk-tron-plane-glow {
+    top: -10%;
+    transform: rotateX(66deg) rotateZ(-2deg);
+    transform-origin: center top;
+}
+
+.ronk-tron-plane-wrap.is-ceiling .ronk-tron-plane,
+.ronk-tron-plane-wrap.is-ceiling .ronk-tron-plane-glow {
+    bottom: -10%;
+    /* Mirrored pitch, same Z roll as floor — keeps longitudinal lines coherent */
+    transform: rotateX(-66deg) rotateZ(-2deg);
+    transform-origin: center bottom;
+}
+
+/* Soft bloom — darker red than the play-board lines */
+.ronk-tron-plane-glow {
+    background-image:
+        linear-gradient(to bottom, rgba(90, 12, 20, 0.45) 3px, transparent 3px),
+        linear-gradient(to right, rgba(90, 12, 20, 0.45) 3px, transparent 3px);
+    background-size: 64px 64px;
+    opacity: 0.65;
+    animation: ronk-tron-scroll 2.4s linear infinite;
+    filter: blur(1.2px);
+}
+
+.ronk-tron-plane {
+    background-image:
+        linear-gradient(to bottom, rgba(110, 18, 28, 0.78) 1.5px, transparent 1.5px),
+        linear-gradient(to right, rgba(110, 18, 28, 0.78) 1.5px, transparent 1.5px);
+    background-size: 64px 64px;
+    opacity: 0.8;
+    animation: ronk-tron-scroll 2.4s linear infinite;
+}
+
+.ronk-tron-plane-wrap.is-ceiling .ronk-tron-plane,
+.ronk-tron-plane-wrap.is-ceiling .ronk-tron-plane-glow {
+    /* Scroll toward shared horizon (opposite screen Y, same cell size) */
+    animation-name: ronk-tron-scroll-rev;
+}
+
+@keyframes ronk-tron-scroll {
+    from { background-position: 0 0; }
+    to { background-position: 0 64px; }
+}
+
+@keyframes ronk-tron-scroll-rev {
+    from { background-position: 0 0; }
+    to { background-position: 0 -64px; }
+}
+
+/* Legacy aliases (in case anything still targets floor class names) */
+.ronk-tron-floor-wrap { /* no-op shell */ }
+.ronk-tron-floor,
+.ronk-tron-floor-glow { display: none; }
+
+/* Transparent canvas — tunnel shows through; board is line-only */
+body.in-game.theme-ronk #gameCanvas {
+    z-index: 2;
+    border: none;
+    box-shadow: none;
+    background: transparent !important;
+}
+
+/* ----- Sparse ember dust (visible red sparks) ----- */
+.ronk-embers {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.ronk-ember {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 90, 55, 0.95);
+    box-shadow:
+        0 0 4px rgba(255, 60, 40, 0.85),
+        0 0 10px rgba(255, 40, 20, 0.45);
+    animation-name: ronk-ember-rise;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform, opacity;
+    pointer-events: none;
+}
+
+@keyframes ronk-ember-rise {
+    0% {
+        transform: translate3d(0, 0, 0) scale(0.7);
+        opacity: 0;
+    }
+    8% { opacity: 0.95; }
+    55% {
+        transform: translate3d(var(--drift-x, 12px), -55vh, 0) scale(1);
+        opacity: 0.55;
+    }
+    100% {
+        transform: translate3d(calc(var(--drift-x, 12px) * 0.6), -110vh, 0) scale(0.4);
+        opacity: 0;
+    }
+}
+
+.ronk-vignette {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 42%, transparent 22%, rgba(0, 0, 0, 0.28) 58%, rgba(0, 0, 0, 0.72) 86%, #000 100%);
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.ronk-corner {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-color: rgba(102, 0, 0, 0.55);
+    border-style: solid;
+    border-width: 0;
+    opacity: 0.42;
+}
+
+.ronk-corner-tl { top: 12px; left: 12px; border-top-width: 2px; border-left-width: 2px; }
+.ronk-corner-tr { top: 12px; right: 12px; border-top-width: 2px; border-right-width: 2px; animation-delay: -0.75s; }
+.ronk-corner-bl { bottom: 12px; left: 12px; border-bottom-width: 2px; border-left-width: 2px; animation-delay: -1.5s; }
+.ronk-corner-br { bottom: 12px; right: 12px; border-bottom-width: 2px; border-right-width: 2px; animation-delay: -2.25s; }
+
+@keyframes ronk-corner-pulse {
+    0%, 100% { opacity: 0.35; box-shadow: 0 0 8px rgba(80, 0, 0, 0.2); }
+    50% { opacity: 0.75; box-shadow: 0 0 16px rgba(102, 0, 0, 0.45); }
+}
+
+.ronk-flash {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    animation: none !important;
+}
+
+/* Menu: stable Tron tunnel — no lightning/noise flicker on the backdrop (title flickers via h1 CSS) */
+body.theme-ronk:not(.in-game) .ronk-flash {
+    animation: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+body.theme-ronk:not(.in-game) .ronk-noise {
+    animation: none !important;
+    opacity: 0.1 !important;
+    transform: none !important;
+}
+
+body.theme-ronk:not(.in-game) .ronk-grid-glow {
+    animation: none !important;
+    opacity: 0.55 !important;
+}
+
+/* Menu/loadout/intro: moving Tron tunnel only — kill every strobe/pulse layer on the backdrop */
+body.theme-ronk:not(.in-game) .ronk-tron-plane,
+body.theme-ronk:not(.in-game) .ronk-tron-plane-glow {
+    animation-duration: 3.2s !important;
+    animation-timing-function: linear !important;
+    animation-play-state: running !important;
+}
+
+body.theme-ronk:not(.in-game) .ronk-tron-horizon {
+    animation: none !important;
+    opacity: 0.82 !important;
+}
+
+body.theme-ronk:not(.in-game) .ronk-scanlines,
+body.theme-ronk:not(.in-game)::after {
+    animation: none !important;
+    transform: none !important;
+}
+
+body.theme-ronk:not(.in-game) .ronk-hud-label {
+    animation: none !important;
+}
+
+/* Menu: smooth scroll only — kill opacity-pulse layers that read as bg flicker */
+body.theme-ronk:not(.in-game) .ronk-vignette {
+    animation: none !important;
+    opacity: 0.9 !important;
+}
+
+body.theme-ronk:not(.in-game) .ronk-corner {
+    animation: none !important;
+    opacity: 0.42 !important;
+    box-shadow: 0 0 10px rgba(80, 0, 0, 0.25) !important;
+}
+
+body.theme-ronk:not(.in-game) .ronk-ember {
+    animation: none !important;
+    opacity: 0.28 !important;
+    transform: none !important;
+}
+
+body.theme-ronk.overlay-screen.theme-ronk .ronk-scanlines {
+    animation: none !important;
+    transform: none !important;
+}
+
+@keyframes ronk-lightning {
+    0%, 88%, 100% { opacity: 0; }
+    89% { opacity: 0.45; }
+    89.5% { opacity: 0; }
+    90% { opacity: 0.35; }
+    90.5% { opacity: 0; }
+    91% { opacity: 0.55; }
+    91.5% { opacity: 0; }
+    96% { opacity: 0.2; }
+    96.5% { opacity: 0; }
+}
+
+.ronk-scanlines {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(60, 10, 10, 0.14) 2px,
+        rgba(60, 10, 10, 0.14) 4px
+    );
+    opacity: 0.55;
+    z-index: 5;
+    pointer-events: none;
+}
+
+body.in-game.theme-ronk .ronk-scanlines {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 0.55 !important;
+    z-index: 5 !important;
+}
+
+/* Full-viewport CRT overlay removed — drift read as random bg flicker; in-container scanlines stay static */
+body.theme-ronk:not(.intro-active)::after {
+    display: none !important;
+    content: none !important;
+    animation: none !important;
+}
+
+@keyframes ronk-scan-drift {
+    from { transform: translateY(0); }
+    to { transform: translateY(8px); }
+}
+
+.ronk-grid-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 55%, rgba(70, 12, 12, 0.12) 0%, transparent 42%);
+    animation: ronk-grid-pulse 5.5s ease-in-out infinite;
+}
+
+@keyframes ronk-grid-pulse {
+    0%, 100% { opacity: 0.45; }
+    50% { opacity: 0.8; }
+}
+
+.ronk-particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--ronk-base);
+    box-shadow: 0 0 8px var(--ronk-mid), 0 0 18px rgba(85, 0, 0, 0.5);
+    animation: ronk-particle-float linear infinite;
+}
+
+.ronk-spark {
+    background: linear-gradient(180deg, rgba(255, 120, 120, 0.9), rgba(255, 60, 60, 0.2)) !important;
+    box-shadow: 0 0 6px rgba(255, 80, 80, 0.7), 0 0 12px rgba(0, 200, 255, 0.15) !important;
+}
+
+.ronk-noise,
+.ronk-grid-glow,
+.ronk-hud,
+.ronk-corner {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    animation: none !important;
+}
+
+/* Ronk backdrop: smooth Tron scroll only — no ember opacity cycling (reads as random flicker) */
+body.theme-ronk .ronk-ember {
+    animation: none !important;
+    opacity: 0.32 !important;
+    transform: none !important;
+}
+
+@keyframes ronk-noise-flicker {
+    0% { opacity: 0.09; transform: translate(0, 0); }
+    33% { opacity: 0.13; transform: translate(-1px, 1px); }
+    66% { opacity: 0.1; transform: translate(1px, -1px); }
+    100% { opacity: 0.12; transform: translate(0, 0); }
+}
+
+.ronk-hud {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 90, 90, 0.45);
+    text-shadow: 0 0 8px rgba(255, 60, 60, 0.35);
+}
+
+.ronk-hud-label {
+    position: absolute;
+    animation: ronk-hud-glitch 7s step-end infinite;
+}
+
+.ronk-hud-tl { top: 18px; left: 68px; }
+.ronk-hud-tr { top: 18px; right: 68px; color: rgba(0, 220, 255, 0.35); text-shadow: 0 0 8px rgba(0, 200, 255, 0.25); }
+.ronk-hud-bl { bottom: 18px; left: 68px; color: rgba(255, 60, 90, 0.4); animation-delay: -2s; }
+.ronk-hud-br { bottom: 18px; right: 68px; animation-delay: -4s; }
+
+@keyframes ronk-hud-glitch {
+    0%, 92%, 100% { opacity: 0.45; filter: none; }
+    93% { opacity: 0.15; filter: blur(0.5px); }
+    94% { opacity: 0.7; transform: translateX(2px); }
+    95% { opacity: 0.3; transform: translateX(-1px); }
+}
+
+@keyframes ronk-particle-float {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+    25% { opacity: 1; }
+    50% { transform: translate(var(--drift-x, 20px), -50px) scale(1.6); opacity: 0.6; }
+    100% { transform: translate(calc(var(--drift-x, 20px) * -0.5), -100px) scale(0.5); opacity: 0; }
+}
+
+body.theme-ronk:not(.in-game)::before {
+    display: none !important;
+    content: none !important;
+    animation: none !important;
+}
+
+@keyframes ronk-horror-vignette {
+    0%, 100% { opacity: 0.85; }
+    48% { opacity: 1; }
+    50% { opacity: 0.72; }
+    52% { opacity: 0.95; }
+}
+
+@keyframes ronk-flicker-main {
+    /* Mostly steady red — one brief glitch near the end of a long cycle */
+    0%, 86%, 94%, 100% {
+        color: #ff4040;
+        -webkit-text-fill-color: #ff4040;
+        text-shadow: 0 0 15px rgba(255, 60, 60, 0.9), 0 0 30px rgba(220, 40, 40, 0.5);
+        transform: none;
+        filter: none;
+    }
+    87% {
+        color: #fff;
+        -webkit-text-fill-color: #fff;
+        text-shadow: 0 0 20px #fff;
+        transform: skewX(-8deg) scaleY(1.04);
+        filter: none;
+    }
+    88% {
+        color: #000;
+        -webkit-text-fill-color: #000;
+        text-shadow: none;
+        transform: skewX(6deg) scaleY(0.96);
+        filter: none;
+    }
+    89%, 91% {
+        color: #ff4040;
+        -webkit-text-fill-color: #ff4040;
+        text-shadow: 0 0 18px rgba(255, 70, 70, 0.95), 0 0 32px rgba(230, 50, 50, 0.55);
+        transform: none;
+        filter: none;
+    }
+    92% {
+        color: #fff;
+        -webkit-text-fill-color: #fff;
+        text-shadow: 0 0 16px #fff;
+        transform: translateX(-3px);
+        filter: none;
+    }
+    93% {
+        color: #ff4040;
+        -webkit-text-fill-color: #ff4040;
+        text-shadow: 0 0 28px rgba(255, 60, 60, 0.95);
+        transform: none;
+        filter: none;
+    }
+}
+
+body.theme-ronk #menu h1 {
+    color: #ff4040 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #ff4040 !important;
+    animation: ronk-flicker-main 9.5s infinite step-end !important;
+    text-transform: uppercase;
+    position: relative;
+    overflow: visible;
+    opacity: 1;
+    text-shadow: 0 0 14px rgba(255, 70, 70, 0.9), 0 0 28px rgba(230, 50, 50, 0.6), 0 0 48px rgba(180, 30, 30, 0.35);
+    transition: opacity 0.05s step-end, color 0.05s step-end, text-shadow 0.05s step-end, -webkit-text-fill-color 0.05s step-end, box-shadow 0.05s step-end;
+}
+
+/* Yellow electric sparks — shoot outward from title on flicker */
+body.theme-ronk #menu h1 .ronk-spark-burst {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    width: 0;
+    height: 0;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 3;
+}
+
+body.theme-ronk #menu h1 .ronk-spark {
+    position: absolute;
+    width: 2px;
+    height: var(--spark-len, 10px);
+    margin-left: -1px;
+    margin-top: calc(var(--spark-len, 10px) / -2);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 248, 200, 0.75) 25%,
+        rgba(255, 230, 140, 0.45) 55%,
+        rgba(255, 200, 100, 0.12) 100%
+    );
+    box-shadow:
+        0 0 3px rgba(255, 255, 240, 0.5),
+        0 0 8px rgba(255, 220, 120, 0.28);
+    border-radius: 1px;
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(var(--spark-tilt, 90deg)) scaleY(0.2);
+    animation: ronk-spark-fall var(--spark-dur, 0.65s) cubic-bezier(0.25, 0.55, 0.45, 1) var(--spark-delay, 0s) forwards;
+    will-change: transform, opacity;
+    pointer-events: none;
+}
+
+body.theme-ronk #menu h1 .ronk-spark-wide {
+    width: 5px;
+    height: 2px;
+    margin-left: -2px;
+    margin-top: -1px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 245, 200, 0.35) 25%, rgba(255, 230, 150, 0.55) 50%, rgba(255, 245, 200, 0.35) 75%, transparent 100%);
+    box-shadow: 0 0 5px rgba(255, 230, 150, 0.25);
+}
+
+body.theme-ronk #menu h1 .ronk-spark-fork {
+    width: 1px;
+    opacity: 0.5;
+}
+
+@keyframes ronk-spark-fall {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) rotate(var(--spark-tilt, 90deg)) scaleY(0.15);
+    }
+    6% {
+        opacity: var(--spark-opacity, 0.45);
+        transform: translate3d(calc(var(--spark-vx-end) * 0.06), calc(var(--spark-vy-end) * 0.04), 0) rotate(var(--spark-tilt, 90deg)) scaleY(1);
+    }
+    40% {
+        opacity: calc(var(--spark-opacity, 0.45) * 0.85);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(var(--spark-vx-end), var(--spark-vy-end), 0) rotate(var(--spark-tilt, 90deg)) scaleY(0.55);
+    }
+}
+
+/* Flicker dims text only — never the element opacity (keeps scanlines visible) */
+
+body.theme-ronk #menu h1.ronk-flicker-out {
+    opacity: 1 !important;
+    color: rgba(255, 64, 64, 0.06) !important;
+    -webkit-text-fill-color: rgba(255, 64, 64, 0.06) !important;
+    text-shadow: 0 0 6px rgba(255, 210, 70, 0.5) !important;
+}
+
+body.theme-ronk #menu h1.ronk-flicker-dead {
+    opacity: 1 !important;
+    color: #662020 !important;
+    -webkit-text-fill-color: #662020 !important;
+    text-shadow: 0 0 5px rgba(255, 200, 60, 0.35) !important;
+}
+
+body.theme-ronk #menu h1.ronk-flicker-dim {
+    opacity: 1 !important;
+    color: #992828 !important;
+    -webkit-text-fill-color: #992828 !important;
+    text-shadow: 0 0 6px rgba(255, 210, 70, 0.4), 0 0 6px rgba(180, 30, 30, 0.35) !important;
+}
+
+body.theme-ronk #menu h1.ronk-flicker-half {
+    opacity: 1 !important;
+    color: #d03030 !important;
+    -webkit-text-fill-color: #d03030 !important;
+    text-shadow: 0 0 7px rgba(255, 220, 80, 0.45), 0 0 8px rgba(220, 50, 50, 0.45) !important;
+}
+
+body.theme-ronk #menu h1.ronk-flicker-wobble {
+    opacity: 1 !important;
+    color: #ff5050 !important;
+    -webkit-text-fill-color: #ff5050 !important;
+    text-shadow: 0 0 8px rgba(255, 230, 100, 0.5), 0 0 10px rgba(255, 70, 70, 0.55) !important;
+}
+
+body.theme-ronk #menu h1.ronk-flicker-bright {
+    opacity: 1 !important;
+    color: #ff6666 !important;
+    -webkit-text-fill-color: #ff6666 !important;
+    text-shadow: 0 0 10px rgba(255, 240, 120, 0.65), 0 0 16px rgba(255, 90, 90, 0.85) !important;
+}
+
+body.theme-ronk #menu h1[class*="ronk-flicker"]::before {
+    opacity: 0.52 !important;
+}
+
+body.theme-ronk #menu h1::before {
+    content: '';
+    position: absolute;
+    inset: -4px -8px;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(60, 0, 0, 0.38) 2px,
+        rgba(60, 0, 0, 0.38) 3px
+    );
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: multiply;
+    opacity: 0.48;
+    animation: ronk-title-scanlines 0.12s steps(2) infinite;
+}
+
+@keyframes ronk-title-scanlines {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(3px); }
+}
+
+body.theme-ronk #menu h1.ronk-glitch-slice {
+    animation: ronk-title-glitch 0.12s step-end 1 !important;
+}
+
+@keyframes ronk-title-glitch {
+    0%, 84%, 86%, 100% {
+        clip-path: inset(0 0 0 0);
+        filter: none;
+        text-shadow: 0 0 14px rgba(255, 70, 70, 0.9), 0 0 28px rgba(230, 50, 50, 0.6), 0 0 48px rgba(180, 30, 30, 0.35);
+    }
+    85% {
+        clip-path: inset(8% 0 72% 0);
+        text-shadow: -3px 0 rgba(0, 230, 255, 0.55), 3px 0 rgba(255, 0, 90, 0.5), 0 0 20px rgba(255, 50, 50, 0.9);
+    }
+    85.5% {
+        clip-path: inset(55% 0 18% 0);
+        text-shadow: 2px 0 rgba(0, 200, 255, 0.4), -2px 0 rgba(200, 0, 50, 0.45), 0 0 16px rgba(255, 60, 60, 0.85);
+    }
+    86.5% {
+        clip-path: inset(30% 0 45% 0);
+        text-shadow: 0 0 18px rgba(255, 80, 80, 0.95), 0 0 32px rgba(255, 40, 40, 0.5);
+    }
+}
+
+body.theme-ronk #menu {
+    position: relative;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+body.theme-ronk #menu::before {
+    content: '';
+    position: absolute;
+    inset: -12px -20px;
+    pointer-events: none;
+    border: 1px solid rgba(255, 70, 70, 0.18);
+    clip-path: polygon(0 14px, 14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px));
+    box-shadow:
+        inset 0 0 30px rgba(255, 40, 40, 0.06),
+        0 0 40px rgba(255, 30, 30, 0.08);
+    z-index: -1;
+}
+
+body.theme-ronk #menu::after {
+    content: 'NEURAL_LINK // ACTIVE';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.5rem;
+    letter-spacing: 0.35em;
+    color: rgba(0, 220, 255, 0.35);
+    text-shadow: 0 0 10px rgba(0, 200, 255, 0.25);
+    pointer-events: none;
+    animation: ronk-hud-glitch 11s step-end infinite;
+    white-space: nowrap;
+}
+
+/* Ronk buttons — flat rect + scanline fill on hover (no chamfer clip-path) */
+body.theme-ronk button:not(.nav-arrow):not(#theme-btn) {
+    overflow: hidden !important;
+    position: relative !important;
+    clip-path: none !important;
+    border: 2px solid #cc1111 !important;
+    background: #120000 !important;
+    color: #ff5555 !important;
+    -webkit-text-fill-color: #ff5555 !important;
+    text-shadow: none !important;
+    box-shadow: 5px 5px 0 rgba(80, 0, 0, 0.92) !important;
+    font-family: 'Orbitron', 'Rajdhani', sans-serif !important;
+    letter-spacing: 0.18em !important;
+    font-weight: 700 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease, transform 0.14s ease !important;
+}
+
+body.theme-ronk button:not(.nav-arrow):not(#theme-btn)::before,
+body.theme-ronk button:not(.nav-arrow):not(#theme-btn)::after {
+    content: none !important;
+    display: none !important;
+}
+
+body.theme-ronk button:not(.nav-arrow):not(#theme-btn):hover {
+    background: var(--ronk-btn-scanlines), #ff4444 !important;
+    color: #120000 !important;
+    -webkit-text-fill-color: #120000 !important;
+    border-color: #ff7777 !important;
+    box-shadow:
+        7px 7px 0 rgba(110, 0, 0, 0.95),
+        3px 3px 0 rgba(70, 0, 0, 0.75) !important;
+    text-shadow: none !important;
+    transform: translate(-3px, -3px) !important;
+    filter: none !important;
+    z-index: 2 !important;
+}
+
+body.theme-ronk button:not(.nav-arrow):not(#theme-btn):active {
+    background: var(--ronk-btn-scanlines), #dd3333 !important;
+    transform: translate(2px, 2px) !important;
+    box-shadow: 2px 2px 0 rgba(60, 0, 0, 0.9) !important;
+    filter: none !important;
+}
+
+body.theme-ronk button:not(.nav-arrow):not(#theme-btn):focus-visible {
+    outline: 2px solid #ff6666 !important;
+    outline-offset: 3px !important;
+}
+
+body.theme-ronk button:not(.nav-arrow):not(#theme-btn):focus:not(:active),
+body.theme-ronk button:not(.nav-arrow):not(#theme-btn):focus-visible {
+    border-color: #cc1111 !important;
+    box-shadow: 5px 5px 0 rgba(80, 0, 0, 0.92) !important;
+    transform: none !important;
+    background: #120000 !important;
+    color: #ff5555 !important;
+    -webkit-text-fill-color: #ff5555 !important;
+}
+
+body.theme-ronk #theme-btn,
+body.theme-ronk #display-mode-btn {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    right: auto !important;
+    transform-origin: bottom left !important;
+    overflow: hidden !important;
+    clip-path: none !important;
+    background: #120000 !important;
+    border: 2px solid #cc1111 !important;
+    color: #ff5555 !important;
+    -webkit-text-fill-color: #ff5555 !important;
+    text-shadow: none !important;
+    box-shadow: 5px 5px 0 rgba(80, 0, 0, 0.92) !important;
+    font-family: 'Orbitron', 'Rajdhani', sans-serif !important;
+    letter-spacing: 0.18em !important;
+    font-weight: 700 !important;
+    animation: none !important;
+    transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease, transform 0.14s ease !important;
+}
+
+body.theme-ronk #display-mode-btn {
+    position: static !important;
+    bottom: auto !important;
+    left: auto !important;
+    clip-path: none !important;
+}
+
+body.theme-ronk #theme-btn:focus:not(:active),
+body.theme-ronk #display-mode-btn:focus:not(:active) {
+    transform: scale(var(--ui-scale)) !important;
+    background: #120000 !important;
+    color: #ff5555 !important;
+    -webkit-text-fill-color: #ff5555 !important;
+    box-shadow: 5px 5px 0 rgba(80, 0, 0, 0.92) !important;
+}
+
+body.theme-ronk #theme-btn:hover,
+body.theme-ronk #display-mode-btn:hover {
+    background: var(--ronk-btn-scanlines), #ff4444 !important;
+    color: #120000 !important;
+    -webkit-text-fill-color: #120000 !important;
+    border-color: #ff7777 !important;
+    box-shadow:
+        7px 7px 0 rgba(110, 0, 0, 0.95),
+        3px 3px 0 rgba(70, 0, 0, 0.75) !important;
+    text-shadow: none !important;
+    transform: scale(var(--ui-scale)) translate(-3px, -3px) !important;
+}
+
+body.theme-ronk #theme-btn:active,
+body.theme-ronk #display-mode-btn:active {
+    background: var(--ronk-btn-scanlines), #dd3333 !important;
+    transform: scale(var(--ui-scale)) translate(2px, 2px) !important;
+    box-shadow: 2px 2px 0 rgba(60, 0, 0, 0.9) !important;
+    filter: none !important;
+}
+
+body.theme-ronk .nav-arrow {
+    overflow: visible !important;
+    position: relative !important;
+    border: none !important;
+    border-radius: 0 !important;
+    clip-path: none !important;
+    box-shadow: none !important;
+    min-width: auto !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0.2rem 0.45rem !important;
+    background: var(--ronk-btn-scanlines), linear-gradient(180deg, #ff7777 0%, #ee3333 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    text-shadow: none !important;
+    filter: drop-shadow(0 0 10px rgba(255, 70, 70, 0.55));
+}
+
+body.theme-ronk .nav-arrow:hover {
+    background: var(--ronk-btn-scanlines), linear-gradient(180deg, #ff9999 0%, #ff5555 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: drop-shadow(0 0 14px rgba(255, 90, 90, 0.85));
+}
+
+body.theme-ronk .nav-arrow:active {
+    background: var(--ronk-btn-scanlines), linear-gradient(180deg, #ff6666 0%, #cc2222 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: drop-shadow(0 0 8px rgba(255, 60, 60, 0.6));
+}
+
+/* ========== HACKER — copoeric.com background (plain black + scrolling code) ========== */
+body.theme-hacker {
+    background: #000000 !important;
+    filter: none;
+}
+
+body.theme-hacker:not(.in-game)::before,
+body.theme-hacker:not(.in-game)::after {
+    display: none !important;
+    animation: none !important;
+}
+
+body.theme-hacker .matrix-container::after {
+    display: none !important;
+    content: none !important;
+}
+
+body.theme-hacker .matrix-column,
+body.theme-hacker .hacker-glitch-bar {
+    display: none !important;
+}
+
+body.theme-hacker #menu {
+    background: transparent !important;
+    backdrop-filter: none !important;
+}
+
+@keyframes crt-flicker {
+    0% { opacity: 0.5; }
+    100% { opacity: 0.7; }
+}
+
+body.theme-hacker #menu h1 {
+    color: #00ff41 !important;
+    text-shadow: 0 0 10px #00ff41, 0 0 30px rgba(0, 255, 65, 0.8) !important;
+    animation: hacker-text-flicker 4s steps(1) infinite;
+    font-family: 'VT323', monospace !important;
+}
+
+@keyframes hacker-text-flicker {
+    0%, 95%, 100% { opacity: 1; }
+    96% { opacity: 0.7; transform: skewX(-2deg); }
+    97% { opacity: 1; transform: skewX(1deg); }
+    98% { opacity: 0.85; }
+}
+
+body.theme-hacker button:not(.nav-arrow) {
+    color: #00ff41 !important;
+    border-color: #00ff41 !important;
+    text-shadow: 0 0 8px #00ff41 !important;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.3) !important;
+}
+
+body.theme-hacker #theme-btn {
+    background: #001a00 !important;
+    color: #00ff41 !important;
+    border: 2px solid #00ff41 !important;
+    text-shadow: 0 0 10px #00ff41 !important;
+}
+
+/* ========== CANVAS FRAMES ========== */
+#gameCanvas {
+    transition: none !important;
+}
+
+body.theme-ronk #gameCanvas {
+    box-shadow: none;
+    border: 2px solid rgba(160, 40, 40, 0.5);
+}
+
+body.theme-hacker #gameCanvas {
+    box-shadow: none;
+    border: 2px solid rgba(0, 255, 65, 0.6);
+}
+
+body.theme-white-black #gameCanvas {
+    box-shadow: none;
+    border: 1px solid rgba(196, 196, 196, 0.22);
+    border-radius: 8px;
+}
+
+/* ========== SHARED HUD / GAME UI ========== */
+#round-announcer:not(.hidden) #round-text,
+#round-announcer:not(.hidden) #countdown-text {
+    animation: announcer-text-pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+body.theme-pinkcore #round-announcer:not(.hidden) #round-text {
+    animation: pinkcore-round-in 0.45s cubic-bezier(0.34, 1.2, 0.64, 1) forwards !important;
+}
+
+body.theme-pinkcore #round-announcer:not(.hidden) #countdown-text {
+    animation: pinkcore-countdown-pop 0.5s cubic-bezier(0.34, 1.45, 0.64, 1) forwards !important;
+}
+
+@keyframes announcer-text-pop {
+    from { opacity: 0; transform: scale(0.6); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.joker-icon-display {
+    animation: joker-idle-bob 2s ease-in-out infinite;
+}
+
+@keyframes joker-idle-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+.hunger-bar-fill.low {
+    animation: hunger-low-pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes hunger-low-pulse {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.4); }
+}
+
+#theme-btn {
+    animation: none;
+    z-index: 9000;
+    pointer-events: auto !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#display-mode-btn {
+    animation: none;
+    z-index: 9000;
+    pointer-events: auto !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body.main-menu-visible #theme-btn,
+body.in-game #theme-btn,
+body.overlay-screen #theme-btn,
+body.main-menu-visible #display-mode-wrap:not([hidden]),
+body.in-game #display-mode-wrap:not([hidden]),
+body.overlay-screen #display-mode-wrap:not([hidden]) {
+    z-index: 15000 !important;
+}
+
+#pause-menu:not(.hidden) {
+    z-index: 16000 !important;
+}
+
+.spectate-cam-hint {
+    display: none;
+    margin: 0.35rem auto 0;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.08rem;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+}
+
+#spectate-cam-hint:not([hidden]) {
+    display: block;
+}
+
+#theme-btn:hover,
+#theme-btn:active,
+#theme-btn:focus,
+#display-mode-btn:hover,
+#display-mode-btn:active,
+#display-mode-btn:focus {
+    transform: scale(var(--ui-scale)) !important;
+}
+
+body:not(.theme-ronk):not(.theme-pinkcore) #theme-btn {
+    animation: theme-btn-glow 3s ease-in-out infinite;
+}
+
+@keyframes theme-btn-glow {
+    0%, 100% { box-shadow: 0 0 8px rgba(255, 255, 255, 0.15); }
+    50% { box-shadow: 0 0 16px rgba(255, 255, 255, 0.35); }
+}
+
+/* Respect performance mode — tone down heavy CSS animations */
+body.performance-mode .ronk-particle,
+body.performance-mode .ronk-ember,
+body.performance-mode .ronk-embers,
+body.performance-mode .ronk-tron-floor-glow,
+body.performance-mode .ronk-tron-plane-glow,
+body.performance-mode .matrix-column,
+body.performance-mode .matrix-line,
+body.performance-mode .cloud,
+body.performance-mode .hacker-glitch-bar,
+body.performance-mode .ronk-flash,
+body.performance-mode .ronk-corner,
+body.performance-mode .ronk-hud,
+body.performance-mode .ronk-noise,
+body.performance-mode .ronk-grid-glow,
+body.performance-mode .ronk-scanlines {
+    display: none !important;
+}
+
+/* 480p / perf: keep faint Flappy decor so Pixel theme doesn't look broken */
+body.performance-mode .pixel-cloud,
+body.performance-mode .pixel-pipe,
+body.performance-mode .pixel-flappy-bird {
+    display: block !important;
+    opacity: 0.35 !important;
+    animation-duration: 28s !important;
+}
+
+/* Keep the Tron floor in perf mode, just stop the scroll animation */
+body.performance-mode .ronk-tron-floor,
+body.performance-mode .ronk-tron-plane {
+    animation: none !important;
+}
+
+body.performance-mode.theme-ronk #menu::after {
+    display: none !important;
+}
+
+body.performance-mode .ronk-scanlines,
+body.performance-mode body.theme-hacker .matrix-container::after,
+
+body.performance-mode.theme-ronk::before {
+    opacity: 0.3 !important;
+}
+
+body.performance-mode #theme-btn {
+    animation: none !important;
+}
+
+body.performance-mode.theme-ronk #menu h1 .ronk-spark-burst {
+    display: none !important;
+}
+
+body.performance-mode.theme-ronk #menu h1::before {
+    animation: none !important;
+    opacity: 0.45 !important;
+}
+
+
+body.performance-mode.theme-hacker::after {
+    animation: none !important;
+    opacity: 0.3;
+}
+
+/* ========== IN-GAME THEME FX (backgrounds + scanlines) ========== */
+/* All themes — menu, loadout/overlays, and in-match share the same animated HTML backdrop */
+body.main-menu-visible #menu:not(.hidden),
+body.overlay-screen #loadout-page:not(.hidden),
+body.overlay-screen #settings-page:not(.hidden),
+body.overlay-screen #custom-page:not(.hidden),
+body.overlay-screen #online-lobby:not(.hidden),
+body.overlay-screen #online-matchmake:not(.hidden),
+body.overlay-screen #online-friends:not(.hidden) {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+body.theme-ronk:not(.intro-active) .ronk-container,
+body.main-menu-visible.theme-ronk .ronk-container,
+body.overlay-screen.theme-ronk .ronk-container,
+body.in-game.theme-ronk .ronk-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+body.theme-hacker .matrix-container,
+body.main-menu-visible.theme-hacker .matrix-container,
+body.overlay-screen.theme-hacker .matrix-container,
+body.in-game.theme-hacker .matrix-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+body.theme-pixel .pixel-bg-container,
+body.main-menu-visible.theme-pixel .pixel-bg-container,
+body.overlay-screen.theme-pixel .pixel-bg-container,
+body.in-game.theme-pixel .pixel-bg-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+body.theme-pinkcore .clouds-container,
+body.main-menu-visible.theme-pinkcore .clouds-container,
+body.overlay-screen.theme-pinkcore .clouds-container,
+body.in-game.theme-pinkcore .clouds-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 0.78 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+body.theme-white-black .liquid-container,
+body.main-menu-visible.theme-white-black .liquid-container,
+body.overlay-screen.theme-white-black .liquid-container,
+body.in-game.theme-white-black .liquid-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    background: transparent !important;
+}
+
+body.in-game.theme-white-black .liquid-container canvas {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+body.in-game #game-ui {
+    background: transparent !important;
+}
+
+body.in-game #gameCanvas {
+    background: transparent !important;
+}
+
+body.in-game.theme-hacker .matrix-line,
+body.in-game.theme-pixel .pixel-cloud,
+body.in-game.theme-pixel .pixel-pipe,
+body.in-game.theme-pixel .pixel-flappy-bird {
+    animation-play-state: running !important;
+}
+
+/* In-match: pause the noisiest CSS filter loops (same static look, less compositor thrash) */
+body.in-game.theme-ronk .ronk-noise,
+body.in-game.theme-ronk .ronk-flash,
+body.in-game.theme-ronk .ronk-hud {
+    animation: none !important;
+}
+
+/* Full-graphics in-match: keep ALL theme backdrops smooth (near menu speed).
+   Only body.performance-mode (480p / --ronk-low-gfx) freezes or hides heavy FX. */
+body.in-game:not(.performance-mode) .ronk-tron-plane,
+body.in-game:not(.performance-mode) .ronk-tron-plane-glow {
+    animation-duration: 2.5s !important;
+    animation-timing-function: linear !important;
+}
+
+body.in-game:not(.performance-mode).theme-hacker .matrix-line {
+    animation-duration: 14s !important;
+    animation-timing-function: linear !important;
+}
+
+body.in-game:not(.performance-mode).theme-pinkcore .clouds-container .cloud {
+    animation-duration: 28s !important;
+    animation-timing-function: linear !important;
+}
+
+body.in-game:not(.performance-mode).theme-pixel .pixel-cloud,
+body.in-game:not(.performance-mode).theme-pixel .pixel-pipe,
+body.in-game:not(.performance-mode).theme-pixel .pixel-flappy-bird {
+    animation-duration: 16s !important;
+    animation-play-state: running !important;
+}
+
+/* GPU-friendly layers — smooth CSS motion without look changes */
+body.in-game:not(.performance-mode) .ronk-tron-scene,
+body.in-game:not(.performance-mode) .ronk-tron-plane-wrap,
+body.in-game:not(.performance-mode) .matrix-container,
+body.in-game:not(.performance-mode) .clouds-container,
+body.in-game:not(.performance-mode) .pixel-bg-container,
+body.in-game:not(.performance-mode) .liquid-container {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+body.in-game #gameCanvas {
+    z-index: 1;
+}
+
+#game-fx-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1500;
+    display: none;
+}
+
+/* In-game Ronk: scanlines drawn on canvas only — no CSS red wash */
+body.in-game.theme-ronk #game-fx-overlay {
+    display: none !important;
+}
+
+/* Don't kill the global CRT overlay we restored above */
+body.in-game.theme-ronk #game-ui::before,
+body.in-game.theme-ronk #game-ui::after,
+body.in-game.theme-ronk::before,
+body.in-game.theme-ronk::after {
+    display: none !important;
+    content: none !important;
+    animation: none !important;
+}
+
+/* In-match Ronk: smooth Tron scroll only — no horizon/vignette/scanline pulse (reads as bg flicker) */
+body.in-game.theme-ronk .ronk-tron-horizon {
+    animation: none !important;
+    opacity: 0.82 !important;
+}
+
+body.in-game.theme-ronk .ronk-vignette {
+    animation: none !important;
+    opacity: 0.88 !important;
+}
+
+body.in-game.theme-ronk .ronk-scanlines {
+    animation: none !important;
+    transform: none !important;
+}
+
+body.in-game.theme-ronk .ronk-ember {
+    animation: none !important;
+}
+
+body.in-game.theme-hacker::before,
+body.in-game.theme-hacker::after,
+body.in-game.theme-pixel::before,
+body.in-game.theme-white-black::before {
+    display: none !important;
+    content: none !important;
+    animation: none !important;
+}
+
+body.in-game.theme-pinkcore::before {
+    display: none !important;
+    content: none !important;
+    animation: none !important;
+    transform: none !important;
+}
+
+body.in-game.theme-pixel::before {
+    display: none !important;
+    content: none !important;
+}
+
+body.in-game.theme-white-black::before {
+    display: none !important;
+    content: none !important;
+    animation: none !important;
+}
+
+
+body.steam-store-capture #round-announcer,
+body.steam-store-capture .round-announcer,
+body.steam-store-capture #countdown-overlay,
+body.steam-store-capture .countdown-overlay {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Marketing screenshots: strip chrome / tips / spectate clutter (keep score + arena) */
+body.steam-store-capture #theme-btn,
+body.steam-store-capture #display-mode-btn,
+body.steam-store-capture #display-mode-wrap,
+body.steam-store-capture #match-mode-banner,
+body.steam-store-capture .match-mode-banner,
+body.steam-store-capture #spectate-cam-hint,
+body.steam-store-capture .spectate-cam-hint,
+body.steam-store-capture #tutorial-overlay,
+body.steam-store-capture #play-unlock-hint-overlay,
+body.steam-store-capture #unlock-notify,
+body.steam-store-capture #anti-cheat-toast,
+body.steam-store-capture #intro-skip-hint,
+body.steam-store-capture #steam-capture-hint,
+body.steam-store-capture #tutorial-gate,
+body.steam-store-capture .ronk-hud {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Steam store browser capture: keep FULL ambience (Tron / clouds / matrix / marble).
+   Old Electron capturePage dumps looked like empty black voids vs the live game. */
+body.steam-store-capture.theme-ronk .ronk-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+body.steam-store-capture.theme-ronk .ronk-tron-scene,
+body.steam-store-capture.theme-ronk .ronk-tron-plane,
+body.steam-store-capture.theme-ronk .ronk-scanlines,
+body.steam-store-capture.theme-ronk .ronk-vignette {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+/* Steam/Electron: cut intentional glitch/flicker layers that look broken + tank FPS */
+body.perf-steam.theme-ronk .ronk-noise,
+body.perf-steam.theme-ronk .ronk-hud,
+body.perf-steam.theme-ronk .ronk-flash,
+body.perf-steam.theme-ronk .ronk-scan,
+body.perf-steam.theme-ronk .ronk-lightning {
+    animation: none !important;
+    filter: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Chrome/Blink: cheaper compositing during matches — keep all theme motion visible.
+   Swap live blur for a static fog band (same look). Full-graphics keeps near-native speeds. */
+body.perf-chrome.in-game.theme-ronk .ronk-tron-horizon {
+    filter: none !important;
+    opacity: 0.82 !important;
+    background:
+        radial-gradient(ellipse 95% 70% at 50% 50%,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.55) 32%,
+            rgba(0, 0, 0, 0.18) 58%,
+            transparent 78%),
+        radial-gradient(ellipse 70% 85% at 50% 50%,
+            rgba(160, 40, 55, 0.22) 0%,
+            rgba(90, 16, 28, 0.12) 42%,
+            transparent 74%) !important;
+}
+
+/* Soften only when FPS budget is low (no gfx-smooth). Full themes stay fluid. */
+body.perf-chrome.in-game:not(.gfx-smooth):not(.performance-mode) .ronk-tron-plane,
+body.perf-chrome.in-game:not(.gfx-smooth):not(.performance-mode) .ronk-tron-plane-glow {
+    animation-duration: 2.8s !important;
+}
+
+body.perf-chrome.in-game:not(.gfx-smooth):not(.performance-mode) .ronk-ember {
+    animation-duration: 12s !important;
+}
+
+body.perf-chrome.in-game:not(.gfx-smooth):not(.performance-mode).theme-hacker .matrix-line {
+    animation-duration: 16s !important;
+}
+
+body.perf-chrome.in-game:not(.gfx-smooth):not(.performance-mode).theme-pinkcore .clouds-container .cloud {
+    animation-duration: 32s !important;
+}
+
+body.perf-chrome.in-game:not(.gfx-smooth):not(.performance-mode).theme-pixel .pixel-cloud,
+body.perf-chrome.in-game:not(.gfx-smooth):not(.performance-mode).theme-pixel .pixel-pipe {
+    animation-duration: 18s !important;
+}
+
+/* ok+ FPS: menu-quality backdrop motion for every theme */
+body.gfx-smooth.in-game:not(.performance-mode) .ronk-tron-plane,
+body.gfx-smooth.in-game:not(.performance-mode) .ronk-tron-plane-glow {
+    animation-duration: 2.4s !important;
+}
+
+body.gfx-smooth.in-game:not(.performance-mode) .ronk-ember {
+    animation-duration: 10s !important;
+}
+
+body.gfx-smooth.in-game:not(.performance-mode).theme-hacker .matrix-line {
+    animation-duration: 12s !important;
+}
+
+body.gfx-smooth.in-game:not(.performance-mode).theme-pinkcore .clouds-container .cloud {
+    animation-duration: 24s !important;
+}
+
+body.gfx-smooth.in-game:not(.performance-mode).theme-pixel .pixel-cloud,
+body.gfx-smooth.in-game:not(.performance-mode).theme-pixel .pixel-pipe,
+body.gfx-smooth.in-game:not(.performance-mode).theme-pixel .pixel-flappy-bird {
+    animation-duration: 14s !important;
+}
+
+/* High FPS headroom: slightly snappier (still same assets / colors) */
+body.gfx-boost.in-game:not(.performance-mode) .ronk-tron-plane,
+body.gfx-boost.in-game:not(.performance-mode) .ronk-tron-plane-glow {
+    animation-duration: 2.2s !important;
+}
+
+body.gfx-boost.in-game:not(.performance-mode) .ronk-ember {
+    animation-duration: 9s !important;
+}
+
+body.gfx-boost.in-game:not(.performance-mode).theme-hacker .matrix-line {
+    animation-duration: 10s !important;
+}
+
+body.gfx-boost.in-game:not(.performance-mode).theme-pinkcore .clouds-container .cloud {
+    animation-duration: 20s !important;
+}
+
+body.gfx-boost.in-game:not(.performance-mode).theme-pixel .pixel-cloud,
+body.gfx-boost.in-game:not(.performance-mode).theme-pixel .pixel-pipe {
+    animation-duration: 12s !important;
+}
+
+body.perf-chrome.in-game #gameCanvas {
+    /* Promote canvas to its own layer — reduces Blink paint hitching */
+    transform: translateZ(0);
+    will-change: auto;
+}
+
+body.perf-steam.theme-ronk .ronk-tron-horizon {
+    filter: blur(6px);
+    animation: none !important;
+}
+
+body.perf-steam.theme-ronk .ronk-tron-plane-glow {
+    filter: none;
+}
+
+body.perf-steam.theme-ronk .ronk-tron-plane,
+body.perf-steam.theme-ronk .ronk-tron-plane-glow {
+    animation-duration: 3.6s;
+}
+
+body.perf-steam.theme-ronk .ronk-corner,
+body.perf-steam.theme-ronk .ronk-grid-glow,
+body.perf-steam.theme-ronk .ronk-vignette {
+    animation: none !important;
+}
+
+/* Steam/Electron: keep theme backdrops visible, just cheaper motion (no blank voids) */
+body.perf-steam .matrix-line {
+    will-change: auto !important;
+    text-shadow: none !important;
+    animation-duration: 14s !important;
+    opacity: 0.55 !important;
+}
+
+body.perf-steam .pixel-cloud,
+body.perf-steam .pixel-pipe {
+    will-change: auto !important;
+    animation-duration: 16s !important;
+}
+
+body.perf-steam .ronk-ember {
+    will-change: auto !important;
+    box-shadow: none !important;
+}
+
+/* Solid theme plates so transparent canvas never shows unrendered black holes */
+body.in-game.theme-ronk {
+    background: #050000 !important;
+}
+body.in-game.theme-hacker {
+    background: #020904 !important;
+}
+body.in-game.theme-pixel {
+    background: #70c5ce !important;
+}
+
+body.in-game.theme-pixel #gameCanvas {
+    image-rendering: auto !important;
+}
+body.in-game.theme-pinkcore {
+    background: #ffc4de !important;
+}
+body.in-game.theme-white-black {
+    background: #05040a !important;
+}

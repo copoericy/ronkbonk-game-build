@@ -1,0 +1,11 @@
+---
+description: Clones skill and Laser skill are mutually exclusive; clone cubes have no skills
+alwaysApply: true
+---
+
+# Clones ≠ Laser
+
+- One loadout skill only. Picking **Clones** means you have **no Laser** (and vice versa).
+- Spawned **clone cubes** have `selectedSkill = null` — no laser waves, no skill button, no re-cloning.
+- Only a player whose skill is `laser` may push `activeLaserRoutines` / call `spawnLaserLine`.
+- Never imply “clone lasers” in code comments, UI, or collision rules.

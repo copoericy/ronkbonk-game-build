@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260">
+  <defs>
+    <linearGradient id="body" x1="210" y1="24" x2="210" y2="230" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#ffe8f4"/>
+      <stop offset="100%" stop-color="#ffb8d8"/>
+    </linearGradient>
+    <radialGradient id="shine" cx="36%" cy="32%" r="48%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shade" cx="55%" cy="80%" r="58%">
+      <stop offset="0%" stop-color="#e56aa8" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#d24a90" stop-opacity="0.26"/>
+    </radialGradient>
+    <filter id="lift" x="-20%" y="-18%" width="140%" height="145%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"/>
+      <feOffset in="blur" dy="7" result="off"/>
+      <feFlood flood-color="#c44a88" flood-opacity="0.28" result="color"/>
+      <feComposite in="color" in2="off" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#lift)">
+    <path fill="url(#body)" d="M72 178C42 178 24 150 30 124C10 114 10 80 38 70C42 40 76 24 110 36C128 16 166 10 200 30C224 14 270 16 294 40C326 30 368 44 376 80C404 86 418 118 406 148C418 170 398 198 362 192C350 216 302 230 252 222H142C102 232 68 208 72 178Z"/>
+    <path fill="url(#shine)" d="M72 178C42 178 24 150 30 124C10 114 10 80 38 70C42 40 76 24 110 36C128 16 166 10 200 30C224 14 270 16 294 40C326 30 368 44 376 80C404 86 418 118 406 148C418 170 398 198 362 192C350 216 302 230 252 222H142C102 232 68 208 72 178Z"/>
+    <path fill="url(#shade)" d="M72 178C42 178 24 150 30 124C10 114 10 80 38 70C42 40 76 24 110 36C128 16 166 10 200 30C224 14 270 16 294 40C326 30 368 44 376 80C404 86 418 118 406 148C418 170 398 198 362 192C350 216 302 230 252 222H142C102 232 68 208 72 178Z"/>
+  </g>
+</svg>

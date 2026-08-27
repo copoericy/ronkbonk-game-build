@@ -1,0 +1,38 @@
+Paste into Steamworks when re-submitting this launch-block.
+
+══════════════════════════════════════════════════════════════════
+RESPONSE TO REVIEW — WINDOWS LAUNCH THROUGH STEAM CLIENT
+══════════════════════════════════════════════════════════════════
+
+The Windows depot, packages, default branch, and launch options are now
+aligned so the game starts through the Steam client on Windows, Linux,
+and macOS.
+
+Disk Write Error fix: we no longer ship Mac .app files in the Windows
+depot. Each OS is its own depot with the OS filter set:
+
+1. Separate depots (OS filter set on each):
+   • 4887921 = Windows only  (windows/RonkBonk.exe)
+   • 4887922 = Linux only    (linux/RonkBonk)
+   • 4887923 = macOS only    (mac/RonkBonk.app)
+2. Both the Store package and the Developer Comp package include all
+   three depots.
+3. The new build is set Live on the default branch.
+4. Launch options (published):
+   Windows:  Executable windows/RonkBonk.exe   Working Dir windows
+   Linux:    Executable linux/RonkBonk         Working Dir linux
+   macOS:    Executable mac/RonkBonk.app       Working Dir mac
+
+A fresh Windows install through Steam should contain windows/RonkBonk.exe
+and must not contain mac/ or RonkBonk.app.
+
+Please re-test Play on Windows through the Steam client.
+
+══════════════════════════════════════════════════════════════════
+HOW TO FIND ONLINE PVP
+══════════════════════════════════════════════════════════════════
+1. Main menu → START → (loadout) → play menu
+2. MULTIPLAYER PVP → ONLINE MATCHMAKE or ONLINE WITH FRIEND
+3. Ready in WAITING ROOM
+
+Local couch PvP: MULTIPLAYER PVP → LOCAL PVP

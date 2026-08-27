@@ -1,0 +1,93 @@
+══════════════════════════════════════════════════════════════════
+RONKBONK — NOTES FOR STEAM REVIEWER (build 2026-08-13)
+══════════════════════════════════════════════════════════════════
+
+IMPORTANT — MEDIA NOT UPDATED THIS TIME
+• Store screenshots and trailer / capsule video are NOT updated in this
+  submission.
+• This build is for FUNCTIONAL / PLAYABILITY review only: please check
+  that the game launches, menus work, matches run, and Online / Local
+  multiplayer paths are reachable.
+• Updated marketing screenshots and video will come in a later upload.
+
+App ID: 4887920
+Developer: copoeric
+
+══════════════════════════════════════════════════════════════════
+QUICK START AFTER LAUNCH
+══════════════════════════════════════════════════════════════════
+1. Watch or click through the intro → ENTER GAME (or click to skip).
+2. You land on the main menu (RONK theme by default).
+3. Press START.
+4. Optional loadout (skills / jokers / color) → continue into the play menu.
+5. From the play menu you can choose:
+   • Solo / bot fight (difficulty options)
+   • MULTIPLAYER PVP
+   • SPECTATE (AI vs AI or Steam friend path)
+
+Controls (default):
+• Move: WASD
+• Dash: F
+• Charge: C
+• Skill: Y (or remapped in Settings)
+• Pause: Esc / Start on gamepad (LOCAL / BOT / SPECTATE only — not online human PvP)
+
+Settings (THEME, LANGUAGE, CONTROLS, FULLSCREEN) are on the main menu
+and in the pause menu.
+
+══════════════════════════════════════════════════════════════════
+HOW TO REACH MULTIPLAYER
+══════════════════════════════════════════════════════════════════
+Main menu → START → (loadout if shown) → play menu → MULTIPLAYER PVP
+
+Online options are listed FIRST:
+1) ONLINE MATCHMAKE — random online rival
+   • Enter nickname → FIND MATCH → ready in WAITING ROOM
+2) ONLINE WITH FRIEND — host or join with a room code
+   • Enter nickname → HOST (share code) or JOIN with friend’s code
+   • Optional: INVITE STEAM FRIEND when Steam client is running
+3) LOCAL PVP — same-screen couch co-op / duel (listed after Online)
+   • P1: WASD + dash/charge/skill (or Controller 1)
+   • P2: Arrow keys + Enter/Shift (or Controller 2)
+   • Shared camera (not dual viewports)
+
+In-match banners:
+• ONLINE PVP
+• LOCAL PVP · SAME SCREEN
+
+Online uses PeerJS (WebRTC). Two real peers / network path needed to
+fully verify a live online match. Friend room code works between two
+clients. Matchmake needs another player searching at the same time.
+Online mid-match: no pause / no quit-to-menu (intentional). Finish the
+match or close the app to disconnect.
+
+══════════════════════════════════════════════════════════════════
+OTHER MODES WORTH CLICKING
+══════════════════════════════════════════════════════════════════
+• SPECTATE → SPECTATE BOT = watch two elite AIs (WASD moves which board
+  you watch; camera does not force-follow)
+• Tutorial gate may appear for new profiles (TUTORIAL / SKIP TUTORIAL)
+• THEME button cycles visual themes (Ronk, pixel, pinkcore, etc.)
+• Pause (Esc / gamepad Start) → RESUME / SETTINGS / QUIT TO MENU
+  (disabled during online human vs human matches)
+
+══════════════════════════════════════════════════════════════════
+WHAT CHANGED IN THIS BUILD (high level)
+══════════════════════════════════════════════════════════════════
+• Intro cinematic polish (Tron room, cube shatter, wall credit)
+• Spectate free camera (WASD board navigate)
+• Online / Local PvP menu paths clarified earlier
+• Online human PvP: no mid-match pause / quit (fairness)
+• Smooth Chrome/Electron rendering (button paint + DPR caps)
+• Controller pause / disconnect handling (local/bot)
+• Various gameplay / UI / tutorial / joker fixes
+
+══════════════════════════════════════════════════════════════════
+STORE CATEGORIES (please KEEP)
+══════════════════════════════════════════════════════════════════
+• Online PvP
+• Shared/Split Screen PvP
+• Partial Controller Support
+
+Thank you for reviewing. Again: screenshots and trailer are intentionally
+unchanged this round — focus on whether the build runs correctly.

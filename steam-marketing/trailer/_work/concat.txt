@@ -1,0 +1,7 @@
+file '/Users/copoeric/the steam game/RONKBONK_NEWEST_2026-07-28/game-source/steam-marketing/trailer/_work/01_intro.mp4'
+file '/Users/copoeric/the steam game/RONKBONK_NEWEST_2026-07-28/game-source/steam-marketing/trailer/_work/02_menu.mp4'
+file '/Users/copoeric/the steam game/RONKBONK_NEWEST_2026-07-28/game-source/steam-marketing/trailer/_work/03_loadout.mp4'
+file '/Users/copoeric/the steam game/RONKBONK_NEWEST_2026-07-28/game-source/steam-marketing/trailer/_work/04_skills.mp4'
+file '/Users/copoeric/the steam game/RONKBONK_NEWEST_2026-07-28/game-source/steam-marketing/trailer/_work/05_jokers.mp4'
+file '/Users/copoeric/the steam game/RONKBONK_NEWEST_2026-07-28/game-source/steam-marketing/trailer/_work/06_gameplay.mp4'
+file '/Users/copoeric/the steam game/RONKBONK_NEWEST_2026-07-28/game-source/steam-marketing/trailer/_work/07_spectate.mp4'

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>render-pinkcore-clouds</title>
+  <style>
+    html, body { margin: 0; background: transparent; overflow: hidden; }
+    canvas { display: block; }
+  </style>
+  <script src="../vendor/three.min.js"></script>
+</head>
+<body>
+<script>
+/**
+ * Simple wide cloud — FEW large soft lobes (not popcorn).
+ * Asymmetric, flat, clean text plate in the middle.
+ */
+function addSphere(group, geo, mat, x, y, z, sx, sy, sz) {
+  const m = new THREE.Mesh(geo, mat);
+  m.position.set(x, y, z);
+  m.scale.set(sx, sy, sz);
+  m.castShadow = true;
+  m.receiveShadow = true;
+  group.add(m);
+}
+
+function createCleanCloud(baseGeo, material, kind) {
+  const g = new THREE.Group();
+  const f = kind === 'window' ? -1 : 1;
+
+  if (kind === 'panel') {
+    // 4 lobes only
+    addSphere(g, baseGeo, material, 0, 0, 0, 7.4, 5.8, 6.0);
+    addSphere(g, baseGeo, material, -4.2, 0.4, 0.3, 4.8, 4.2, 4.2);
+    addSphere(g, baseGeo, material, 3.8, 0.55, -0.2, 4.2, 3.8, 3.8);
+    addSphere(g, baseGeo, material, -0.6, 3.4, 0, 3.6, 3.2, 3.2);
+    return g;
+  }
+
+  // === 5 lobes total — big soft pillow, not bubbly ===
+  // Main body (wide flat)
+  addSphere(g, baseGeo, material, -0.4 * f, 0, 0, 11.5, 3.6, 5.2);
+  // Heavy end
+  addSphere(g, baseGeo, material, -8.6 * f, 0.15, 0.2, 5.2, 3.8, 4.4);
+  // Light end
+  addSphere(g, baseGeo, material, 8.2 * f, 0.2, -0.15, 4.0, 3.2, 3.6);
+  // Tall bump (off-center)
+  addSphere(g, baseGeo, material, -2.8 * f, 2.2, 0, 4.6, 3.4, 3.8);
+  // Lower secondary bump
+  addSphere(g, baseGeo, material, 3.2 * f, 1.7, 0.1, 3.8, 2.8, 3.2);
+
+  return g;
+}
+
+function renderOne({ kind, width, height, camZ, camY, lookY, rotY }) {
+  const renderer = new THREE.WebGLRenderer({
+    antialias: true,
+    alpha: true,
+    preserveDrawingBuffer: true,
+    premultipliedAlpha: false
+  });
+  renderer.setPixelRatio(2);
+  renderer.setSize(width, height, false);
+  renderer.setClearColor(0x000000, 0);
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.22;
+  document.body.appendChild(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(30, width / height, 0.5, 500);
+  camera.position.set(0, camY, camZ);
+  camera.lookAt(0, lookY, 0);
+
+  const hemi = new THREE.HemisphereLight(0xffffff, 0xffe08a, 0.95);
+  hemi.position.set(0, 50, 0);
+  scene.add(hemi);
+
+  const key = new THREE.DirectionalLight(0xffffff, 1.55);
+  key.position.set(-28, 80, 48);
+  key.castShadow = true;
+  key.shadow.mapSize.set(2048, 2048);
+  key.shadow.radius = 8;
+  key.shadow.bias = -0.0006;
+  key.shadow.camera.near = 1;
+  key.shadow.camera.far = 260;
+  key.shadow.camera.left = -55;
+  key.shadow.camera.right = 55;
+  key.shadow.camera.top = 28;
+  key.shadow.camera.bottom = -28;
+  scene.add(key);
+
+  const rim = new THREE.DirectionalLight(0xff9ac8, 0.38);
+  rim.position.set(50, 35, -85);
+  scene.add(rim);
+
+  const fill = new THREE.DirectionalLight(0xffffff, 0.55);
+  fill.position.set(40, 10, 65);
+  scene.add(fill);
+
+  const geo = new THREE.SphereGeometry(1, 64, 64);
+  const mat = new THREE.MeshStandardMaterial({
+    color: 0xffffff,
+    roughness: 0.82,
+    metalness: 0.0,
+    emissive: 0xffffff,
+    emissiveIntensity: 0.11
+  });
+
+  const cloud = createCleanCloud(geo, mat, kind);
+  cloud.rotation.y = rotY;
+  cloud.rotation.x = 0.03;
+  scene.add(cloud);
+
+  for (let i = 0; i < 4; i++) renderer.render(scene, camera);
+  renderer.render(scene, camera);
+
+  const dataUrl = renderer.domElement.toDataURL('image/png');
+  renderer.dispose();
+  if (renderer.domElement.parentNode) {
+    renderer.domElement.parentNode.removeChild(renderer.domElement);
+  }
+  return dataUrl;
+}
+
+window.__cloudError = null;
+try {
+  if (typeof THREE === 'undefined') throw new Error('THREE missing');
+  const jobs = [
+    { kind: 'btn', width: 1600, height: 520, camZ: 27, camY: 1.6, lookY: 0.7, rotY: -0.16, name: 'cloud-btn.png' },
+    { kind: 'window', width: 1640, height: 530, camZ: 27.5, camY: 1.65, lookY: 0.65, rotY: 0.14, name: 'cloud-window.png' },
+    { kind: 'panel', width: 960, height: 840, camZ: 30, camY: 2.2, lookY: 1.1, rotY: -0.22, name: 'cloud-panel.png' }
+  ];
+  const out = {};
+  for (const job of jobs) out[job.name] = renderOne(job);
+  window.__cloudResults = out;
+  document.title = 'DONE';
+} catch (e) {
+  window.__cloudError = String(e && e.stack || e);
+  document.title = 'ERROR';
+}
+</script>
+</body>
+</html>

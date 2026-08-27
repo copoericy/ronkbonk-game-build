@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="copyright" content="Copyright 2026 copoeric. RonkBonk. All Rights Reserved.">
+    <meta name="author" content="copoeric">
+    <title>RONKBONK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Orbitron:wght@400;700;900&family=Press+Start+2P&family=VT323&family=Pacifico&family=Quicksand:wght@300;500;700&family=Caveat:wght@400;700&family=Montserrat:wght@400;700;900&family=Lobster&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=202608261830">
+    <link rel="stylesheet" href="theme-ambience.css?v=202608262350">
+    <link rel="stylesheet" href="theme-trailer-capture.css?v=202607274100">
+    <link rel="stylesheet" href="ui-refinement.css?v=202608261610">
+    <link rel="stylesheet" href="theme-windows.css?v=202608261610">
+    <link rel="preload" as="image" href="assets/ui/cloud-btn.png?v=2232">
+    <script src="vendor/peerjs.min.js"></script>
+</head>
+<body class="theme-ronk intro-active">
+    <div class="clouds-container">
+        <!-- Clouds will be added by JS -->
+    </div>
+    <div class="matrix-container">
+        <!-- Matrix rain columns added by JS -->
+    </div>
+    <div class="matrix-code-layer" aria-hidden="true">
+        <!-- Scrolling code snippets added by JS -->
+    </div>
+    <div class="pixel-bg-container">
+        <!-- Pixel clouds and pipes will be added by JS -->
+    </div>
+    <div class="ronk-container">
+        <!-- Ronk effects will be added by JS -->
+    </div>
+    <div class="liquid-container">
+        <!-- Liquid oil painting will be added by JS -->
+    </div>
+    <button id="theme-btn" hidden aria-hidden="true">THEME: RONK</button>
+    <div id="display-mode-wrap" hidden aria-hidden="true">
+        <button id="display-mode-btn" type="button" title="Toggle fullscreen">FULLSCREEN</button>
+    </div>
+
+    <div id="intro-overlay">
+        <canvas id="intro-canvas"></canvas>
+        <div id="intro-content">
+            <h1 id="intro-title" class="hidden">RONKBONK</h1>
+            <p id="intro-credit" class="hidden" aria-label="Credits">Made by copoeric</p>
+            <p id="intro-credit-show" class="hidden" aria-hidden="true">MADE BY COPOERIC</p>
+            <button id="intro-start-btn" class="hidden">ENTER GAME</button>
+            <p id="intro-skip-hint">CLICK TO SKIP</p>
+        </div>
+    </div>
+
+    <div id="tutorial-gate-overlay" class="hidden" aria-label="Tutorial choice">
+        <div class="tutorial-gate-scanlines" aria-hidden="true"></div>
+        <div class="tutorial-gate-grid" aria-hidden="true"></div>
+        <div class="tutorial-gate-glow" aria-hidden="true"></div>
+        <div id="tutorial-gate-content">
+            <h1 class="tutorial-gate-title">RONKBONK</h1>
+            <p id="tutorial-gate-subtitle" class="tutorial-gate-subtitle">NEW PLAYER TRAINING</p>
+            <p id="tutorial-gate-skip-hint" class="tutorial-gate-skip-hint">New here? Play the tutorial — or skip anytime below.</p>
+            <div class="tutorial-gate-actions">
+                <button type="button" id="tutorial-gate-play-btn" class="tutorial-gate-btn tutorial-gate-primary">TUTORIAL</button>
+                <button type="button" id="tutorial-gate-skip-btn" class="tutorial-gate-btn tutorial-gate-skip">SKIP TUTORIAL</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="play-unlock-hint-overlay" class="hidden" aria-label="Unlock progression info">
+        <div class="tutorial-gate-scanlines" aria-hidden="true"></div>
+        <div class="tutorial-gate-grid" aria-hidden="true"></div>
+        <div class="tutorial-gate-glow" aria-hidden="true"></div>
+        <div id="play-unlock-hint-content">
+            <h2 id="play-unlock-hint-title" class="tutorial-gate-subtitle">SKILLS &amp; JOKERS LOCKED</h2>
+            <p id="play-unlock-hint-body" class="play-unlock-hint-body">All skills and jokers start locked. Beat bots (easy through elite) or win online to unlock what they were using.</p>
+            <button type="button" id="play-unlock-hint-btn" class="tutorial-gate-btn tutorial-gate-primary">GOT IT</button>
+        </div>
+    </div>
+
+    <div id="touch-controls" hidden aria-hidden="true">
+        <div class="touch-dpad">
+            <button type="button" class="touch-btn touch-up" data-touch="up" aria-label="Up">&#9650;</button>
+            <button type="button" class="touch-btn touch-left" data-touch="left" aria-label="Left">&#9664;</button>
+            <button type="button" class="touch-btn touch-right" data-touch="right" aria-label="Right">&#9654;</button>
+            <button type="button" class="touch-btn touch-down" data-touch="down" aria-label="Down">&#9660;</button>
+        </div>
+        <div class="touch-actions">
+            <button type="button" class="touch-btn touch-action" data-touch="dash">DASH</button>
+            <button type="button" class="touch-btn touch-action" data-touch="charge">CHARGE</button>
+            <button type="button" class="touch-btn touch-action" data-touch="skill">SKILL</button>
+        </div>
+    </div>
+
+    <div id="menu">
+        <h1>RONKBONK</h1>
+        <!-- Main Tier -->
+        <div id="main-menu-tier" class="menu-tier">
+            <button id="main-play-btn">START</button>
+            <button id="main-tutorial-btn" type="button">TUTORIAL</button>
+            <button id="open-gamemode-btn">GAMEMODE: NORMAL</button>
+            <button id="open-settings-btn">SETTINGS</button>
+            <button id="exit-game-btn">EXIT GAME</button>
+        </div>
+
+        <!-- After START: Single / Multiplayer / Spectate -->
+        <div id="start-mode-tier" class="menu-tier hidden">
+            <p class="menu-tier-hint" id="start-mode-hint">Choose a mode</p>
+            <button id="single-player-btn" type="button">SINGLE PLAYER</button>
+            <button id="multiplayer-mode-btn" type="button">MULTIPLAYER</button>
+            <button id="start-spectate-btn" type="button">SPECTATE</button>
+            <button class="back-tier-btn" data-back="main-menu-tier">BACK</button>
+        </div>
+        
+        <!-- Legacy play tier (kept for compatibility; primary flow uses start-mode-tier) -->
+        <div id="play-menu-tier" class="menu-tier hidden">
+            <p class="menu-tier-hint" id="play-tier-hint" hidden>Pick how you want to fight</p>
+            <button id="start-btn" type="button">PLAY</button>
+            <button id="spectate-btn" type="button">SPECTATE</button>
+            <button id="multiplayer-tier-btn" type="button">MULTIPLAYER</button>
+            <button class="back-tier-btn" data-back="start-mode-tier">BACK</button>
+        </div>
+
+        <!-- Spectate choice: AI vs AI or Steam friend -->
+        <div id="spectate-choice-tier" class="menu-tier hidden">
+            <p class="menu-tier-hint" id="spectate-tier-hint" hidden>Watch a match — pick a mode</p>
+            <button id="spectate-bot-btn" type="button">SPECTATE BOT</button>
+            <button id="spectate-friend-btn" type="button" title="Spectate a Steam friend">SPECTATE FRIEND</button>
+            <button class="back-tier-btn" data-back="start-mode-tier">BACK</button>
+        </div>
+
+        <!-- Bot Difficulty Tier -->
+        <div id="bot-difficulty-tier" class="menu-tier hidden">
+            <button id="bot-easy-btn" data-bot="easy">EASY</button>
+            <button id="bot-medium-btn" data-bot="medium">MEDIUM</button>
+            <button id="bot-hard-btn" data-bot="hard">HARD</button>
+            <button id="bot-invincible-btn" data-bot="invincible">ELITE</button>
+            <button class="back-tier-btn" data-back="loadout-page">BACK</button>
+        </div>
+        
+        <!-- Gamemode Tier -->
+        <div id="gamemode-menu-tier" class="menu-tier hidden">
+            <button id="gamemode-normal-btn">CLASSIC</button>
+            <button id="gamemode-simplistic-btn">SIMPLISTIC</button>
+            <button class="back-tier-btn" data-back="main-menu-tier">BACK</button>
+        </div>
+
+        <!-- Multiplayer Tier — Online listed first for Steam discoverability -->
+        <div id="multiplayer-menu-tier" class="menu-tier hidden">
+            <p class="menu-tier-hint" id="multiplayer-tier-hint">Online PvP · Local shared-screen PvP</p>
+            <button id="matchmake-btn" type="button">ONLINE MATCHMAKE</button>
+            <button id="play-friend-btn" type="button">ONLINE WITH FRIEND</button>
+            <button id="multiplayer-btn" type="button">LOCAL PVP</button>
+            <button class="back-tier-btn" data-back="start-mode-tier">BACK</button>
+        </div>
+        <p id="menu-copyright" class="menu-copyright" data-copyright-menu></p>
+    </div>
+
+    <div id="online-matchmake" class="hidden online-panel multiplayer-panel">
+        <header class="mp-panel-header">
+            <span class="mp-panel-kicker">ONLINE</span>
+            <h2>MATCHMAKE</h2>
+            <p class="online-mode-desc">Play online against a random opponent.</p>
+        </header>
+        <div class="mp-panel-body">
+            <label class="mp-field" for="matchmake-nickname">
+                <span class="mp-field-label">NICKNAME</span>
+                <input type="text" id="matchmake-nickname" placeholder="Enter nickname" maxlength="12" autocomplete="off">
+            </label>
+            <div class="mp-actions">
+                <button type="button" id="find-match-btn">FIND MATCH</button>
+                <button type="button" id="cancel-match-btn" class="hidden mp-btn-secondary">CANCEL</button>
+            </div>
+            <div class="mp-status-row">
+                <p id="matchmake-status" class="mp-status-pill">READY</p>
+            </div>
+            <div id="matchmake-log" class="mp-log" role="log" aria-live="polite">LOG: WAITING...</div>
+        </div>
+        <footer class="mp-panel-footer">
+            <button type="button" id="matchmake-back-btn" class="mp-btn-ghost">BACK</button>
+        </footer>
+    </div>
+
+    <div id="online-friends" class="hidden online-panel multiplayer-panel">
+        <header class="mp-panel-header">
+            <span class="mp-panel-kicker">ONLINE</span>
+            <h2>PLAY WITH FRIEND</h2>
+            <p class="online-mode-desc">Host a private room or join with a friend&apos;s code.</p>
+        </header>
+        <div class="mp-panel-body">
+            <label class="mp-field" for="friend-nickname">
+                <span class="mp-field-label">NICKNAME</span>
+                <input type="text" id="friend-nickname" placeholder="Enter nickname" maxlength="12" autocomplete="off">
+            </label>
+            <label class="mp-field" for="join-id">
+                <span class="mp-field-label">ROOM CODE</span>
+                <input type="text" id="join-id" placeholder="Friend's room code" autocomplete="off">
+            </label>
+            <div class="lobby-buttons mp-actions-row">
+                <button type="button" id="host-btn">HOST</button>
+                <button type="button" id="connect-btn">JOIN</button>
+            </div>
+            <button type="button" id="steam-invite-btn" class="hidden">INVITE STEAM FRIEND</button>
+            <div class="mp-status-row">
+                <p id="friend-status" class="mp-status-pill">HOST OR JOIN A FRIEND</p>
+            </div>
+            <div id="friend-log" class="mp-log" role="log" aria-live="polite">LOG: WAITING...</div>
+        </div>
+        <footer class="mp-panel-footer">
+            <button type="button" id="friend-back-btn" class="mp-btn-ghost">BACK</button>
+        </footer>
+    </div>
+
+    <div id="waiting-room" class="hidden multiplayer-panel">
+        <header class="mp-panel-header">
+            <span class="mp-panel-kicker">ONLINE LOBBY</span>
+            <h2>WAITING ROOM</h2>
+        </header>
+        <div class="mp-lobby-grid players-container">
+            <article class="mp-player-card player-slot" id="self-slot">
+                <span class="slot-label">YOU</span>
+                <div class="player-preview" id="self-preview"></div>
+                <span class="player-name" id="self-name">PLAYER</span>
+                <div class="ready-indicator" id="self-ready">NOT READY</div>
+                <div class="waiting-room-controls">
+                    <button type="button" id="waiting-change-btn">CHANGE CUBE</button>
+                    <button type="button" id="ready-btn">READY</button>
+                    <button type="button" id="copy-link-btn" class="hidden">COPY JOIN LINK</button>
+                    <button type="button" id="add-steam-friend-btn" class="hidden">ADD STEAM FRIEND</button>
+                </div>
+            </article>
+            <div class="mp-vs vs-divider" aria-hidden="true">VS</div>
+            <article class="mp-player-card player-slot" id="enemy-slot">
+                <span class="slot-label">RIVAL</span>
+                <div class="player-preview" id="enemy-preview"></div>
+                <span class="player-name" id="enemy-name">WAITING...</span>
+                <div class="ready-indicator" id="enemy-ready">NOT READY</div>
+                <button type="button" id="lobby-report-btn" class="report-btn report-btn-lobby hidden" title="Report rival">REPORT</button>
+            </article>
+        </div>
+        <footer class="mp-panel-footer">
+            <button type="button" id="waiting-exit-btn" class="mp-btn-ghost">EXIT LOBBY</button>
+        </footer>
+    </div>
+
+    <div id="custom-page" class="hidden">
+        <h2 id="custom-title">CUSTOMIZE CUBE</h2>
+        
+        <div class="custom-layout">
+            <div class="color-section">
+                <div class="cube-navigation">
+                    <button id="prev-color" class="nav-arrow">&#9664;</button>
+                    <div class="cube-preview-container">
+                        <div id="cube-preview" class="color-cube">
+                            <div id="custom-upload-overlay" class="upload-overlay hidden">
+                                <div class="plus-icon">+</div>
+                                <p>UPLOAD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="next-color" class="nav-arrow">&#9654;</button>
+                </div>
+            </div>
+
+            <div class="image-section hidden">
+                <input type="file" id="cube-image-input" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" class="hidden">
+            </div>
+        </div>
+
+        <button id="close-custom-btn">CONFIRM</button>
+    </div>
+
+    <div id="loadout-page" class="hidden">
+        <button id="loadout-back-btn" class="loadout-back-btn" type="button">BACK</button>
+
+        <div class="loadout-layout" id="loadout-single">
+            <div class="loadout-left">
+                <div class="loadout-cube-row">
+                    <button id="loadout-prev-color" class="nav-arrow loadout-cube-nav" type="button">&#9664;</button>
+                    <div class="loadout-cube-stage">
+                        <canvas id="loadout-cube-canvas" class="loadout-cube-canvas" aria-hidden="true"></canvas>
+                        <div id="loadout-upload-overlay" class="loadout-cube-upload-overlay upload-overlay hidden">
+                            <div class="plus-icon">+</div>
+                            <p>UPLOAD</p>
+                        </div>
+                    </div>
+                    <button id="loadout-next-color" class="nav-arrow loadout-cube-nav" type="button">&#9654;</button>
+                </div>
+                <div class="loadout-cube-controls">
+                    <button id="loadout-upload-btn" type="button">UPLOAD IMAGE</button>
+                </div>
+                <input type="file" id="loadout-cube-image-input" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" class="hidden">
+            </div>
+
+            <div class="loadout-right">
+                <h2 class="loadout-title">LOADOUT</h2>
+                <p class="loadout-subtitle">Prepare your cube, skill, and jokers</p>
+                <div class="loadout-summary">
+                    <div class="loadout-summary-item">
+                        <span class="loadout-summary-label">SKILL</span>
+                        <span id="loadout-skill-summary" class="loadout-summary-value">&mdash;</span>
+                    </div>
+                    <div class="loadout-summary-item">
+                        <span class="loadout-summary-label">JOKERS</span>
+                        <span id="loadout-joker-summary" class="loadout-summary-value">&mdash;</span>
+                    </div>
+                </div>
+                <div class="loadout-main-actions">
+                    <button id="loadout-start-btn" type="button">START</button>
+                    <button id="loadout-joker-btn" type="button">JOKER POWERS</button>
+                    <button id="loadout-skill-btn" type="button">SPECIAL SKILL</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loadout-dual hidden" id="loadout-dual" aria-label="Local PvP loadouts">
+            <div class="loadout-dual-columns">
+                <section class="loadout-dual-col" data-slot="1" id="loadout-slot-p1">
+                    <h2 class="loadout-dual-label">P1</h2>
+                    <div class="loadout-cube-row">
+                        <button id="loadout-prev-color-p1" class="nav-arrow loadout-cube-nav" type="button">&#9664;</button>
+                        <div class="loadout-cube-stage">
+                            <canvas id="loadout-cube-canvas-p1" class="loadout-cube-canvas" aria-hidden="true"></canvas>
+                        </div>
+                        <button id="loadout-next-color-p1" class="nav-arrow loadout-cube-nav" type="button">&#9654;</button>
+                    </div>
+                    <div class="loadout-cube-controls">
+                        <button id="loadout-upload-btn-p1" type="button">UPLOAD</button>
+                    </div>
+                    <input type="file" id="loadout-cube-image-input-p1" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" class="hidden">
+                    <div class="loadout-summary">
+                        <div class="loadout-summary-item">
+                            <span class="loadout-summary-label">SKILL</span>
+                            <span id="loadout-skill-summary-p1" class="loadout-summary-value">&mdash;</span>
+                        </div>
+                        <div class="loadout-summary-item">
+                            <span class="loadout-summary-label">JOKERS</span>
+                            <span id="loadout-joker-summary-p1" class="loadout-summary-value">&mdash;</span>
+                        </div>
+                    </div>
+                    <div class="loadout-dual-actions">
+                        <button id="loadout-skill-btn-p1" type="button">SKILL</button>
+                        <button id="loadout-joker-btn-p1" type="button">JOKERS</button>
+                    </div>
+                </section>
+                <section class="loadout-dual-col" data-slot="2" id="loadout-slot-p2">
+                    <h2 class="loadout-dual-label">P2</h2>
+                    <div class="loadout-cube-row">
+                        <button id="loadout-prev-color-p2" class="nav-arrow loadout-cube-nav" type="button">&#9664;</button>
+                        <div class="loadout-cube-stage">
+                            <canvas id="loadout-cube-canvas-p2" class="loadout-cube-canvas" aria-hidden="true"></canvas>
+                        </div>
+                        <button id="loadout-next-color-p2" class="nav-arrow loadout-cube-nav" type="button">&#9654;</button>
+                    </div>
+                    <div class="loadout-cube-controls">
+                        <button id="loadout-upload-btn-p2" type="button">UPLOAD</button>
+                    </div>
+                    <input type="file" id="loadout-cube-image-input-p2" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" class="hidden">
+                    <div class="loadout-summary">
+                        <div class="loadout-summary-item">
+                            <span class="loadout-summary-label">SKILL</span>
+                            <span id="loadout-skill-summary-p2" class="loadout-summary-value">&mdash;</span>
+                        </div>
+                        <div class="loadout-summary-item">
+                            <span class="loadout-summary-label">JOKERS</span>
+                            <span id="loadout-joker-summary-p2" class="loadout-summary-value">&mdash;</span>
+                        </div>
+                    </div>
+                    <div class="loadout-dual-actions">
+                        <button id="loadout-skill-btn-p2" type="button">SKILL</button>
+                        <button id="loadout-joker-btn-p2" type="button">JOKERS</button>
+                    </div>
+                </section>
+            </div>
+            <div class="loadout-dual-footer">
+                <button id="loadout-dual-start-btn" type="button">START MATCH</button>
+            </div>
+        </div>
+
+        <div id="loadout-skill-panel" class="loadout-picker-panel loadout-collection-panel hidden">
+            <div class="collection-panel">
+                <div class="collection-header">
+                    <button type="button" class="collection-back-btn" data-close-panel="skill">BACK</button>
+                    <h3 class="collection-title">SPECIAL SKILLS</h3>
+                </div>
+                <p class="collection-progress" id="skills-unlock-progress">0 / 5 unlocked</p>
+                <div class="collection-body loadout-skill-carousel-body">
+                    <button id="prev-skill" class="collection-nav-arrow nav-arrow" type="button" aria-label="Previous skill">&#9664;</button>
+                    <div class="collection-grid-wrap loadout-skill-carousel">
+                        <div id="skill-preview-card" class="collection-item collection-skill-card">
+                            <div class="skill-spin-scene" aria-hidden="true">
+                                <div class="skill-spin-plane">
+                                    <div id="skill-preview-icon" class="collection-item-icon">&#9889;</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="next-skill" class="collection-nav-arrow nav-arrow" type="button" aria-label="Next skill">&#9654;</button>
+                </div>
+                <p class="skill-carousel-counter" id="skill-carousel-counter">1 / 5</p>
+                <div class="collection-desc-strip" id="skill-preview-info">
+                    <span class="collection-desc-name" id="skill-preview-name"></span>
+                    <span class="collection-desc-text" id="skill-preview-desc"></span>
+                </div>
+                <button id="loadout-skill-done-btn" class="collection-confirm loadout-panel-done" type="button">CONFIRM</button>
+            </div>
+        </div>
+
+        <div id="loadout-joker-panel" class="loadout-picker-panel loadout-collection-panel hidden">
+            <div class="collection-panel loadout-joker-collection-panel">
+                <div class="collection-header">
+                    <button type="button" class="collection-back-btn" data-close-panel="joker">BACK</button>
+                    <h3 class="collection-title">JOKER POWERS</h3>
+                </div>
+                <p class="collection-progress" id="jokers-unlock-progress">0 / 10 unlocked</p>
+                <div class="collection-body collection-body-grid">
+                    <div class="collection-grid-wrap">
+                        <div class="collection-grid" id="jokers-grid"></div>
+                    </div>
+                </div>
+                <div class="collection-desc-strip" id="joker-preview-info">
+                    <span class="collection-desc-name" id="joker-preview-name"></span>
+                    <span class="collection-desc-text" id="joker-preview-desc"></span>
+                </div>
+                <button id="loadout-joker-done-btn" class="collection-confirm loadout-panel-done" type="button">CONFIRM</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="settings-page" class="hidden">
+        <h2>SETTINGS</h2>
+        
+        <!-- Controls Section -->
+        <div class="settings-section">
+            <h3>CONTROLS</h3>
+            <div class="control-item">
+                <label>Move Up</label>
+                <input type="text" id="control-up" value="W" maxlength="1">
+            </div>
+            <div class="control-item">
+                <label>Move Down</label>
+                <input type="text" id="control-down" value="S" maxlength="1">
+            </div>
+            <div class="control-item">
+                <label>Move Left</label>
+                <input type="text" id="control-left" value="A" maxlength="1">
+            </div>
+            <div class="control-item">
+                <label>Move Right</label>
+                <input type="text" id="control-right" value="D" maxlength="1">
+            </div>
+            <div class="control-item">
+                <label>Dash</label>
+                <input type="text" id="control-dash" value="F" maxlength="1">
+            </div>
+            <div class="control-item">
+                <label>Charge</label>
+                <input type="text" id="control-charge" value="C" maxlength="1">
+            </div>
+            <div class="control-item">
+                <label>Skill</label>
+                <input type="text" id="control-skill" value="Y" maxlength="1">
+            </div>
+            <div class="control-item">
+                <label>Pause</label>
+                <input type="text" id="control-pause" value="ESC" maxlength="5">
+            </div>
+        </div>
+        
+        <!-- Volume Section -->
+        <div class="settings-section">
+            <h3>VOLUME</h3>
+            <div class="volume-item">
+                <label>Master Volume</label>
+                <input type="range" id="volume-master" min="0" max="100" value="70">
+                <span id="volume-master-value">70%</span>
+            </div>
+            <div class="volume-item">
+                <label>Music Volume</label>
+                <input type="range" id="volume-music" min="0" max="100" value="60">
+                <span id="volume-music-value">60%</span>
+            </div>
+            <div class="volume-item">
+                <label>SFX Volume</label>
+                <input type="range" id="volume-sfx" min="0" max="100" value="80">
+                <span id="volume-sfx-value">80%</span>
+            </div>
+            <div class="volume-item">
+                <label>Sound</label>
+                <button id="settings-sound-toggle-btn">ON</button>
+            </div>
+        </div>
+        
+        <!-- Language Section -->
+        <div class="settings-section">
+            <h3>LANGUAGE</h3>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="ja">日本語</option>
+                <option value="zh">中文</option>
+                <option value="ko">한국어</option>
+            </select>
+        </div>
+        
+        <!-- Resolution Section -->
+        <div class="settings-section">
+            <h3>RESOLUTION</h3>
+            <select id="resolution-select">
+                <option value="480p">480p - Low (Performance)</option>
+                <option value="720p">720p - Balanced (Low-end default)</option>
+                <option value="1080p" selected>1080p - Default</option>
+                <option value="ultra">Ultra - High sharpness (strong PC)</option>
+                <option value="2k">2K - High Quality</option>
+                <option value="4k">4K - Ultra Quality</option>
+            </select>
+        </div>
+
+        <div class="settings-section" id="player-meta-section">
+            <h3>PROFILE &amp; CHALLENGES</h3>
+            <div id="player-stats-panel" class="player-stats-panel" aria-live="polite"></div>
+            <ul id="player-challenges-list" class="player-challenges-list"></ul>
+            <div class="settings-steam-actions">
+                <button type="button" id="open-help-btn">HOW TO PLAY</button>
+                <button type="button" id="open-credits-btn">CREDITS</button>
+            </div>
+        </div>
+
+        <div class="settings-section settings-legal-section">
+            <h3>LEGAL</h3>
+            <p class="settings-legal-line" data-copyright-owner></p>
+            <p class="settings-legal-notice" data-copyright-line></p>
+            <p class="settings-legal-small">Unauthorized copying, redistribution, or reverse engineering of RonkBonk is prohibited. See COPYRIGHT.txt in the game install folder.</p>
+        </div>
+        
+        <button id="close-settings-btn">SAVE</button>
+    </div>
+
+    <div id="help-overlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="help-overlay-title">
+        <div class="help-overlay-card">
+            <h2 id="help-overlay-title">HOW TO PLAY</h2>
+            <div class="help-overlay-body">
+                <p><strong>Round:</strong> 1 kill · or 3 boards in a line</p>
+                <p><strong>Match:</strong> first to 6</p>
+                <p>Own a board = take its 3 checkpoints. Dash off edges to travel.</p>
+                <p>Unlock skills &amp; jokers by beating rivals.</p>
+            </div>
+            <button type="button" id="help-overlay-close">GOT IT</button>
+        </div>
+    </div>
+
+    <div id="credits-overlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="credits-overlay-title">
+        <div class="help-overlay-card">
+            <h2 id="credits-overlay-title">CREDITS</h2>
+            <div class="help-overlay-body">
+                <p><strong>RonkBonk</strong></p>
+                <p>Created by <strong>copoeric</strong></p>
+                <p>© 2026 copoeric. All rights reserved.</p>
+                <p>Steam App ID 4887920 — support &amp; community open from Settings when Steam is running.</p>
+            </div>
+            <button type="button" id="credits-overlay-close">CLOSE</button>
+        </div>
+    </div>
+
+    <div id="anti-cheat-toast" class="hidden" aria-live="polite"></div>
+
+    <div id="report-modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="report-modal-title">
+        <div class="report-modal-card">
+            <h3 id="report-modal-title">REPORT RIVAL</h3>
+            <p id="report-modal-sub">Choose a reason. False reports may be ignored.</p>
+            <div class="report-reason-list">
+                <button type="button" class="report-reason-btn" data-reason="hack">HACK / CHEAT</button>
+                <button type="button" class="report-reason-btn" data-reason="nsfw">18+ / INAPPROPRIATE IMAGE</button>
+                <button type="button" class="report-reason-btn" data-reason="harassment">HARASSMENT / TOXIC</button>
+                <button type="button" class="report-reason-btn" data-reason="other">OTHER</button>
+            </div>
+            <button type="button" id="report-modal-cancel" class="report-modal-cancel">CANCEL</button>
+        </div>
+    </div>
+    <div id="unlock-notify" class="hidden" aria-live="polite">
+        <div class="unlock-notify-frame">
+            <div class="unlock-notify-icon" aria-hidden="true">?</div>
+            <div class="unlock-notify-copy">
+                <p class="unlock-notify-kicker">UNLOCKED</p>
+                <p class="unlock-notify-name"></p>
+                <p class="unlock-notify-desc"></p>
+                <p class="unlock-notify-hint"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-ui" class="hidden">
+        <div id="tutorial-overlay" class="hidden tutorial-practice">
+            <div class="tutorial-box">
+                <div id="tutorial-progress-dots" class="tutorial-progress-dots" aria-label="Tutorial progress">
+                    <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="tutorial-body">
+                    <div id="tutorial-visual" class="tutorial-visual" aria-hidden="true"></div>
+                    <div class="tutorial-prompt-row">
+                        <p id="tutorial-text">Turn with WASD</p>
+                        <div id="tutorial-keys">
+                            <span class="key">W</span>
+                            <span class="key">A</span>
+                            <span class="key">S</span>
+                            <span class="key">D</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="tutorial-next" class="hidden">START</button>
+            </div>
+        </div>
+        <div id="pause-menu" class="hidden">
+            <h2>PAUSED</h2>
+            <button type="button" id="resume-btn" tabindex="0">RESUME</button>
+            <button type="button" id="pause-settings-btn" tabindex="0">SETTINGS</button>
+            <button type="button" id="pause-back-to-menu-btn" tabindex="0">QUIT TO MENU</button>
+        </div>
+        <div id="top-ui">
+            <!-- P1 HUD (Left) -->
+            <div id="p1-hud" class="player-hud left">
+                <div class="player-name-tag" id="p1-name-tag">YOU</div>
+                <div class="hud-stack" id="p1-hud-stack">
+                    <div class="cooldown-letter-item">
+                        <span id="p1-dash-letter" class="cooldown-letter">DASH</span>
+                    </div>
+                    <div class="cooldown-letter-item">
+                        <span id="p1-charge-letter" class="cooldown-letter">CHARGE</span>
+                    </div>
+                    <div class="cooldown-letter-item">
+                        <span id="p1-skill-letter" class="cooldown-letter">SKILL</span>
+                    </div>
+                    <div class="cooldown-letter-item" id="p1-joker-container" style="display: none;">
+                        <span id="p1-joker-1" class="joker-icon-display"></span>
+                        <span id="p1-joker-2" class="joker-icon-display"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scoreboard (Center) -->
+            <div id="scoreboard-container">
+                <div id="match-mode-banner" class="match-mode-banner" hidden aria-live="polite">VS BOT</div>
+                <div id="scoreboard" aria-label="Match score">
+                    <div class="score-col score-col-p1">
+                        <span class="score-name" id="score-p1-label">YOU</span>
+                        <div id="p1-score-val">0</div>
+                    </div>
+                    <div class="score-center" aria-hidden="true">
+                        <span class="score-rule"></span>
+                        <span class="score-vs" id="score-match-target">FIRST TO 6</span>
+                        <span class="score-rule"></span>
+                    </div>
+                    <div class="score-col score-col-p2">
+                        <span class="score-name" id="score-p2-label">RIVAL</span>
+                        <div id="p2-score-val">0</div>
+                    </div>
+                </div>
+                <div id="spectate-cam-hint" class="spectate-cam-hint" hidden>WASD · move camera</div>
+                <div id="board-ownership-hud" aria-label="Board map">
+                    <div class="board-hud-meta">
+                        <span class="board-hud-label">map</span>
+                        <span id="board-ownership-label">0 / 0</span>
+                    </div>
+                    <div class="board-hud-grid" title="3 in a line wins the round">
+                        <div class="board-hud-cell" data-board="0"><span class="board-hud-dot"></span><span class="board-hud-dot"></span><span class="board-hud-dot"></span></div>
+                        <div class="board-hud-cell" data-board="1"><span class="board-hud-dot"></span><span class="board-hud-dot"></span><span class="board-hud-dot"></span></div>
+                        <div class="board-hud-cell" data-board="2"><span class="board-hud-dot"></span><span class="board-hud-dot"></span><span class="board-hud-dot"></span></div>
+                        <div class="board-hud-cell" data-board="3"><span class="board-hud-dot"></span><span class="board-hud-dot"></span><span class="board-hud-dot"></span></div>
+                        <div class="board-hud-cell" data-board="4"><span class="board-hud-dot"></span><span class="board-hud-dot"></span><span class="board-hud-dot"></span></div>
+                        <div class="board-hud-cell" data-board="5"><span class="board-hud-dot"></span><span class="board-hud-dot"></span><span class="board-hud-dot"></span></div>
+                        <div class="board-hud-cell" data-board="6"><span class="board-hud-dot"></span><span class="board-hud-dot"></span><span class="board-hud-dot"></span></div>
+                        <div class="board-hud-cell" data-board="7"><span class="board-hud-dot"></span><span class="board-hud-dot"></span><span class="board-hud-dot"></span></div>
+                        <div class="board-hud-cell" data-board="8"><span class="board-hud-dot"></span><span class="board-hud-dot"></span><span class="board-hud-dot"></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- P2 HUD (Right) -->
+            <div id="p2-hud" class="player-hud right">
+                <div class="player-hud-head">
+                    <div class="player-name-tag" id="p2-name-tag">RIVAL</div>
+                    <button type="button" id="hud-report-btn" class="report-btn report-btn-hud hidden" title="Report rival">REPORT</button>
+                </div>
+                <div class="hud-stack" id="p2-hud-stack">
+                    <div class="cooldown-letter-item">
+                        <span id="p2-dash-letter" class="cooldown-letter">DASH</span>
+                    </div>
+                    <div class="cooldown-letter-item">
+                        <span id="p2-charge-letter" class="cooldown-letter">CHARGE</span>
+                    </div>
+                    <div class="cooldown-letter-item">
+                        <span id="p2-skill-letter" class="cooldown-letter">SKILL</span>
+                    </div>
+                    <div class="cooldown-letter-item" id="p2-joker-container" style="display: none;">
+                        <span id="p2-joker-1" class="joker-icon-display"></span>
+                        <span id="p2-joker-2" class="joker-icon-display"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hunger Bars (Fixed at Bottom) -->
+            <div class="hunger-bars-container">
+                <div class="hunger-bar-container left">
+                    <span class="hunger-label">HUNGER</span>
+                    <div class="hunger-bar">
+                        <div id="p1-hunger-bar-fill" class="hunger-bar-fill"></div>
+                    </div>
+                </div>
+                <div class="hunger-bar-container right">
+                    <span class="hunger-label">HUNGER</span>
+                    <div class="hunger-bar">
+                        <div id="p2-hunger-bar-fill" class="hunger-bar-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div id="game-fx-overlay" aria-hidden="true"></div>
+        <div id="round-announcer" class="hidden">
+            <h2 id="round-text">ROUND 1</h2>
+            <h3 id="countdown-text">3</h3>
+        </div>
+        <div id="game-over" class="hidden">
+            <h2 id="winner-msg"></h2>
+            <p id="game-over-hint" class="hidden"></p>
+            <div id="multiplayer-vote-container" class="hidden">
+                <button id="continue-btn">CONTINUE</button>
+                <button id="gameover-add-steam-friend-btn" class="hidden">ADD STEAM FRIEND</button>
+                <button type="button" id="gameover-report-btn" class="report-btn report-btn-gameover hidden" title="Report rival">REPORT RIVAL</button>
+                <div id="vote-status">WAITING FOR RIVAL...</div>
+            </div>
+            <button id="restart-btn">PLAY AGAIN</button>
+            <button id="back-to-menu-btn">MENU</button>
+        </div>
+    </div>
+    <!-- AI heuristics + Elite play-only pretrained brain (no training) -->
+    <script src="ai_learning/ai_logic.js?v=202608262320"></script>
+    <script src="ai_learning/elite-brain.js?v=202608262250"></script>
+    <script src="anti-cheat.js?v=202608261830"></script>
+    <script src="content-safety.js?v=202607280955"></script>
+    <script src="intro-animation.js?v=202608262350"></script>
+    <script src="protection.js?v=202608252200"></script>
+    <script src="steam-bridge.js?v=202608252200"></script>
+    <script src="steam-achievements.js?v=202608182240"></script>
+    <script src="game.js?v=202608262350"></script>
+</body>
+</html>

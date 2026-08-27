@@ -1,0 +1,12 @@
+{
+  "appId": "com.copoeric.ronkbonk",
+  "appName": "RonkBonk",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": true,
+    "backgroundColor": "#000000"
+  },
+  "server": {
+    "androidScheme": "https"
+  }
+}

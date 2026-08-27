@@ -1,0 +1,6778 @@
+{
+  "trainedAt": "2026-08-20T04:35:07.706Z",
+  "tournamentGames": 4128,
+  "uniqueKits": 172,
+  "borderSafeAllowed": false,
+  "allBySkill": {
+    "clones": [
+      {
+        "rank": 1,
+        "skill": "clones",
+        "jokers": [
+          "rage-joker",
+          "extra-life"
+        ],
+        "name": "clones [extra-life + rage-joker]",
+        "games": 48,
+        "winRate": 0.7083333333333334,
+        "winPct": 70.8,
+        "apples": 1.8541666666666667,
+        "checkpoints": 3.7916666666666665,
+        "boards": 0.5833333333333334,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.375,
+        "ticks": 111.625
+      },
+      {
+        "rank": 2,
+        "skill": "clones",
+        "jokers": [
+          "no-hunger",
+          "extra-life"
+        ],
+        "name": "clones [extra-life + no-hunger]",
+        "games": 48,
+        "winRate": 0.7083333333333334,
+        "winPct": 70.8,
+        "apples": 1.1666666666666667,
+        "checkpoints": 3.0416666666666665,
+        "boards": 0.3125,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.4375,
+        "ticks": 76.39583333333333
+      },
+      {
+        "rank": 3,
+        "skill": "clones",
+        "jokers": [
+          "charge-plus",
+          "dash-cooldown"
+        ],
+        "name": "clones [charge-plus + dash-cooldown]",
+        "games": 48,
+        "winRate": 0.7083333333333334,
+        "winPct": 70.8,
+        "apples": 1.8333333333333333,
+        "checkpoints": 3.1875,
+        "boards": 0.22916666666666666,
+        "ttt": 0.020833333333333332,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.5,
+        "ticks": 79.3125
+      },
+      {
+        "rank": 4,
+        "skill": "clones",
+        "jokers": [
+          "extra-life",
+          "disable-enemy"
+        ],
+        "name": "clones [disable-enemy + extra-life]",
+        "games": 48,
+        "winRate": 0.7083333333333334,
+        "winPct": 70.8,
+        "apples": 1.1666666666666667,
+        "checkpoints": 2.9791666666666665,
+        "boards": 0.1875,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.375,
+        "ticks": 86.14583333333333
+      },
+      {
+        "rank": 5,
+        "skill": "clones",
+        "jokers": [
+          "rage-joker",
+          "disable-enemy"
+        ],
+        "name": "clones [disable-enemy + rage-joker]",
+        "games": 48,
+        "winRate": 0.6875,
+        "winPct": 68.8,
+        "apples": 0.9791666666666666,
+        "checkpoints": 3.3333333333333335,
+        "boards": 0.3333333333333333,
+        "ttt": 0.020833333333333332,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.4375,
+        "ticks": 81.29166666666667
+      },
+      {
+        "rank": 6,
+        "skill": "clones",
+        "jokers": [
+          "double-effective",
+          "extra-life"
+        ],
+        "name": "clones [double-effective + extra-life]",
+        "games": 48,
+        "winRate": 0.6875,
+        "winPct": 68.8,
+        "apples": 1.4166666666666667,
+        "checkpoints": 2.6875,
+        "boards": 0.20833333333333334,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 68.4375
+      },
+      {
+        "rank": 7,
+        "skill": "clones",
+        "jokers": [
+          "rage-joker",
+          "dash-cooldown"
+        ],
+        "name": "clones [dash-cooldown + rage-joker]",
+        "games": 48,
+        "winRate": 0.6666666666666666,
+        "winPct": 66.7,
+        "apples": 1.6041666666666667,
+        "checkpoints": 3.6666666666666665,
+        "boards": 0.4166666666666667,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.4166666666666667,
+        "ticks": 81.6875
+      },
+      {
+        "rank": 8,
+        "skill": "clones",
+        "jokers": [
+          "no-hunger",
+          "rage-joker"
+        ],
+        "name": "clones [no-hunger + rage-joker]",
+        "games": 48,
+        "winRate": 0.6458333333333334,
+        "winPct": 64.6,
+        "apples": 1.5,
+        "checkpoints": 3.6041666666666665,
+        "boards": 0.3958333333333333,
+        "ttt": 0.041666666666666664,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.4375,
+        "ticks": 97.91666666666667
+      },
+      {
+        "rank": 9,
+        "skill": "clones",
+        "jokers": [
+          "dash-cooldown",
+          "extra-life"
+        ],
+        "name": "clones [dash-cooldown + extra-life]",
+        "games": 48,
+        "winRate": 0.6458333333333334,
+        "winPct": 64.6,
+        "apples": 1.8541666666666667,
+        "checkpoints": 3.2291666666666665,
+        "boards": 0.2916666666666667,
+        "ttt": 0.020833333333333332,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.3541666666666667,
+        "ticks": 92.95833333333333
+      },
+      {
+        "rank": 10,
+        "skill": "clones",
+        "jokers": [
+          "rage-joker",
+          "trail-growth"
+        ],
+        "name": "clones [rage-joker + trail-growth]",
+        "games": 48,
+        "winRate": 0.625,
+        "winPct": 62.5,
+        "apples": 4.5,
+        "checkpoints": 4.020833333333333,
+        "boards": 0.5,
+        "ttt": 0.041666666666666664,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.5,
+        "ticks": 107.54166666666667
+      },
+      {
+        "rank": 11,
+        "skill": "clones",
+        "jokers": [
+          "charge-plus",
+          "extra-life"
+        ],
+        "name": "clones [charge-plus + extra-life]",
+        "games": 48,
+        "winRate": 0.6041666666666666,
+        "winPct": 60.4,
+        "apples": 2.5,
+        "checkpoints": 3.4375,
+        "boards": 0.4166666666666667,
+        "ttt": 0.041666666666666664,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.25,
+        "ticks": 92.70833333333333
+      },
+      {
+        "rank": 12,
+        "skill": "clones",
+        "jokers": [
+          "dash-cooldown",
+          "disable-enemy"
+        ],
+        "name": "clones [dash-cooldown + disable-enemy]",
+        "games": 48,
+        "winRate": 0.6041666666666666,
+        "winPct": 60.4,
+        "apples": 1.375,
+        "checkpoints": 3.1875,
+        "boards": 0.3125,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.5416666666666666,
+        "ticks": 75.3125
+      },
+      {
+        "rank": 13,
+        "skill": "clones",
+        "jokers": [
+          "charge-plus",
+          "friend-blocks"
+        ],
+        "name": "clones [charge-plus + friend-blocks]",
+        "games": 48,
+        "winRate": 0.6041666666666666,
+        "winPct": 60.4,
+        "apples": 0.8125,
+        "checkpoints": 2.6041666666666665,
+        "boards": 0.20833333333333334,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.5416666666666666,
+        "ticks": 62.4375
+      },
+      {
+        "rank": 14,
+        "skill": "clones",
+        "jokers": [
+          "dash-cooldown",
+          "trail-growth"
+        ],
+        "name": "clones [dash-cooldown + trail-growth]",
+        "games": 48,
+        "winRate": 0.5833333333333334,
+        "winPct": 58.3,
+        "apples": 3.6041666666666665,
+        "checkpoints": 3.6458333333333335,
+        "boards": 0.375,
+        "ttt": 0,
+        "hungerDeath": 0.08333333333333333,
+        "fallDeath": 0.4375,
+        "ticks": 107.20833333333333
+      },
+      {
+        "rank": 15,
+        "skill": "clones",
+        "jokers": [
+          "friend-blocks",
+          "extra-life"
+        ],
+        "name": "clones [extra-life + friend-blocks]",
+        "games": 48,
+        "winRate": 0.5833333333333334,
+        "winPct": 58.3,
+        "apples": 1.6458333333333333,
+        "checkpoints": 3.0625,
+        "boards": 0.3541666666666667,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.3958333333333333,
+        "ticks": 81.41666666666667
+      },
+      {
+        "rank": 16,
+        "skill": "clones",
+        "jokers": [
+          "friend-blocks",
+          "disable-enemy"
+        ],
+        "name": "clones [disable-enemy + friend-blocks]",
+        "games": 48,
+        "winRate": 0.5833333333333334,
+        "winPct": 58.3,
+        "apples": 1.2708333333333333,
+        "checkpoints": 2.5625,
+        "boards": 0.16666666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.4166666666666667,
+        "ticks": 77.91666666666667
+      },
+      {
+        "rank": 17,
+        "skill": "clones",
+        "jokers": [
+          "no-hunger",
+          "dash-cooldown"
+        ],
+        "name": "clones [dash-cooldown + no-hunger]",
+        "games": 48,
+        "winRate": 0.5625,
+        "winPct": 56.3,
+        "apples": 1.1875,
+        "checkpoints": 3.0833333333333335,
+        "boards": 0.3333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.4583333333333333,
+        "ticks": 71.72916666666667
+      },
+      {
+        "rank": 18,
+        "skill": "clones",
+        "jokers": [
+          "double-effective",
+          "disable-enemy"
+        ],
+        "name": "clones [disable-enemy + double-effective]",
+        "games": 48,
+        "winRate": 0.5625,
+        "winPct": 56.3,
+        "apples": 1.1041666666666667,
+        "checkpoints": 2.9375,
+        "boards": 0.20833333333333334,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.5208333333333334,
+        "ticks": 88.95833333333333
+      },
+      {
+        "rank": 19,
+        "skill": "clones",
+        "jokers": [
+          "rage-joker",
+          "double-effective"
+        ],
+        "name": "clones [double-effective + rage-joker]",
+        "games": 48,
+        "winRate": 0.5416666666666666,
+        "winPct": 54.2,
+        "apples": 2.2083333333333335,
+        "checkpoints": 3.6666666666666665,
+        "boards": 0.3958333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.10416666666666667,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 106.52083333333333
+      },
+      {
+        "rank": 20,
+        "skill": "clones",
+        "jokers": [
+          "trail-growth",
+          "extra-life"
+        ],
+        "name": "clones [extra-life + trail-growth]",
+        "games": 48,
+        "winRate": 0.5416666666666666,
+        "winPct": 54.2,
+        "apples": 2.9375,
+        "checkpoints": 2.9375,
+        "boards": 0.3125,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.375,
+        "ticks": 85.79166666666667
+      },
+      {
+        "rank": 21,
+        "skill": "clones",
+        "jokers": [
+          "charge-plus",
+          "trail-growth"
+        ],
+        "name": "clones [charge-plus + trail-growth]",
+        "games": 48,
+        "winRate": 0.5416666666666666,
+        "winPct": 54.2,
+        "apples": 3.1458333333333335,
+        "checkpoints": 2.7291666666666665,
+        "boards": 0.2916666666666667,
+        "ttt": 0.020833333333333332,
+        "hungerDeath": 0.08333333333333333,
+        "fallDeath": 0.5,
+        "ticks": 86.33333333333333
+      },
+      {
+        "rank": 22,
+        "skill": "clones",
+        "jokers": [
+          "charge-plus",
+          "rage-joker"
+        ],
+        "name": "clones [charge-plus + rage-joker]",
+        "games": 48,
+        "winRate": 0.5208333333333334,
+        "winPct": 52.1,
+        "apples": 1.4375,
+        "checkpoints": 3.3125,
+        "boards": 0.3958333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.3333333333333333,
+        "ticks": 85.22916666666667
+      },
+      {
+        "rank": 23,
+        "skill": "clones",
+        "jokers": [
+          "friend-blocks",
+          "trail-growth"
+        ],
+        "name": "clones [friend-blocks + trail-growth]",
+        "games": 48,
+        "winRate": 0.5208333333333334,
+        "winPct": 52.1,
+        "apples": 3.1875,
+        "checkpoints": 3.3125,
+        "boards": 0.3333333333333333,
+        "ttt": 0.020833333333333332,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.5833333333333334,
+        "ticks": 78.85416666666667
+      },
+      {
+        "rank": 24,
+        "skill": "clones",
+        "jokers": [
+          "trail-growth",
+          "disable-enemy"
+        ],
+        "name": "clones [disable-enemy + trail-growth]",
+        "games": 48,
+        "winRate": 0.5208333333333334,
+        "winPct": 52.1,
+        "apples": 2.4375,
+        "checkpoints": 2.9583333333333335,
+        "boards": 0.22916666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.4166666666666667,
+        "ticks": 66.41666666666667
+      },
+      {
+        "rank": 25,
+        "skill": "clones",
+        "jokers": [
+          "no-hunger",
+          "double-effective"
+        ],
+        "name": "clones [double-effective + no-hunger]",
+        "games": 48,
+        "winRate": 0.5,
+        "winPct": 50,
+        "apples": 1.9583333333333333,
+        "checkpoints": 2.9583333333333335,
+        "boards": 0.375,
+        "ttt": 0,
+        "hungerDeath": 0.08333333333333333,
+        "fallDeath": 0.4583333333333333,
+        "ticks": 104.125
+      },
+      {
+        "rank": 26,
+        "skill": "clones",
+        "jokers": [
+          "rage-joker",
+          "friend-blocks"
+        ],
+        "name": "clones [friend-blocks + rage-joker]",
+        "games": 48,
+        "winRate": 0.4791666666666667,
+        "winPct": 47.9,
+        "apples": 2.5833333333333335,
+        "checkpoints": 4.020833333333333,
+        "boards": 0.5416666666666666,
+        "ttt": 0.020833333333333332,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.5,
+        "ticks": 108.1875
+      },
+      {
+        "rank": 27,
+        "skill": "clones",
+        "jokers": [
+          "no-hunger",
+          "disable-enemy"
+        ],
+        "name": "clones [disable-enemy + no-hunger]",
+        "games": 48,
+        "winRate": 0.4791666666666667,
+        "winPct": 47.9,
+        "apples": 0.7708333333333334,
+        "checkpoints": 2.875,
+        "boards": 0.22916666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.5208333333333334,
+        "ticks": 71.10416666666667
+      },
+      {
+        "rank": 28,
+        "skill": "clones",
+        "jokers": [
+          "dash-cooldown",
+          "double-effective"
+        ],
+        "name": "clones [dash-cooldown + double-effective]",
+        "games": 48,
+        "winRate": 0.4583333333333333,
+        "winPct": 45.8,
+        "apples": 1.4583333333333333,
+        "checkpoints": 2.7708333333333335,
+        "boards": 0.22916666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.4583333333333333,
+        "ticks": 77.875
+      },
+      {
+        "rank": 29,
+        "skill": "clones",
+        "jokers": [
+          "charge-plus",
+          "no-hunger"
+        ],
+        "name": "clones [charge-plus + no-hunger]",
+        "games": 48,
+        "winRate": 0.4375,
+        "winPct": 43.8,
+        "apples": 1.375,
+        "checkpoints": 3.2291666666666665,
+        "boards": 0.375,
+        "ttt": 0.020833333333333332,
+        "hungerDeath": 0,
+        "fallDeath": 0.4375,
+        "ticks": 76.22916666666667
+      },
+      {
+        "rank": 30,
+        "skill": "clones",
+        "jokers": [
+          "no-hunger",
+          "trail-growth"
+        ],
+        "name": "clones [no-hunger + trail-growth]",
+        "games": 48,
+        "winRate": 0.4375,
+        "winPct": 43.8,
+        "apples": 2.6458333333333335,
+        "checkpoints": 3.125,
+        "boards": 0.3333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.5208333333333334,
+        "ticks": 79.60416666666667
+      },
+      {
+        "rank": 31,
+        "skill": "clones",
+        "jokers": [
+          "charge-plus",
+          "disable-enemy"
+        ],
+        "name": "clones [charge-plus + disable-enemy]",
+        "games": 48,
+        "winRate": 0.4375,
+        "winPct": 43.8,
+        "apples": 0.875,
+        "checkpoints": 2.5625,
+        "boards": 0.16666666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.6041666666666666,
+        "ticks": 57.770833333333336
+      },
+      {
+        "rank": 32,
+        "skill": "clones",
+        "jokers": [
+          "charge-plus",
+          "double-effective"
+        ],
+        "name": "clones [charge-plus + double-effective]",
+        "games": 48,
+        "winRate": 0.4166666666666667,
+        "winPct": 41.7,
+        "apples": 1.1458333333333333,
+        "checkpoints": 2.7083333333333335,
+        "boards": 0.2708333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.10416666666666667,
+        "fallDeath": 0.5,
+        "ticks": 90.47916666666667
+      },
+      {
+        "rank": 33,
+        "skill": "clones",
+        "jokers": [
+          "dash-cooldown",
+          "friend-blocks"
+        ],
+        "name": "clones [dash-cooldown + friend-blocks]",
+        "games": 48,
+        "winRate": 0.4166666666666667,
+        "winPct": 41.7,
+        "apples": 1.25,
+        "checkpoints": 2.6666666666666665,
+        "boards": 0.14583333333333334,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 53.75
+      },
+      {
+        "rank": 34,
+        "skill": "clones",
+        "jokers": [
+          "double-effective",
+          "friend-blocks"
+        ],
+        "name": "clones [double-effective + friend-blocks]",
+        "games": 48,
+        "winRate": 0.3958333333333333,
+        "winPct": 39.6,
+        "apples": 1.5416666666666667,
+        "checkpoints": 2.9791666666666665,
+        "boards": 0.4166666666666667,
+        "ttt": 0.020833333333333332,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.4375,
+        "ticks": 77.52083333333333
+      },
+      {
+        "rank": 35,
+        "skill": "clones",
+        "jokers": [
+          "double-effective",
+          "trail-growth"
+        ],
+        "name": "clones [double-effective + trail-growth]",
+        "games": 48,
+        "winRate": 0.375,
+        "winPct": 37.5,
+        "apples": 5.166666666666667,
+        "checkpoints": 3.0208333333333335,
+        "boards": 0.3125,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.5416666666666666,
+        "ticks": 80.91666666666667
+      },
+      {
+        "rank": 36,
+        "skill": "clones",
+        "jokers": [
+          "no-hunger",
+          "friend-blocks"
+        ],
+        "name": "clones [friend-blocks + no-hunger]",
+        "games": 48,
+        "winRate": 0.3541666666666667,
+        "winPct": 35.4,
+        "apples": 1.0208333333333333,
+        "checkpoints": 2.4791666666666665,
+        "boards": 0.16666666666666666,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.4166666666666667,
+        "ticks": 60.6875
+      }
+    ],
+    "infinite-charge": [
+      {
+        "rank": 1,
+        "skill": "infinite-charge",
+        "jokers": [
+          "double-effective",
+          "extra-life"
+        ],
+        "name": "infinite-charge [double-effective + extra-life]",
+        "games": 48,
+        "winRate": 0.6041666666666666,
+        "winPct": 60.4,
+        "apples": 0.8541666666666666,
+        "checkpoints": 1.7916666666666667,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.25,
+        "ticks": 53.479166666666664
+      },
+      {
+        "rank": 2,
+        "skill": "infinite-charge",
+        "jokers": [
+          "no-hunger",
+          "extra-life"
+        ],
+        "name": "infinite-charge [extra-life + no-hunger]",
+        "games": 48,
+        "winRate": 0.5833333333333334,
+        "winPct": 58.3,
+        "apples": 0.9166666666666666,
+        "checkpoints": 2.1666666666666665,
+        "boards": 0.22916666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.4166666666666667,
+        "ticks": 81.9375
+      },
+      {
+        "rank": 3,
+        "skill": "infinite-charge",
+        "jokers": [
+          "friend-blocks",
+          "extra-life"
+        ],
+        "name": "infinite-charge [extra-life + friend-blocks]",
+        "games": 48,
+        "winRate": 0.5625,
+        "winPct": 56.3,
+        "apples": 0.8541666666666666,
+        "checkpoints": 1.7083333333333333,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 45.166666666666664
+      },
+      {
+        "rank": 4,
+        "skill": "infinite-charge",
+        "jokers": [
+          "dash-cooldown",
+          "extra-life"
+        ],
+        "name": "infinite-charge [dash-cooldown + extra-life]",
+        "games": 48,
+        "winRate": 0.5625,
+        "winPct": 56.3,
+        "apples": 1.0208333333333333,
+        "checkpoints": 2.1041666666666665,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.4166666666666667,
+        "ticks": 71.625
+      },
+      {
+        "rank": 5,
+        "skill": "infinite-charge",
+        "jokers": [
+          "trail-growth",
+          "extra-life"
+        ],
+        "name": "infinite-charge [extra-life + trail-growth]",
+        "games": 48,
+        "winRate": 0.5625,
+        "winPct": 56.3,
+        "apples": 2.3125,
+        "checkpoints": 1.875,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.3541666666666667,
+        "ticks": 60.354166666666664
+      },
+      {
+        "rank": 6,
+        "skill": "infinite-charge",
+        "jokers": [
+          "extra-life",
+          "disable-enemy"
+        ],
+        "name": "infinite-charge [disable-enemy + extra-life]",
+        "games": 48,
+        "winRate": 0.5625,
+        "winPct": 56.3,
+        "apples": 0.8541666666666666,
+        "checkpoints": 1.7291666666666667,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.3125,
+        "ticks": 51.854166666666664
+      },
+      {
+        "rank": 7,
+        "skill": "infinite-charge",
+        "jokers": [
+          "rage-joker",
+          "extra-life"
+        ],
+        "name": "infinite-charge [extra-life + rage-joker]",
+        "games": 48,
+        "winRate": 0.5208333333333334,
+        "winPct": 52.1,
+        "apples": 1.25,
+        "checkpoints": 1.8958333333333333,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.3333333333333333,
+        "ticks": 79.125
+      },
+      {
+        "rank": 8,
+        "skill": "infinite-charge",
+        "jokers": [
+          "charge-plus",
+          "extra-life"
+        ],
+        "name": "infinite-charge [charge-plus + extra-life]",
+        "games": 48,
+        "winRate": 0.4583333333333333,
+        "winPct": 45.8,
+        "apples": 1.3541666666666667,
+        "checkpoints": 1.9791666666666667,
+        "boards": 0.14583333333333334,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.5,
+        "ticks": 61.604166666666664
+      },
+      {
+        "rank": 9,
+        "skill": "infinite-charge",
+        "jokers": [
+          "friend-blocks",
+          "disable-enemy"
+        ],
+        "name": "infinite-charge [disable-enemy + friend-blocks]",
+        "games": 48,
+        "winRate": 0.375,
+        "winPct": 37.5,
+        "apples": 0.7083333333333334,
+        "checkpoints": 1.7916666666666667,
+        "boards": 0.14583333333333334,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.25,
+        "ticks": 46.604166666666664
+      },
+      {
+        "rank": 10,
+        "skill": "infinite-charge",
+        "jokers": [
+          "dash-cooldown",
+          "disable-enemy"
+        ],
+        "name": "infinite-charge [dash-cooldown + disable-enemy]",
+        "games": 48,
+        "winRate": 0.3541666666666667,
+        "winPct": 35.4,
+        "apples": 0.5208333333333334,
+        "checkpoints": 1.4791666666666667,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 41.25
+      },
+      {
+        "rank": 11,
+        "skill": "infinite-charge",
+        "jokers": [
+          "rage-joker",
+          "trail-growth"
+        ],
+        "name": "infinite-charge [rage-joker + trail-growth]",
+        "games": 48,
+        "winRate": 0.2916666666666667,
+        "winPct": 29.2,
+        "apples": 0.9375,
+        "checkpoints": 1.625,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.22916666666666666,
+        "ticks": 36.416666666666664
+      },
+      {
+        "rank": 12,
+        "skill": "infinite-charge",
+        "jokers": [
+          "charge-plus",
+          "no-hunger"
+        ],
+        "name": "infinite-charge [charge-plus + no-hunger]",
+        "games": 48,
+        "winRate": 0.2916666666666667,
+        "winPct": 29.2,
+        "apples": 0.7708333333333334,
+        "checkpoints": 1.5833333333333333,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 59.416666666666664
+      },
+      {
+        "rank": 13,
+        "skill": "infinite-charge",
+        "jokers": [
+          "no-hunger",
+          "double-effective"
+        ],
+        "name": "infinite-charge [double-effective + no-hunger]",
+        "games": 48,
+        "winRate": 0.2708333333333333,
+        "winPct": 27.1,
+        "apples": 0.7916666666666666,
+        "checkpoints": 1.375,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.25,
+        "ticks": 37.3125
+      },
+      {
+        "rank": 14,
+        "skill": "infinite-charge",
+        "jokers": [
+          "rage-joker",
+          "double-effective"
+        ],
+        "name": "infinite-charge [double-effective + rage-joker]",
+        "games": 48,
+        "winRate": 0.25,
+        "winPct": 25,
+        "apples": 0.7291666666666666,
+        "checkpoints": 1.6666666666666667,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 43.583333333333336
+      },
+      {
+        "rank": 15,
+        "skill": "infinite-charge",
+        "jokers": [
+          "rage-joker",
+          "friend-blocks"
+        ],
+        "name": "infinite-charge [friend-blocks + rage-joker]",
+        "games": 48,
+        "winRate": 0.25,
+        "winPct": 25,
+        "apples": 0.5208333333333334,
+        "checkpoints": 1.5833333333333333,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.1875,
+        "ticks": 35.875
+      },
+      {
+        "rank": 16,
+        "skill": "infinite-charge",
+        "jokers": [
+          "charge-plus",
+          "disable-enemy"
+        ],
+        "name": "infinite-charge [charge-plus + disable-enemy]",
+        "games": 48,
+        "winRate": 0.25,
+        "winPct": 25,
+        "apples": 0.75,
+        "checkpoints": 1.5625,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.16666666666666666,
+        "ticks": 41.0625
+      },
+      {
+        "rank": 17,
+        "skill": "infinite-charge",
+        "jokers": [
+          "double-effective",
+          "trail-growth"
+        ],
+        "name": "infinite-charge [double-effective + trail-growth]",
+        "games": 48,
+        "winRate": 0.25,
+        "winPct": 25,
+        "apples": 2.2708333333333335,
+        "checkpoints": 1.6041666666666667,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.25,
+        "ticks": 35.916666666666664
+      },
+      {
+        "rank": 18,
+        "skill": "infinite-charge",
+        "jokers": [
+          "friend-blocks",
+          "trail-growth"
+        ],
+        "name": "infinite-charge [friend-blocks + trail-growth]",
+        "games": 48,
+        "winRate": 0.25,
+        "winPct": 25,
+        "apples": 1.25,
+        "checkpoints": 1.5833333333333333,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 40.791666666666664
+      },
+      {
+        "rank": 19,
+        "skill": "infinite-charge",
+        "jokers": [
+          "no-hunger",
+          "trail-growth"
+        ],
+        "name": "infinite-charge [no-hunger + trail-growth]",
+        "games": 48,
+        "winRate": 0.25,
+        "winPct": 25,
+        "apples": 2.5208333333333335,
+        "checkpoints": 1.8125,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.25,
+        "ticks": 65.70833333333333
+      },
+      {
+        "rank": 20,
+        "skill": "infinite-charge",
+        "jokers": [
+          "double-effective",
+          "friend-blocks"
+        ],
+        "name": "infinite-charge [double-effective + friend-blocks]",
+        "games": 48,
+        "winRate": 0.25,
+        "winPct": 25,
+        "apples": 0.6458333333333334,
+        "checkpoints": 1.7083333333333333,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.22916666666666666,
+        "ticks": 33.6875
+      },
+      {
+        "rank": 21,
+        "skill": "infinite-charge",
+        "jokers": [
+          "charge-plus",
+          "rage-joker"
+        ],
+        "name": "infinite-charge [charge-plus + rage-joker]",
+        "games": 48,
+        "winRate": 0.25,
+        "winPct": 25,
+        "apples": 0.4166666666666667,
+        "checkpoints": 1.6041666666666667,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.25,
+        "ticks": 28.583333333333332
+      },
+      {
+        "rank": 22,
+        "skill": "infinite-charge",
+        "jokers": [
+          "trail-growth",
+          "disable-enemy"
+        ],
+        "name": "infinite-charge [disable-enemy + trail-growth]",
+        "games": 48,
+        "winRate": 0.25,
+        "winPct": 25,
+        "apples": 0.5625,
+        "checkpoints": 1.3541666666666667,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.125,
+        "ticks": 28.333333333333332
+      },
+      {
+        "rank": 23,
+        "skill": "infinite-charge",
+        "jokers": [
+          "rage-joker",
+          "dash-cooldown"
+        ],
+        "name": "infinite-charge [dash-cooldown + rage-joker]",
+        "games": 48,
+        "winRate": 0.22916666666666666,
+        "winPct": 22.9,
+        "apples": 0.7916666666666666,
+        "checkpoints": 1.7916666666666667,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 31.645833333333332
+      },
+      {
+        "rank": 24,
+        "skill": "infinite-charge",
+        "jokers": [
+          "no-hunger",
+          "friend-blocks"
+        ],
+        "name": "infinite-charge [friend-blocks + no-hunger]",
+        "games": 48,
+        "winRate": 0.22916666666666666,
+        "winPct": 22.9,
+        "apples": 0.75,
+        "checkpoints": 1.5625,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.25,
+        "ticks": 50.3125
+      },
+      {
+        "rank": 25,
+        "skill": "infinite-charge",
+        "jokers": [
+          "dash-cooldown",
+          "trail-growth"
+        ],
+        "name": "infinite-charge [dash-cooldown + trail-growth]",
+        "games": 48,
+        "winRate": 0.22916666666666666,
+        "winPct": 22.9,
+        "apples": 1,
+        "checkpoints": 1.7291666666666667,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 34.041666666666664
+      },
+      {
+        "rank": 26,
+        "skill": "infinite-charge",
+        "jokers": [
+          "double-effective",
+          "disable-enemy"
+        ],
+        "name": "infinite-charge [disable-enemy + double-effective]",
+        "games": 48,
+        "winRate": 0.22916666666666666,
+        "winPct": 22.9,
+        "apples": 0.5208333333333334,
+        "checkpoints": 1.5,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.16666666666666666,
+        "ticks": 37.958333333333336
+      },
+      {
+        "rank": 27,
+        "skill": "infinite-charge",
+        "jokers": [
+          "dash-cooldown",
+          "friend-blocks"
+        ],
+        "name": "infinite-charge [dash-cooldown + friend-blocks]",
+        "games": 48,
+        "winRate": 0.20833333333333334,
+        "winPct": 20.8,
+        "apples": 0.8958333333333334,
+        "checkpoints": 1.8958333333333333,
+        "boards": 0.14583333333333334,
+        "ttt": 0.020833333333333332,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.16666666666666666,
+        "ticks": 50.0625
+      },
+      {
+        "rank": 28,
+        "skill": "infinite-charge",
+        "jokers": [
+          "charge-plus",
+          "double-effective"
+        ],
+        "name": "infinite-charge [charge-plus + double-effective]",
+        "games": 48,
+        "winRate": 0.20833333333333334,
+        "winPct": 20.8,
+        "apples": 0.75,
+        "checkpoints": 1.7083333333333333,
+        "boards": 0.14583333333333334,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.1875,
+        "ticks": 39.0625
+      },
+      {
+        "rank": 29,
+        "skill": "infinite-charge",
+        "jokers": [
+          "rage-joker",
+          "disable-enemy"
+        ],
+        "name": "infinite-charge [disable-enemy + rage-joker]",
+        "games": 48,
+        "winRate": 0.20833333333333334,
+        "winPct": 20.8,
+        "apples": 0.4166666666666667,
+        "checkpoints": 1.5,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.3541666666666667,
+        "ticks": 37.125
+      },
+      {
+        "rank": 30,
+        "skill": "infinite-charge",
+        "jokers": [
+          "no-hunger",
+          "disable-enemy"
+        ],
+        "name": "infinite-charge [disable-enemy + no-hunger]",
+        "games": 48,
+        "winRate": 0.20833333333333334,
+        "winPct": 20.8,
+        "apples": 0.5416666666666666,
+        "checkpoints": 1.5,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3333333333333333,
+        "ticks": 41.3125
+      },
+      {
+        "rank": 31,
+        "skill": "infinite-charge",
+        "jokers": [
+          "dash-cooldown",
+          "double-effective"
+        ],
+        "name": "infinite-charge [dash-cooldown + double-effective]",
+        "games": 48,
+        "winRate": 0.1875,
+        "winPct": 18.8,
+        "apples": 0.5416666666666666,
+        "checkpoints": 1.5625,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.25,
+        "ticks": 33.020833333333336
+      },
+      {
+        "rank": 32,
+        "skill": "infinite-charge",
+        "jokers": [
+          "charge-plus",
+          "friend-blocks"
+        ],
+        "name": "infinite-charge [charge-plus + friend-blocks]",
+        "games": 48,
+        "winRate": 0.16666666666666666,
+        "winPct": 16.7,
+        "apples": 0.9583333333333334,
+        "checkpoints": 1.4583333333333333,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.20833333333333334,
+        "ticks": 46.1875
+      },
+      {
+        "rank": 33,
+        "skill": "infinite-charge",
+        "jokers": [
+          "charge-plus",
+          "trail-growth"
+        ],
+        "name": "infinite-charge [charge-plus + trail-growth]",
+        "games": 48,
+        "winRate": 0.16666666666666666,
+        "winPct": 16.7,
+        "apples": 1.0833333333333333,
+        "checkpoints": 1.625,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3125,
+        "ticks": 34.75
+      },
+      {
+        "rank": 34,
+        "skill": "infinite-charge",
+        "jokers": [
+          "no-hunger",
+          "rage-joker"
+        ],
+        "name": "infinite-charge [no-hunger + rage-joker]",
+        "games": 48,
+        "winRate": 0.14583333333333334,
+        "winPct": 14.6,
+        "apples": 0.9375,
+        "checkpoints": 1.6458333333333333,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 63.666666666666664
+      },
+      {
+        "rank": 35,
+        "skill": "infinite-charge",
+        "jokers": [
+          "no-hunger",
+          "dash-cooldown"
+        ],
+        "name": "infinite-charge [dash-cooldown + no-hunger]",
+        "games": 48,
+        "winRate": 0.125,
+        "winPct": 12.5,
+        "apples": 0.3333333333333333,
+        "checkpoints": 1.5833333333333333,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.16666666666666666,
+        "ticks": 26.520833333333332
+      },
+      {
+        "rank": 36,
+        "skill": "infinite-charge",
+        "jokers": [
+          "charge-plus",
+          "dash-cooldown"
+        ],
+        "name": "infinite-charge [charge-plus + dash-cooldown]",
+        "games": 48,
+        "winRate": 0.10416666666666667,
+        "winPct": 10.4,
+        "apples": 0.7916666666666666,
+        "checkpoints": 1.9791666666666667,
+        "boards": 0.1875,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.20833333333333334,
+        "ticks": 39.708333333333336
+      }
+    ],
+    "laser": [
+      {
+        "rank": 1,
+        "skill": "laser",
+        "jokers": [
+          "double-effective",
+          "extra-life"
+        ],
+        "name": "laser [double-effective + extra-life]",
+        "games": 48,
+        "winRate": 0.8125,
+        "winPct": 81.3,
+        "apples": 0.6666666666666666,
+        "checkpoints": 1.7083333333333333,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 41.75
+      },
+      {
+        "rank": 2,
+        "skill": "laser",
+        "jokers": [
+          "rage-joker",
+          "extra-life"
+        ],
+        "name": "laser [extra-life + rage-joker]",
+        "games": 48,
+        "winRate": 0.7083333333333334,
+        "winPct": 70.8,
+        "apples": 1,
+        "checkpoints": 1.7291666666666667,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.16666666666666666,
+        "ticks": 39.666666666666664
+      },
+      {
+        "rank": 3,
+        "skill": "laser",
+        "jokers": [
+          "dash-cooldown",
+          "extra-life"
+        ],
+        "name": "laser [dash-cooldown + extra-life]",
+        "games": 48,
+        "winRate": 0.6666666666666666,
+        "winPct": 66.7,
+        "apples": 0.5625,
+        "checkpoints": 1.6666666666666667,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 33.270833333333336
+      },
+      {
+        "rank": 4,
+        "skill": "laser",
+        "jokers": [
+          "friend-blocks",
+          "extra-life"
+        ],
+        "name": "laser [extra-life + friend-blocks]",
+        "games": 48,
+        "winRate": 0.6458333333333334,
+        "winPct": 64.6,
+        "apples": 0.7916666666666666,
+        "checkpoints": 2.0208333333333335,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 41.041666666666664
+      },
+      {
+        "rank": 5,
+        "skill": "laser",
+        "jokers": [
+          "trail-growth",
+          "extra-life"
+        ],
+        "name": "laser [extra-life + trail-growth]",
+        "games": 48,
+        "winRate": 0.6458333333333334,
+        "winPct": 64.6,
+        "apples": 1.2083333333333333,
+        "checkpoints": 1.8541666666666667,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3125,
+        "ticks": 41.291666666666664
+      },
+      {
+        "rank": 6,
+        "skill": "laser",
+        "jokers": [
+          "no-hunger",
+          "extra-life"
+        ],
+        "name": "laser [extra-life + no-hunger]",
+        "games": 48,
+        "winRate": 0.5833333333333334,
+        "winPct": 58.3,
+        "apples": 0.8333333333333334,
+        "checkpoints": 2.125,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.4791666666666667,
+        "ticks": 37.229166666666664
+      },
+      {
+        "rank": 7,
+        "skill": "laser",
+        "jokers": [
+          "extra-life",
+          "disable-enemy"
+        ],
+        "name": "laser [disable-enemy + extra-life]",
+        "games": 48,
+        "winRate": 0.5833333333333334,
+        "winPct": 58.3,
+        "apples": 0.8125,
+        "checkpoints": 1.6458333333333333,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3333333333333333,
+        "ticks": 37.645833333333336
+      },
+      {
+        "rank": 8,
+        "skill": "laser",
+        "jokers": [
+          "charge-plus",
+          "extra-life"
+        ],
+        "name": "laser [charge-plus + extra-life]",
+        "games": 48,
+        "winRate": 0.4791666666666667,
+        "winPct": 47.9,
+        "apples": 0.8125,
+        "checkpoints": 1.875,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3541666666666667,
+        "ticks": 41.1875
+      },
+      {
+        "rank": 9,
+        "skill": "laser",
+        "jokers": [
+          "rage-joker",
+          "trail-growth"
+        ],
+        "name": "laser [rage-joker + trail-growth]",
+        "games": 48,
+        "winRate": 0.4791666666666667,
+        "winPct": 47.9,
+        "apples": 0.6666666666666666,
+        "checkpoints": 1.4583333333333333,
+        "boards": 0,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 29.291666666666668
+      },
+      {
+        "rank": 10,
+        "skill": "laser",
+        "jokers": [
+          "charge-plus",
+          "no-hunger"
+        ],
+        "name": "laser [charge-plus + no-hunger]",
+        "games": 48,
+        "winRate": 0.4583333333333333,
+        "winPct": 45.8,
+        "apples": 0.8125,
+        "checkpoints": 1.8333333333333333,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.375,
+        "ticks": 35.5625
+      },
+      {
+        "rank": 11,
+        "skill": "laser",
+        "jokers": [
+          "double-effective",
+          "disable-enemy"
+        ],
+        "name": "laser [disable-enemy + double-effective]",
+        "games": 48,
+        "winRate": 0.4583333333333333,
+        "winPct": 45.8,
+        "apples": 0.5208333333333334,
+        "checkpoints": 1.7083333333333333,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.22916666666666666,
+        "ticks": 30.1875
+      },
+      {
+        "rank": 12,
+        "skill": "laser",
+        "jokers": [
+          "no-hunger",
+          "disable-enemy"
+        ],
+        "name": "laser [disable-enemy + no-hunger]",
+        "games": 48,
+        "winRate": 0.4583333333333333,
+        "winPct": 45.8,
+        "apples": 0.7291666666666666,
+        "checkpoints": 1.625,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.375,
+        "ticks": 34.458333333333336
+      },
+      {
+        "rank": 13,
+        "skill": "laser",
+        "jokers": [
+          "rage-joker",
+          "friend-blocks"
+        ],
+        "name": "laser [friend-blocks + rage-joker]",
+        "games": 48,
+        "winRate": 0.4375,
+        "winPct": 43.8,
+        "apples": 0.5833333333333334,
+        "checkpoints": 1.7708333333333333,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.25,
+        "ticks": 32.833333333333336
+      },
+      {
+        "rank": 14,
+        "skill": "laser",
+        "jokers": [
+          "dash-cooldown",
+          "friend-blocks"
+        ],
+        "name": "laser [dash-cooldown + friend-blocks]",
+        "games": 48,
+        "winRate": 0.4166666666666667,
+        "winPct": 41.7,
+        "apples": 0.8125,
+        "checkpoints": 2.0208333333333335,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3125,
+        "ticks": 33.729166666666664
+      },
+      {
+        "rank": 15,
+        "skill": "laser",
+        "jokers": [
+          "rage-joker",
+          "dash-cooldown"
+        ],
+        "name": "laser [dash-cooldown + rage-joker]",
+        "games": 48,
+        "winRate": 0.3958333333333333,
+        "winPct": 39.6,
+        "apples": 0.5208333333333334,
+        "checkpoints": 2.0625,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 35.25
+      },
+      {
+        "rank": 16,
+        "skill": "laser",
+        "jokers": [
+          "no-hunger",
+          "rage-joker"
+        ],
+        "name": "laser [no-hunger + rage-joker]",
+        "games": 48,
+        "winRate": 0.3958333333333333,
+        "winPct": 39.6,
+        "apples": 0.7083333333333334,
+        "checkpoints": 1.7916666666666667,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.4375,
+        "ticks": 34.8125
+      },
+      {
+        "rank": 17,
+        "skill": "laser",
+        "jokers": [
+          "charge-plus",
+          "dash-cooldown"
+        ],
+        "name": "laser [charge-plus + dash-cooldown]",
+        "games": 48,
+        "winRate": 0.375,
+        "winPct": 37.5,
+        "apples": 0.6458333333333334,
+        "checkpoints": 1.8125,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 31.166666666666668
+      },
+      {
+        "rank": 18,
+        "skill": "laser",
+        "jokers": [
+          "no-hunger",
+          "dash-cooldown"
+        ],
+        "name": "laser [dash-cooldown + no-hunger]",
+        "games": 48,
+        "winRate": 0.375,
+        "winPct": 37.5,
+        "apples": 0.75,
+        "checkpoints": 1.7291666666666667,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3125,
+        "ticks": 33.354166666666664
+      },
+      {
+        "rank": 19,
+        "skill": "laser",
+        "jokers": [
+          "charge-plus",
+          "rage-joker"
+        ],
+        "name": "laser [charge-plus + rage-joker]",
+        "games": 48,
+        "winRate": 0.375,
+        "winPct": 37.5,
+        "apples": 0.5208333333333334,
+        "checkpoints": 1.7916666666666667,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 30.708333333333332
+      },
+      {
+        "rank": 20,
+        "skill": "laser",
+        "jokers": [
+          "charge-plus",
+          "friend-blocks"
+        ],
+        "name": "laser [charge-plus + friend-blocks]",
+        "games": 48,
+        "winRate": 0.375,
+        "winPct": 37.5,
+        "apples": 0.7291666666666666,
+        "checkpoints": 1.7916666666666667,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3125,
+        "ticks": 33.5625
+      },
+      {
+        "rank": 21,
+        "skill": "laser",
+        "jokers": [
+          "dash-cooldown",
+          "trail-growth"
+        ],
+        "name": "laser [dash-cooldown + trail-growth]",
+        "games": 48,
+        "winRate": 0.3541666666666667,
+        "winPct": 35.4,
+        "apples": 1.2291666666666667,
+        "checkpoints": 1.75,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.4791666666666667,
+        "ticks": 34.520833333333336
+      },
+      {
+        "rank": 22,
+        "skill": "laser",
+        "jokers": [
+          "double-effective",
+          "friend-blocks"
+        ],
+        "name": "laser [double-effective + friend-blocks]",
+        "games": 48,
+        "winRate": 0.3541666666666667,
+        "winPct": 35.4,
+        "apples": 0.7083333333333334,
+        "checkpoints": 1.6458333333333333,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3125,
+        "ticks": 31.375
+      },
+      {
+        "rank": 23,
+        "skill": "laser",
+        "jokers": [
+          "no-hunger",
+          "double-effective"
+        ],
+        "name": "laser [double-effective + no-hunger]",
+        "games": 48,
+        "winRate": 0.3333333333333333,
+        "winPct": 33.3,
+        "apples": 0.3333333333333333,
+        "checkpoints": 1.5416666666666667,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.25,
+        "ticks": 34.3125
+      },
+      {
+        "rank": 24,
+        "skill": "laser",
+        "jokers": [
+          "rage-joker",
+          "disable-enemy"
+        ],
+        "name": "laser [disable-enemy + rage-joker]",
+        "games": 48,
+        "winRate": 0.3333333333333333,
+        "winPct": 33.3,
+        "apples": 0.3958333333333333,
+        "checkpoints": 1.7291666666666667,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3541666666666667,
+        "ticks": 30.166666666666668
+      },
+      {
+        "rank": 25,
+        "skill": "laser",
+        "jokers": [
+          "friend-blocks",
+          "disable-enemy"
+        ],
+        "name": "laser [disable-enemy + friend-blocks]",
+        "games": 48,
+        "winRate": 0.3125,
+        "winPct": 31.3,
+        "apples": 0.5208333333333334,
+        "checkpoints": 1.7916666666666667,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3333333333333333,
+        "ticks": 29.229166666666668
+      },
+      {
+        "rank": 26,
+        "skill": "laser",
+        "jokers": [
+          "charge-plus",
+          "double-effective"
+        ],
+        "name": "laser [charge-plus + double-effective]",
+        "games": 48,
+        "winRate": 0.3125,
+        "winPct": 31.3,
+        "apples": 0.625,
+        "checkpoints": 1.6458333333333333,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3958333333333333,
+        "ticks": 32.75
+      },
+      {
+        "rank": 27,
+        "skill": "laser",
+        "jokers": [
+          "dash-cooldown",
+          "disable-enemy"
+        ],
+        "name": "laser [dash-cooldown + disable-enemy]",
+        "games": 48,
+        "winRate": 0.3125,
+        "winPct": 31.3,
+        "apples": 0.7291666666666666,
+        "checkpoints": 1.3333333333333333,
+        "boards": 0,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3958333333333333,
+        "ticks": 31.25
+      },
+      {
+        "rank": 28,
+        "skill": "laser",
+        "jokers": [
+          "no-hunger",
+          "trail-growth"
+        ],
+        "name": "laser [no-hunger + trail-growth]",
+        "games": 48,
+        "winRate": 0.2916666666666667,
+        "winPct": 29.2,
+        "apples": 0.8541666666666666,
+        "checkpoints": 1.8958333333333333,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3125,
+        "ticks": 34.958333333333336
+      },
+      {
+        "rank": 29,
+        "skill": "laser",
+        "jokers": [
+          "double-effective",
+          "trail-growth"
+        ],
+        "name": "laser [double-effective + trail-growth]",
+        "games": 48,
+        "winRate": 0.2916666666666667,
+        "winPct": 29.2,
+        "apples": 1.6041666666666667,
+        "checkpoints": 1.7291666666666667,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.4166666666666667,
+        "ticks": 33.604166666666664
+      },
+      {
+        "rank": 30,
+        "skill": "laser",
+        "jokers": [
+          "charge-plus",
+          "trail-growth"
+        ],
+        "name": "laser [charge-plus + trail-growth]",
+        "games": 48,
+        "winRate": 0.2916666666666667,
+        "winPct": 29.2,
+        "apples": 0.9375,
+        "checkpoints": 1.7708333333333333,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 33.041666666666664
+      },
+      {
+        "rank": 31,
+        "skill": "laser",
+        "jokers": [
+          "no-hunger",
+          "friend-blocks"
+        ],
+        "name": "laser [friend-blocks + no-hunger]",
+        "games": 48,
+        "winRate": 0.2916666666666667,
+        "winPct": 29.2,
+        "apples": 0.6458333333333334,
+        "checkpoints": 1.6458333333333333,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 29.854166666666668
+      },
+      {
+        "rank": 32,
+        "skill": "laser",
+        "jokers": [
+          "trail-growth",
+          "disable-enemy"
+        ],
+        "name": "laser [disable-enemy + trail-growth]",
+        "games": 48,
+        "winRate": 0.2916666666666667,
+        "winPct": 29.2,
+        "apples": 0.5208333333333334,
+        "checkpoints": 1.6875,
+        "boards": 0,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.375,
+        "ticks": 30.770833333333332
+      },
+      {
+        "rank": 33,
+        "skill": "laser",
+        "jokers": [
+          "dash-cooldown",
+          "double-effective"
+        ],
+        "name": "laser [dash-cooldown + double-effective]",
+        "games": 48,
+        "winRate": 0.2708333333333333,
+        "winPct": 27.1,
+        "apples": 0.7291666666666666,
+        "checkpoints": 1.75,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3541666666666667,
+        "ticks": 33.5625
+      },
+      {
+        "rank": 34,
+        "skill": "laser",
+        "jokers": [
+          "rage-joker",
+          "double-effective"
+        ],
+        "name": "laser [double-effective + rage-joker]",
+        "games": 48,
+        "winRate": 0.2708333333333333,
+        "winPct": 27.1,
+        "apples": 0.8125,
+        "checkpoints": 1.7708333333333333,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 32.854166666666664
+      },
+      {
+        "rank": 35,
+        "skill": "laser",
+        "jokers": [
+          "charge-plus",
+          "disable-enemy"
+        ],
+        "name": "laser [charge-plus + disable-enemy]",
+        "games": 48,
+        "winRate": 0.22916666666666666,
+        "winPct": 22.9,
+        "apples": 0.375,
+        "checkpoints": 1.5208333333333333,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.375,
+        "ticks": 28.604166666666668
+      },
+      {
+        "rank": 36,
+        "skill": "laser",
+        "jokers": [
+          "friend-blocks",
+          "trail-growth"
+        ],
+        "name": "laser [friend-blocks + trail-growth]",
+        "games": 48,
+        "winRate": 0.125,
+        "winPct": 12.5,
+        "apples": 0.875,
+        "checkpoints": 1.5208333333333333,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3125,
+        "ticks": 31.333333333333332
+      }
+    ],
+    "invisible": [
+      {
+        "rank": 1,
+        "skill": "invisible",
+        "jokers": [
+          "double-effective",
+          "extra-life"
+        ],
+        "name": "invisible [double-effective + extra-life]",
+        "games": 48,
+        "winRate": 0.8125,
+        "winPct": 81.3,
+        "apples": 0.8333333333333334,
+        "checkpoints": 1.5833333333333333,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.1875,
+        "ticks": 57.3125
+      },
+      {
+        "rank": 2,
+        "skill": "invisible",
+        "jokers": [
+          "rage-joker",
+          "extra-life"
+        ],
+        "name": "invisible [extra-life + rage-joker]",
+        "games": 48,
+        "winRate": 0.6875,
+        "winPct": 68.8,
+        "apples": 0.8541666666666666,
+        "checkpoints": 2.0416666666666665,
+        "boards": 0.16666666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.4166666666666667,
+        "ticks": 65.125
+      },
+      {
+        "rank": 3,
+        "skill": "invisible",
+        "jokers": [
+          "extra-life",
+          "disable-enemy"
+        ],
+        "name": "invisible [disable-enemy + extra-life]",
+        "games": 48,
+        "winRate": 0.6875,
+        "winPct": 68.8,
+        "apples": 0.8958333333333334,
+        "checkpoints": 1.7083333333333333,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.22916666666666666,
+        "ticks": 55.9375
+      },
+      {
+        "rank": 4,
+        "skill": "invisible",
+        "jokers": [
+          "trail-growth",
+          "extra-life"
+        ],
+        "name": "invisible [extra-life + trail-growth]",
+        "games": 48,
+        "winRate": 0.6458333333333334,
+        "winPct": 64.6,
+        "apples": 2.3125,
+        "checkpoints": 1.7291666666666667,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3125,
+        "ticks": 54.6875
+      },
+      {
+        "rank": 5,
+        "skill": "invisible",
+        "jokers": [
+          "no-hunger",
+          "extra-life"
+        ],
+        "name": "invisible [extra-life + no-hunger]",
+        "games": 48,
+        "winRate": 0.625,
+        "winPct": 62.5,
+        "apples": 0.6666666666666666,
+        "checkpoints": 1.75,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 75.04166666666667
+      },
+      {
+        "rank": 6,
+        "skill": "invisible",
+        "jokers": [
+          "friend-blocks",
+          "extra-life"
+        ],
+        "name": "invisible [extra-life + friend-blocks]",
+        "games": 48,
+        "winRate": 0.6041666666666666,
+        "winPct": 60.4,
+        "apples": 1.1041666666666667,
+        "checkpoints": 1.7083333333333333,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.1875,
+        "ticks": 73.29166666666667
+      },
+      {
+        "rank": 7,
+        "skill": "invisible",
+        "jokers": [
+          "dash-cooldown",
+          "extra-life"
+        ],
+        "name": "invisible [dash-cooldown + extra-life]",
+        "games": 48,
+        "winRate": 0.6041666666666666,
+        "winPct": 60.4,
+        "apples": 1.1458333333333333,
+        "checkpoints": 1.6041666666666667,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.25,
+        "ticks": 65.66666666666667
+      },
+      {
+        "rank": 8,
+        "skill": "invisible",
+        "jokers": [
+          "charge-plus",
+          "extra-life"
+        ],
+        "name": "invisible [charge-plus + extra-life]",
+        "games": 48,
+        "winRate": 0.5833333333333334,
+        "winPct": 58.3,
+        "apples": 1.1458333333333333,
+        "checkpoints": 1.8125,
+        "boards": 0.20833333333333334,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.3125,
+        "ticks": 62.291666666666664
+      },
+      {
+        "rank": 9,
+        "skill": "invisible",
+        "jokers": [
+          "dash-cooldown",
+          "disable-enemy"
+        ],
+        "name": "invisible [dash-cooldown + disable-enemy]",
+        "games": 48,
+        "winRate": 0.5208333333333334,
+        "winPct": 52.1,
+        "apples": 0.4166666666666667,
+        "checkpoints": 1.6458333333333333,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.1875,
+        "ticks": 36.833333333333336
+      },
+      {
+        "rank": 10,
+        "skill": "invisible",
+        "jokers": [
+          "rage-joker",
+          "dash-cooldown"
+        ],
+        "name": "invisible [dash-cooldown + rage-joker]",
+        "games": 48,
+        "winRate": 0.4583333333333333,
+        "winPct": 45.8,
+        "apples": 0.8958333333333334,
+        "checkpoints": 1.9166666666666667,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.3541666666666667,
+        "ticks": 46.5
+      },
+      {
+        "rank": 11,
+        "skill": "invisible",
+        "jokers": [
+          "rage-joker",
+          "friend-blocks"
+        ],
+        "name": "invisible [friend-blocks + rage-joker]",
+        "games": 48,
+        "winRate": 0.4583333333333333,
+        "winPct": 45.8,
+        "apples": 0.5208333333333334,
+        "checkpoints": 1.6875,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3333333333333333,
+        "ticks": 35.958333333333336
+      },
+      {
+        "rank": 12,
+        "skill": "invisible",
+        "jokers": [
+          "no-hunger",
+          "friend-blocks"
+        ],
+        "name": "invisible [friend-blocks + no-hunger]",
+        "games": 48,
+        "winRate": 0.4583333333333333,
+        "winPct": 45.8,
+        "apples": 0.5833333333333334,
+        "checkpoints": 1.3541666666666667,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 36.75
+      },
+      {
+        "rank": 13,
+        "skill": "invisible",
+        "jokers": [
+          "dash-cooldown",
+          "double-effective"
+        ],
+        "name": "invisible [dash-cooldown + double-effective]",
+        "games": 48,
+        "winRate": 0.4375,
+        "winPct": 43.8,
+        "apples": 0.6041666666666666,
+        "checkpoints": 1.5625,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.20833333333333334,
+        "ticks": 32.229166666666664
+      },
+      {
+        "rank": 14,
+        "skill": "invisible",
+        "jokers": [
+          "no-hunger",
+          "dash-cooldown"
+        ],
+        "name": "invisible [dash-cooldown + no-hunger]",
+        "games": 48,
+        "winRate": 0.4166666666666667,
+        "winPct": 41.7,
+        "apples": 0.6875,
+        "checkpoints": 1.75,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3541666666666667,
+        "ticks": 60.6875
+      },
+      {
+        "rank": 15,
+        "skill": "invisible",
+        "jokers": [
+          "double-effective",
+          "disable-enemy"
+        ],
+        "name": "invisible [disable-enemy + double-effective]",
+        "games": 48,
+        "winRate": 0.4166666666666667,
+        "winPct": 41.7,
+        "apples": 0.8125,
+        "checkpoints": 1.375,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.3125,
+        "ticks": 42.958333333333336
+      },
+      {
+        "rank": 16,
+        "skill": "invisible",
+        "jokers": [
+          "no-hunger",
+          "disable-enemy"
+        ],
+        "name": "invisible [disable-enemy + no-hunger]",
+        "games": 48,
+        "winRate": 0.4166666666666667,
+        "winPct": 41.7,
+        "apples": 0.3541666666666667,
+        "checkpoints": 1.3125,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 39.875
+      },
+      {
+        "rank": 17,
+        "skill": "invisible",
+        "jokers": [
+          "rage-joker",
+          "disable-enemy"
+        ],
+        "name": "invisible [disable-enemy + rage-joker]",
+        "games": 48,
+        "winRate": 0.3958333333333333,
+        "winPct": 39.6,
+        "apples": 0.6458333333333334,
+        "checkpoints": 1.7916666666666667,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.3333333333333333,
+        "ticks": 50.375
+      },
+      {
+        "rank": 18,
+        "skill": "invisible",
+        "jokers": [
+          "dash-cooldown",
+          "trail-growth"
+        ],
+        "name": "invisible [dash-cooldown + trail-growth]",
+        "games": 48,
+        "winRate": 0.3958333333333333,
+        "winPct": 39.6,
+        "apples": 1.4583333333333333,
+        "checkpoints": 1.4583333333333333,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 47.9375
+      },
+      {
+        "rank": 19,
+        "skill": "invisible",
+        "jokers": [
+          "charge-plus",
+          "dash-cooldown"
+        ],
+        "name": "invisible [charge-plus + dash-cooldown]",
+        "games": 48,
+        "winRate": 0.3958333333333333,
+        "winPct": 39.6,
+        "apples": 0.625,
+        "checkpoints": 1.6041666666666667,
+        "boards": 0,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3333333333333333,
+        "ticks": 35.416666666666664
+      },
+      {
+        "rank": 20,
+        "skill": "invisible",
+        "jokers": [
+          "charge-plus",
+          "disable-enemy"
+        ],
+        "name": "invisible [charge-plus + disable-enemy]",
+        "games": 48,
+        "winRate": 0.375,
+        "winPct": 37.5,
+        "apples": 0.7916666666666666,
+        "checkpoints": 1.6875,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.25,
+        "ticks": 43.5625
+      },
+      {
+        "rank": 21,
+        "skill": "invisible",
+        "jokers": [
+          "no-hunger",
+          "double-effective"
+        ],
+        "name": "invisible [double-effective + no-hunger]",
+        "games": 48,
+        "winRate": 0.375,
+        "winPct": 37.5,
+        "apples": 1.2083333333333333,
+        "checkpoints": 1.9375,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.4166666666666667,
+        "ticks": 68.97916666666667
+      },
+      {
+        "rank": 22,
+        "skill": "invisible",
+        "jokers": [
+          "charge-plus",
+          "no-hunger"
+        ],
+        "name": "invisible [charge-plus + no-hunger]",
+        "games": 48,
+        "winRate": 0.3541666666666667,
+        "winPct": 35.4,
+        "apples": 0.7708333333333334,
+        "checkpoints": 1.8541666666666667,
+        "boards": 0.14583333333333334,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.3958333333333333,
+        "ticks": 40.604166666666664
+      },
+      {
+        "rank": 23,
+        "skill": "invisible",
+        "jokers": [
+          "rage-joker",
+          "double-effective"
+        ],
+        "name": "invisible [double-effective + rage-joker]",
+        "games": 48,
+        "winRate": 0.3541666666666667,
+        "winPct": 35.4,
+        "apples": 0.7916666666666666,
+        "checkpoints": 1.75,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3541666666666667,
+        "ticks": 40.458333333333336
+      },
+      {
+        "rank": 24,
+        "skill": "invisible",
+        "jokers": [
+          "friend-blocks",
+          "disable-enemy"
+        ],
+        "name": "invisible [disable-enemy + friend-blocks]",
+        "games": 48,
+        "winRate": 0.3541666666666667,
+        "winPct": 35.4,
+        "apples": 0.7083333333333334,
+        "checkpoints": 1.4166666666666667,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3125,
+        "ticks": 36.583333333333336
+      },
+      {
+        "rank": 25,
+        "skill": "invisible",
+        "jokers": [
+          "trail-growth",
+          "disable-enemy"
+        ],
+        "name": "invisible [disable-enemy + trail-growth]",
+        "games": 48,
+        "winRate": 0.3541666666666667,
+        "winPct": 35.4,
+        "apples": 0.6875,
+        "checkpoints": 1.0416666666666667,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 31.416666666666668
+      },
+      {
+        "rank": 26,
+        "skill": "invisible",
+        "jokers": [
+          "charge-plus",
+          "rage-joker"
+        ],
+        "name": "invisible [charge-plus + rage-joker]",
+        "games": 48,
+        "winRate": 0.3333333333333333,
+        "winPct": 33.3,
+        "apples": 0.7291666666666666,
+        "checkpoints": 2.0416666666666665,
+        "boards": 0.14583333333333334,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 50.604166666666664
+      },
+      {
+        "rank": 27,
+        "skill": "invisible",
+        "jokers": [
+          "no-hunger",
+          "rage-joker"
+        ],
+        "name": "invisible [no-hunger + rage-joker]",
+        "games": 48,
+        "winRate": 0.3333333333333333,
+        "winPct": 33.3,
+        "apples": 1.1041666666666667,
+        "checkpoints": 1.7083333333333333,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3125,
+        "ticks": 61.395833333333336
+      },
+      {
+        "rank": 28,
+        "skill": "invisible",
+        "jokers": [
+          "double-effective",
+          "friend-blocks"
+        ],
+        "name": "invisible [double-effective + friend-blocks]",
+        "games": 48,
+        "winRate": 0.3333333333333333,
+        "winPct": 33.3,
+        "apples": 0.5625,
+        "checkpoints": 1.5,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.3125,
+        "ticks": 38
+      },
+      {
+        "rank": 29,
+        "skill": "invisible",
+        "jokers": [
+          "charge-plus",
+          "friend-blocks"
+        ],
+        "name": "invisible [charge-plus + friend-blocks]",
+        "games": 48,
+        "winRate": 0.3333333333333333,
+        "winPct": 33.3,
+        "apples": 0.9375,
+        "checkpoints": 1.5208333333333333,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 45
+      },
+      {
+        "rank": 30,
+        "skill": "invisible",
+        "jokers": [
+          "charge-plus",
+          "trail-growth"
+        ],
+        "name": "invisible [charge-plus + trail-growth]",
+        "games": 48,
+        "winRate": 0.3125,
+        "winPct": 31.3,
+        "apples": 0.5208333333333334,
+        "checkpoints": 1.3958333333333333,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 28.0625
+      },
+      {
+        "rank": 31,
+        "skill": "invisible",
+        "jokers": [
+          "charge-plus",
+          "double-effective"
+        ],
+        "name": "invisible [charge-plus + double-effective]",
+        "games": 48,
+        "winRate": 0.3125,
+        "winPct": 31.3,
+        "apples": 0.8541666666666666,
+        "checkpoints": 1.75,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 37.354166666666664
+      },
+      {
+        "rank": 32,
+        "skill": "invisible",
+        "jokers": [
+          "no-hunger",
+          "trail-growth"
+        ],
+        "name": "invisible [no-hunger + trail-growth]",
+        "games": 48,
+        "winRate": 0.3125,
+        "winPct": 31.3,
+        "apples": 1.4166666666666667,
+        "checkpoints": 1.6041666666666667,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3541666666666667,
+        "ticks": 44.0625
+      },
+      {
+        "rank": 33,
+        "skill": "invisible",
+        "jokers": [
+          "rage-joker",
+          "trail-growth"
+        ],
+        "name": "invisible [rage-joker + trail-growth]",
+        "games": 48,
+        "winRate": 0.25,
+        "winPct": 25,
+        "apples": 1.2291666666666667,
+        "checkpoints": 1.7916666666666667,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3541666666666667,
+        "ticks": 42.916666666666664
+      },
+      {
+        "rank": 34,
+        "skill": "invisible",
+        "jokers": [
+          "dash-cooldown",
+          "friend-blocks"
+        ],
+        "name": "invisible [dash-cooldown + friend-blocks]",
+        "games": 48,
+        "winRate": 0.25,
+        "winPct": 25,
+        "apples": 0.5208333333333334,
+        "checkpoints": 1.5,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.375,
+        "ticks": 33.354166666666664
+      },
+      {
+        "rank": 35,
+        "skill": "invisible",
+        "jokers": [
+          "double-effective",
+          "trail-growth"
+        ],
+        "name": "invisible [double-effective + trail-growth]",
+        "games": 48,
+        "winRate": 0.22916666666666666,
+        "winPct": 22.9,
+        "apples": 1.7291666666666667,
+        "checkpoints": 1.625,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3333333333333333,
+        "ticks": 35.9375
+      },
+      {
+        "rank": 36,
+        "skill": "invisible",
+        "jokers": [
+          "friend-blocks",
+          "trail-growth"
+        ],
+        "name": "invisible [friend-blocks + trail-growth]",
+        "games": 48,
+        "winRate": 0.22916666666666666,
+        "winPct": 22.9,
+        "apples": 0.9375,
+        "checkpoints": 1.5,
+        "boards": 0.0625,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.3541666666666667,
+        "ticks": 34.25
+      }
+    ],
+    "infinite-trails": [
+      {
+        "rank": 1,
+        "skill": "infinite-trails",
+        "jokers": [
+          "friend-blocks",
+          "extra-life"
+        ],
+        "name": "infinite-trails [extra-life + friend-blocks]",
+        "games": 48,
+        "winRate": 0.7708333333333334,
+        "winPct": 77.1,
+        "apples": 1.4583333333333333,
+        "checkpoints": 1.9375,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.3125,
+        "ticks": 79.8125
+      },
+      {
+        "rank": 2,
+        "skill": "infinite-trails",
+        "jokers": [
+          "no-hunger",
+          "extra-life"
+        ],
+        "name": "infinite-trails [extra-life + no-hunger]",
+        "games": 48,
+        "winRate": 0.6875,
+        "winPct": 68.8,
+        "apples": 1.2916666666666667,
+        "checkpoints": 2.0416666666666665,
+        "boards": 0.16666666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.125,
+        "fallDeath": 0.25,
+        "ticks": 151.70833333333334
+      },
+      {
+        "rank": 3,
+        "skill": "infinite-trails",
+        "jokers": [
+          "dash-cooldown",
+          "extra-life"
+        ],
+        "name": "infinite-trails [dash-cooldown + extra-life]",
+        "games": 48,
+        "winRate": 0.6666666666666666,
+        "winPct": 66.7,
+        "apples": 1.1041666666666667,
+        "checkpoints": 2.2916666666666665,
+        "boards": 0.1875,
+        "ttt": 0,
+        "hungerDeath": 0.10416666666666667,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 102.3125
+      },
+      {
+        "rank": 4,
+        "skill": "infinite-trails",
+        "jokers": [
+          "rage-joker",
+          "extra-life"
+        ],
+        "name": "infinite-trails [extra-life + rage-joker]",
+        "games": 48,
+        "winRate": 0.6458333333333334,
+        "winPct": 64.6,
+        "apples": 1.2291666666666667,
+        "checkpoints": 2.25,
+        "boards": 0.16666666666666666,
+        "ttt": 0.020833333333333332,
+        "hungerDeath": 0.10416666666666667,
+        "fallDeath": 0.20833333333333334,
+        "ticks": 103.20833333333333
+      },
+      {
+        "rank": 5,
+        "skill": "infinite-trails",
+        "jokers": [
+          "charge-plus",
+          "extra-life"
+        ],
+        "name": "infinite-trails [charge-plus + extra-life]",
+        "games": 48,
+        "winRate": 0.625,
+        "winPct": 62.5,
+        "apples": 1.8125,
+        "checkpoints": 2.1875,
+        "boards": 0.25,
+        "ttt": 0,
+        "hungerDeath": 0.20833333333333334,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 134.39583333333334
+      },
+      {
+        "rank": 6,
+        "skill": "infinite-trails",
+        "jokers": [
+          "double-effective",
+          "extra-life"
+        ],
+        "name": "infinite-trails [double-effective + extra-life]",
+        "games": 48,
+        "winRate": 0.5833333333333334,
+        "winPct": 58.3,
+        "apples": 1.5,
+        "checkpoints": 2.25,
+        "boards": 0.20833333333333334,
+        "ttt": 0,
+        "hungerDeath": 0.16666666666666666,
+        "fallDeath": 0.25,
+        "ticks": 122.70833333333333
+      },
+      {
+        "rank": 7,
+        "skill": "infinite-trails",
+        "jokers": [
+          "no-hunger",
+          "friend-blocks"
+        ],
+        "name": "infinite-trails [friend-blocks + no-hunger]",
+        "games": 48,
+        "winRate": 0.5625,
+        "winPct": 56.3,
+        "apples": 1.4791666666666667,
+        "checkpoints": 1.7291666666666667,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.10416666666666667,
+        "fallDeath": 0.22916666666666666,
+        "ticks": 109.02083333333333
+      },
+      {
+        "rank": 8,
+        "skill": "infinite-trails",
+        "jokers": [
+          "extra-life",
+          "disable-enemy"
+        ],
+        "name": "infinite-trails [disable-enemy + extra-life]",
+        "games": 48,
+        "winRate": 0.5416666666666666,
+        "winPct": 54.2,
+        "apples": 1.5,
+        "checkpoints": 1.6875,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.14583333333333334,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 104.125
+      },
+      {
+        "rank": 9,
+        "skill": "infinite-trails",
+        "jokers": [
+          "no-hunger",
+          "disable-enemy"
+        ],
+        "name": "infinite-trails [disable-enemy + no-hunger]",
+        "games": 48,
+        "winRate": 0.4791666666666667,
+        "winPct": 47.9,
+        "apples": 0.9166666666666666,
+        "checkpoints": 1.875,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0.08333333333333333,
+        "fallDeath": 0.3541666666666667,
+        "ticks": 94.85416666666667
+      },
+      {
+        "rank": 10,
+        "skill": "infinite-trails",
+        "jokers": [
+          "friend-blocks",
+          "disable-enemy"
+        ],
+        "name": "infinite-trails [disable-enemy + friend-blocks]",
+        "games": 48,
+        "winRate": 0.4791666666666667,
+        "winPct": 47.9,
+        "apples": 0.6875,
+        "checkpoints": 1.5625,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.22916666666666666,
+        "ticks": 71.125
+      },
+      {
+        "rank": 11,
+        "skill": "infinite-trails",
+        "jokers": [
+          "dash-cooldown",
+          "disable-enemy"
+        ],
+        "name": "infinite-trails [dash-cooldown + disable-enemy]",
+        "games": 48,
+        "winRate": 0.4583333333333333,
+        "winPct": 45.8,
+        "apples": 0.75,
+        "checkpoints": 2.125,
+        "boards": 0.14583333333333334,
+        "ttt": 0,
+        "hungerDeath": 0.20833333333333334,
+        "fallDeath": 0.1875,
+        "ticks": 113.25
+      },
+      {
+        "rank": 12,
+        "skill": "infinite-trails",
+        "jokers": [
+          "no-hunger",
+          "rage-joker"
+        ],
+        "name": "infinite-trails [no-hunger + rage-joker]",
+        "games": 48,
+        "winRate": 0.4583333333333333,
+        "winPct": 45.8,
+        "apples": 1.1041666666666667,
+        "checkpoints": 2,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0.10416666666666667,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 122.33333333333333
+      },
+      {
+        "rank": 13,
+        "skill": "infinite-trails",
+        "jokers": [
+          "charge-plus",
+          "no-hunger"
+        ],
+        "name": "infinite-trails [charge-plus + no-hunger]",
+        "games": 48,
+        "winRate": 0.4375,
+        "winPct": 43.8,
+        "apples": 0.7708333333333334,
+        "checkpoints": 1.75,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.10416666666666667,
+        "fallDeath": 0.14583333333333334,
+        "ticks": 118.70833333333333
+      },
+      {
+        "rank": 14,
+        "skill": "infinite-trails",
+        "jokers": [
+          "rage-joker",
+          "disable-enemy"
+        ],
+        "name": "infinite-trails [disable-enemy + rage-joker]",
+        "games": 48,
+        "winRate": 0.4166666666666667,
+        "winPct": 41.7,
+        "apples": 1.4583333333333333,
+        "checkpoints": 2.875,
+        "boards": 0.2916666666666667,
+        "ttt": 0,
+        "hungerDeath": 0.16666666666666666,
+        "fallDeath": 0.2916666666666667,
+        "ticks": 122.8125
+      },
+      {
+        "rank": 15,
+        "skill": "infinite-trails",
+        "jokers": [
+          "dash-cooldown",
+          "friend-blocks"
+        ],
+        "name": "infinite-trails [dash-cooldown + friend-blocks]",
+        "games": 48,
+        "winRate": 0.4166666666666667,
+        "winPct": 41.7,
+        "apples": 1.875,
+        "checkpoints": 2.2708333333333335,
+        "boards": 0.16666666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.14583333333333334,
+        "fallDeath": 0.25,
+        "ticks": 110.97916666666667
+      },
+      {
+        "rank": 16,
+        "skill": "infinite-trails",
+        "jokers": [
+          "charge-plus",
+          "rage-joker"
+        ],
+        "name": "infinite-trails [charge-plus + rage-joker]",
+        "games": 48,
+        "winRate": 0.4166666666666667,
+        "winPct": 41.7,
+        "apples": 1.4791666666666667,
+        "checkpoints": 2.1666666666666665,
+        "boards": 0.16666666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.14583333333333334,
+        "fallDeath": 0.22916666666666666,
+        "ticks": 94.89583333333333
+      },
+      {
+        "rank": 17,
+        "skill": "infinite-trails",
+        "jokers": [
+          "no-hunger",
+          "dash-cooldown"
+        ],
+        "name": "infinite-trails [dash-cooldown + no-hunger]",
+        "games": 48,
+        "winRate": 0.4166666666666667,
+        "winPct": 41.7,
+        "apples": 1.4583333333333333,
+        "checkpoints": 2.2291666666666665,
+        "boards": 0.14583333333333334,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.22916666666666666,
+        "ticks": 105.875
+      },
+      {
+        "rank": 18,
+        "skill": "infinite-trails",
+        "jokers": [
+          "no-hunger",
+          "double-effective"
+        ],
+        "name": "infinite-trails [double-effective + no-hunger]",
+        "games": 48,
+        "winRate": 0.4166666666666667,
+        "winPct": 41.7,
+        "apples": 0.875,
+        "checkpoints": 1.7708333333333333,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0.125,
+        "fallDeath": 0.22916666666666666,
+        "ticks": 124.3125
+      },
+      {
+        "rank": 19,
+        "skill": "infinite-trails",
+        "jokers": [
+          "rage-joker",
+          "friend-blocks"
+        ],
+        "name": "infinite-trails [friend-blocks + rage-joker]",
+        "games": 48,
+        "winRate": 0.4166666666666667,
+        "winPct": 41.7,
+        "apples": 0.8958333333333334,
+        "checkpoints": 1.7083333333333333,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0.10416666666666667,
+        "fallDeath": 0.14583333333333334,
+        "ticks": 75.25
+      },
+      {
+        "rank": 20,
+        "skill": "infinite-trails",
+        "jokers": [
+          "double-effective",
+          "disable-enemy"
+        ],
+        "name": "infinite-trails [disable-enemy + double-effective]",
+        "games": 48,
+        "winRate": 0.3958333333333333,
+        "winPct": 39.6,
+        "apples": 0.7083333333333334,
+        "checkpoints": 2.25,
+        "boards": 0.125,
+        "ttt": 0.020833333333333332,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 73.16666666666667
+      },
+      {
+        "rank": 21,
+        "skill": "infinite-trails",
+        "jokers": [
+          "charge-plus",
+          "double-effective"
+        ],
+        "name": "infinite-trails [charge-plus + double-effective]",
+        "games": 48,
+        "winRate": 0.375,
+        "winPct": 37.5,
+        "apples": 1.0625,
+        "checkpoints": 1.7291666666666667,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0.20833333333333334,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 120.02083333333333
+      },
+      {
+        "rank": 22,
+        "skill": "infinite-trails",
+        "jokers": [
+          "rage-joker",
+          "dash-cooldown"
+        ],
+        "name": "infinite-trails [dash-cooldown + rage-joker]",
+        "games": 48,
+        "winRate": 0.3541666666666667,
+        "winPct": 35.4,
+        "apples": 1.1875,
+        "checkpoints": 2.3958333333333335,
+        "boards": 0.16666666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.14583333333333334,
+        "fallDeath": 0.125,
+        "ticks": 109.20833333333333
+      },
+      {
+        "rank": 23,
+        "skill": "infinite-trails",
+        "jokers": [
+          "charge-plus",
+          "friend-blocks"
+        ],
+        "name": "infinite-trails [charge-plus + friend-blocks]",
+        "games": 48,
+        "winRate": 0.3541666666666667,
+        "winPct": 35.4,
+        "apples": 0.9375,
+        "checkpoints": 1.8958333333333333,
+        "boards": 0.16666666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.16666666666666666,
+        "fallDeath": 0.14583333333333334,
+        "ticks": 99.08333333333333
+      },
+      {
+        "rank": 24,
+        "skill": "infinite-trails",
+        "jokers": [
+          "dash-cooldown",
+          "double-effective"
+        ],
+        "name": "infinite-trails [dash-cooldown + double-effective]",
+        "games": 48,
+        "winRate": 0.3541666666666667,
+        "winPct": 35.4,
+        "apples": 1.1875,
+        "checkpoints": 2.4375,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0.16666666666666666,
+        "fallDeath": 0.25,
+        "ticks": 109.72916666666667
+      },
+      {
+        "rank": 25,
+        "skill": "infinite-trails",
+        "jokers": [
+          "rage-joker",
+          "double-effective"
+        ],
+        "name": "infinite-trails [double-effective + rage-joker]",
+        "games": 48,
+        "winRate": 0.3333333333333333,
+        "winPct": 33.3,
+        "apples": 1.125,
+        "checkpoints": 1.8958333333333333,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0.125,
+        "fallDeath": 0.14583333333333334,
+        "ticks": 94.875
+      },
+      {
+        "rank": 26,
+        "skill": "infinite-trails",
+        "jokers": [
+          "charge-plus",
+          "dash-cooldown"
+        ],
+        "name": "infinite-trails [charge-plus + dash-cooldown]",
+        "games": 48,
+        "winRate": 0.2916666666666667,
+        "winPct": 29.2,
+        "apples": 1.0625,
+        "checkpoints": 2.3541666666666665,
+        "boards": 0.16666666666666666,
+        "ttt": 0.020833333333333332,
+        "hungerDeath": 0.16666666666666666,
+        "fallDeath": 0.125,
+        "ticks": 110.60416666666667
+      },
+      {
+        "rank": 27,
+        "skill": "infinite-trails",
+        "jokers": [
+          "charge-plus",
+          "disable-enemy"
+        ],
+        "name": "infinite-trails [charge-plus + disable-enemy]",
+        "games": 48,
+        "winRate": 0.2916666666666667,
+        "winPct": 29.2,
+        "apples": 0.5,
+        "checkpoints": 1.4583333333333333,
+        "boards": 0.08333333333333333,
+        "ttt": 0,
+        "hungerDeath": 0.16666666666666666,
+        "fallDeath": 0.20833333333333334,
+        "ticks": 91.47916666666667
+      },
+      {
+        "rank": 28,
+        "skill": "infinite-trails",
+        "jokers": [
+          "double-effective",
+          "friend-blocks"
+        ],
+        "name": "infinite-trails [double-effective + friend-blocks]",
+        "games": 48,
+        "winRate": 0.20833333333333334,
+        "winPct": 20.8,
+        "apples": 0.7083333333333334,
+        "checkpoints": 1.5625,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0.10416666666666667,
+        "fallDeath": 0.1875,
+        "ticks": 77.125
+      }
+    ]
+  },
+  "allCombos": [
+    {
+      "skill": "invisible",
+      "jokers": [
+        "double-effective",
+        "extra-life"
+      ],
+      "name": "invisible [double-effective + extra-life]",
+      "games": 48,
+      "winRate": 0.8125,
+      "winPct": 81.3,
+      "apples": 0.8333333333333334,
+      "checkpoints": 1.5833333333333333,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.1875,
+      "ticks": 57.3125
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "double-effective",
+        "extra-life"
+      ],
+      "name": "laser [double-effective + extra-life]",
+      "games": 48,
+      "winRate": 0.8125,
+      "winPct": 81.3,
+      "apples": 0.6666666666666666,
+      "checkpoints": 1.7083333333333333,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 41.75
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "friend-blocks",
+        "extra-life"
+      ],
+      "name": "infinite-trails [extra-life + friend-blocks]",
+      "games": 48,
+      "winRate": 0.7708333333333334,
+      "winPct": 77.1,
+      "apples": 1.4583333333333333,
+      "checkpoints": 1.9375,
+      "boards": 0.125,
+      "ttt": 0,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.3125,
+      "ticks": 79.8125
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "rage-joker",
+        "extra-life"
+      ],
+      "name": "clones [extra-life + rage-joker]",
+      "games": 48,
+      "winRate": 0.7083333333333334,
+      "winPct": 70.8,
+      "apples": 1.8541666666666667,
+      "checkpoints": 3.7916666666666665,
+      "boards": 0.5833333333333334,
+      "ttt": 0,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.375,
+      "ticks": 111.625
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "no-hunger",
+        "extra-life"
+      ],
+      "name": "clones [extra-life + no-hunger]",
+      "games": 48,
+      "winRate": 0.7083333333333334,
+      "winPct": 70.8,
+      "apples": 1.1666666666666667,
+      "checkpoints": 3.0416666666666665,
+      "boards": 0.3125,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.4375,
+      "ticks": 76.39583333333333
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "charge-plus",
+        "dash-cooldown"
+      ],
+      "name": "clones [charge-plus + dash-cooldown]",
+      "games": 48,
+      "winRate": 0.7083333333333334,
+      "winPct": 70.8,
+      "apples": 1.8333333333333333,
+      "checkpoints": 3.1875,
+      "boards": 0.22916666666666666,
+      "ttt": 0.020833333333333332,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.5,
+      "ticks": 79.3125
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "extra-life",
+        "disable-enemy"
+      ],
+      "name": "clones [disable-enemy + extra-life]",
+      "games": 48,
+      "winRate": 0.7083333333333334,
+      "winPct": 70.8,
+      "apples": 1.1666666666666667,
+      "checkpoints": 2.9791666666666665,
+      "boards": 0.1875,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.375,
+      "ticks": 86.14583333333333
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "rage-joker",
+        "extra-life"
+      ],
+      "name": "laser [extra-life + rage-joker]",
+      "games": 48,
+      "winRate": 0.7083333333333334,
+      "winPct": 70.8,
+      "apples": 1,
+      "checkpoints": 1.7291666666666667,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.16666666666666666,
+      "ticks": 39.666666666666664
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "rage-joker",
+        "disable-enemy"
+      ],
+      "name": "clones [disable-enemy + rage-joker]",
+      "games": 48,
+      "winRate": 0.6875,
+      "winPct": 68.8,
+      "apples": 0.9791666666666666,
+      "checkpoints": 3.3333333333333335,
+      "boards": 0.3333333333333333,
+      "ttt": 0.020833333333333332,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.4375,
+      "ticks": 81.29166666666667
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "double-effective",
+        "extra-life"
+      ],
+      "name": "clones [double-effective + extra-life]",
+      "games": 48,
+      "winRate": 0.6875,
+      "winPct": 68.8,
+      "apples": 1.4166666666666667,
+      "checkpoints": 2.6875,
+      "boards": 0.20833333333333334,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 68.4375
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "rage-joker",
+        "extra-life"
+      ],
+      "name": "invisible [extra-life + rage-joker]",
+      "games": 48,
+      "winRate": 0.6875,
+      "winPct": 68.8,
+      "apples": 0.8541666666666666,
+      "checkpoints": 2.0416666666666665,
+      "boards": 0.16666666666666666,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.4166666666666667,
+      "ticks": 65.125
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "no-hunger",
+        "extra-life"
+      ],
+      "name": "infinite-trails [extra-life + no-hunger]",
+      "games": 48,
+      "winRate": 0.6875,
+      "winPct": 68.8,
+      "apples": 1.2916666666666667,
+      "checkpoints": 2.0416666666666665,
+      "boards": 0.16666666666666666,
+      "ttt": 0,
+      "hungerDeath": 0.125,
+      "fallDeath": 0.25,
+      "ticks": 151.70833333333334
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "extra-life",
+        "disable-enemy"
+      ],
+      "name": "invisible [disable-enemy + extra-life]",
+      "games": 48,
+      "winRate": 0.6875,
+      "winPct": 68.8,
+      "apples": 0.8958333333333334,
+      "checkpoints": 1.7083333333333333,
+      "boards": 0.125,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.22916666666666666,
+      "ticks": 55.9375
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "rage-joker",
+        "dash-cooldown"
+      ],
+      "name": "clones [dash-cooldown + rage-joker]",
+      "games": 48,
+      "winRate": 0.6666666666666666,
+      "winPct": 66.7,
+      "apples": 1.6041666666666667,
+      "checkpoints": 3.6666666666666665,
+      "boards": 0.4166666666666667,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.4166666666666667,
+      "ticks": 81.6875
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "dash-cooldown",
+        "extra-life"
+      ],
+      "name": "infinite-trails [dash-cooldown + extra-life]",
+      "games": 48,
+      "winRate": 0.6666666666666666,
+      "winPct": 66.7,
+      "apples": 1.1041666666666667,
+      "checkpoints": 2.2916666666666665,
+      "boards": 0.1875,
+      "ttt": 0,
+      "hungerDeath": 0.10416666666666667,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 102.3125
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "dash-cooldown",
+        "extra-life"
+      ],
+      "name": "laser [dash-cooldown + extra-life]",
+      "games": 48,
+      "winRate": 0.6666666666666666,
+      "winPct": 66.7,
+      "apples": 0.5625,
+      "checkpoints": 1.6666666666666667,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 33.270833333333336
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "no-hunger",
+        "rage-joker"
+      ],
+      "name": "clones [no-hunger + rage-joker]",
+      "games": 48,
+      "winRate": 0.6458333333333334,
+      "winPct": 64.6,
+      "apples": 1.5,
+      "checkpoints": 3.6041666666666665,
+      "boards": 0.3958333333333333,
+      "ttt": 0.041666666666666664,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.4375,
+      "ticks": 97.91666666666667
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "dash-cooldown",
+        "extra-life"
+      ],
+      "name": "clones [dash-cooldown + extra-life]",
+      "games": 48,
+      "winRate": 0.6458333333333334,
+      "winPct": 64.6,
+      "apples": 1.8541666666666667,
+      "checkpoints": 3.2291666666666665,
+      "boards": 0.2916666666666667,
+      "ttt": 0.020833333333333332,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.3541666666666667,
+      "ticks": 92.95833333333333
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "rage-joker",
+        "extra-life"
+      ],
+      "name": "infinite-trails [extra-life + rage-joker]",
+      "games": 48,
+      "winRate": 0.6458333333333334,
+      "winPct": 64.6,
+      "apples": 1.2291666666666667,
+      "checkpoints": 2.25,
+      "boards": 0.16666666666666666,
+      "ttt": 0.020833333333333332,
+      "hungerDeath": 0.10416666666666667,
+      "fallDeath": 0.20833333333333334,
+      "ticks": 103.20833333333333
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "trail-growth",
+        "extra-life"
+      ],
+      "name": "invisible [extra-life + trail-growth]",
+      "games": 48,
+      "winRate": 0.6458333333333334,
+      "winPct": 64.6,
+      "apples": 2.3125,
+      "checkpoints": 1.7291666666666667,
+      "boards": 0.125,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3125,
+      "ticks": 54.6875
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "friend-blocks",
+        "extra-life"
+      ],
+      "name": "laser [extra-life + friend-blocks]",
+      "games": 48,
+      "winRate": 0.6458333333333334,
+      "winPct": 64.6,
+      "apples": 0.7916666666666666,
+      "checkpoints": 2.0208333333333335,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 41.041666666666664
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "trail-growth",
+        "extra-life"
+      ],
+      "name": "laser [extra-life + trail-growth]",
+      "games": 48,
+      "winRate": 0.6458333333333334,
+      "winPct": 64.6,
+      "apples": 1.2083333333333333,
+      "checkpoints": 1.8541666666666667,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3125,
+      "ticks": 41.291666666666664
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "rage-joker",
+        "trail-growth"
+      ],
+      "name": "clones [rage-joker + trail-growth]",
+      "games": 48,
+      "winRate": 0.625,
+      "winPct": 62.5,
+      "apples": 4.5,
+      "checkpoints": 4.020833333333333,
+      "boards": 0.5,
+      "ttt": 0.041666666666666664,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.5,
+      "ticks": 107.54166666666667
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "charge-plus",
+        "extra-life"
+      ],
+      "name": "infinite-trails [charge-plus + extra-life]",
+      "games": 48,
+      "winRate": 0.625,
+      "winPct": 62.5,
+      "apples": 1.8125,
+      "checkpoints": 2.1875,
+      "boards": 0.25,
+      "ttt": 0,
+      "hungerDeath": 0.20833333333333334,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 134.39583333333334
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "no-hunger",
+        "extra-life"
+      ],
+      "name": "invisible [extra-life + no-hunger]",
+      "games": 48,
+      "winRate": 0.625,
+      "winPct": 62.5,
+      "apples": 0.6666666666666666,
+      "checkpoints": 1.75,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 75.04166666666667
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "charge-plus",
+        "extra-life"
+      ],
+      "name": "clones [charge-plus + extra-life]",
+      "games": 48,
+      "winRate": 0.6041666666666666,
+      "winPct": 60.4,
+      "apples": 2.5,
+      "checkpoints": 3.4375,
+      "boards": 0.4166666666666667,
+      "ttt": 0.041666666666666664,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.25,
+      "ticks": 92.70833333333333
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "dash-cooldown",
+        "disable-enemy"
+      ],
+      "name": "clones [dash-cooldown + disable-enemy]",
+      "games": 48,
+      "winRate": 0.6041666666666666,
+      "winPct": 60.4,
+      "apples": 1.375,
+      "checkpoints": 3.1875,
+      "boards": 0.3125,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.5416666666666666,
+      "ticks": 75.3125
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "charge-plus",
+        "friend-blocks"
+      ],
+      "name": "clones [charge-plus + friend-blocks]",
+      "games": 48,
+      "winRate": 0.6041666666666666,
+      "winPct": 60.4,
+      "apples": 0.8125,
+      "checkpoints": 2.6041666666666665,
+      "boards": 0.20833333333333334,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.5416666666666666,
+      "ticks": 62.4375
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "double-effective",
+        "extra-life"
+      ],
+      "name": "infinite-charge [double-effective + extra-life]",
+      "games": 48,
+      "winRate": 0.6041666666666666,
+      "winPct": 60.4,
+      "apples": 0.8541666666666666,
+      "checkpoints": 1.7916666666666667,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.25,
+      "ticks": 53.479166666666664
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "friend-blocks",
+        "extra-life"
+      ],
+      "name": "invisible [extra-life + friend-blocks]",
+      "games": 48,
+      "winRate": 0.6041666666666666,
+      "winPct": 60.4,
+      "apples": 1.1041666666666667,
+      "checkpoints": 1.7083333333333333,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.1875,
+      "ticks": 73.29166666666667
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "dash-cooldown",
+        "extra-life"
+      ],
+      "name": "invisible [dash-cooldown + extra-life]",
+      "games": 48,
+      "winRate": 0.6041666666666666,
+      "winPct": 60.4,
+      "apples": 1.1458333333333333,
+      "checkpoints": 1.6041666666666667,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.25,
+      "ticks": 65.66666666666667
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "dash-cooldown",
+        "trail-growth"
+      ],
+      "name": "clones [dash-cooldown + trail-growth]",
+      "games": 48,
+      "winRate": 0.5833333333333334,
+      "winPct": 58.3,
+      "apples": 3.6041666666666665,
+      "checkpoints": 3.6458333333333335,
+      "boards": 0.375,
+      "ttt": 0,
+      "hungerDeath": 0.08333333333333333,
+      "fallDeath": 0.4375,
+      "ticks": 107.20833333333333
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "friend-blocks",
+        "extra-life"
+      ],
+      "name": "clones [extra-life + friend-blocks]",
+      "games": 48,
+      "winRate": 0.5833333333333334,
+      "winPct": 58.3,
+      "apples": 1.6458333333333333,
+      "checkpoints": 3.0625,
+      "boards": 0.3541666666666667,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.3958333333333333,
+      "ticks": 81.41666666666667
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "no-hunger",
+        "extra-life"
+      ],
+      "name": "infinite-charge [extra-life + no-hunger]",
+      "games": 48,
+      "winRate": 0.5833333333333334,
+      "winPct": 58.3,
+      "apples": 0.9166666666666666,
+      "checkpoints": 2.1666666666666665,
+      "boards": 0.22916666666666666,
+      "ttt": 0,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.4166666666666667,
+      "ticks": 81.9375
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "double-effective",
+        "extra-life"
+      ],
+      "name": "infinite-trails [double-effective + extra-life]",
+      "games": 48,
+      "winRate": 0.5833333333333334,
+      "winPct": 58.3,
+      "apples": 1.5,
+      "checkpoints": 2.25,
+      "boards": 0.20833333333333334,
+      "ttt": 0,
+      "hungerDeath": 0.16666666666666666,
+      "fallDeath": 0.25,
+      "ticks": 122.70833333333333
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "charge-plus",
+        "extra-life"
+      ],
+      "name": "invisible [charge-plus + extra-life]",
+      "games": 48,
+      "winRate": 0.5833333333333334,
+      "winPct": 58.3,
+      "apples": 1.1458333333333333,
+      "checkpoints": 1.8125,
+      "boards": 0.20833333333333334,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.3125,
+      "ticks": 62.291666666666664
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "friend-blocks",
+        "disable-enemy"
+      ],
+      "name": "clones [disable-enemy + friend-blocks]",
+      "games": 48,
+      "winRate": 0.5833333333333334,
+      "winPct": 58.3,
+      "apples": 1.2708333333333333,
+      "checkpoints": 2.5625,
+      "boards": 0.16666666666666666,
+      "ttt": 0,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.4166666666666667,
+      "ticks": 77.91666666666667
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "no-hunger",
+        "extra-life"
+      ],
+      "name": "laser [extra-life + no-hunger]",
+      "games": 48,
+      "winRate": 0.5833333333333334,
+      "winPct": 58.3,
+      "apples": 0.8333333333333334,
+      "checkpoints": 2.125,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.4791666666666667,
+      "ticks": 37.229166666666664
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "extra-life",
+        "disable-enemy"
+      ],
+      "name": "laser [disable-enemy + extra-life]",
+      "games": 48,
+      "winRate": 0.5833333333333334,
+      "winPct": 58.3,
+      "apples": 0.8125,
+      "checkpoints": 1.6458333333333333,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3333333333333333,
+      "ticks": 37.645833333333336
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "no-hunger",
+        "dash-cooldown"
+      ],
+      "name": "clones [dash-cooldown + no-hunger]",
+      "games": 48,
+      "winRate": 0.5625,
+      "winPct": 56.3,
+      "apples": 1.1875,
+      "checkpoints": 3.0833333333333335,
+      "boards": 0.3333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.4583333333333333,
+      "ticks": 71.72916666666667
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "double-effective",
+        "disable-enemy"
+      ],
+      "name": "clones [disable-enemy + double-effective]",
+      "games": 48,
+      "winRate": 0.5625,
+      "winPct": 56.3,
+      "apples": 1.1041666666666667,
+      "checkpoints": 2.9375,
+      "boards": 0.20833333333333334,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.5208333333333334,
+      "ticks": 88.95833333333333
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "friend-blocks",
+        "extra-life"
+      ],
+      "name": "infinite-charge [extra-life + friend-blocks]",
+      "games": 48,
+      "winRate": 0.5625,
+      "winPct": 56.3,
+      "apples": 0.8541666666666666,
+      "checkpoints": 1.7083333333333333,
+      "boards": 0.125,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 45.166666666666664
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "dash-cooldown",
+        "extra-life"
+      ],
+      "name": "infinite-charge [dash-cooldown + extra-life]",
+      "games": 48,
+      "winRate": 0.5625,
+      "winPct": 56.3,
+      "apples": 1.0208333333333333,
+      "checkpoints": 2.1041666666666665,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.4166666666666667,
+      "ticks": 71.625
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "trail-growth",
+        "extra-life"
+      ],
+      "name": "infinite-charge [extra-life + trail-growth]",
+      "games": 48,
+      "winRate": 0.5625,
+      "winPct": 56.3,
+      "apples": 2.3125,
+      "checkpoints": 1.875,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.3541666666666667,
+      "ticks": 60.354166666666664
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "no-hunger",
+        "friend-blocks"
+      ],
+      "name": "infinite-trails [friend-blocks + no-hunger]",
+      "games": 48,
+      "winRate": 0.5625,
+      "winPct": 56.3,
+      "apples": 1.4791666666666667,
+      "checkpoints": 1.7291666666666667,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.10416666666666667,
+      "fallDeath": 0.22916666666666666,
+      "ticks": 109.02083333333333
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "extra-life",
+        "disable-enemy"
+      ],
+      "name": "infinite-charge [disable-enemy + extra-life]",
+      "games": 48,
+      "winRate": 0.5625,
+      "winPct": 56.3,
+      "apples": 0.8541666666666666,
+      "checkpoints": 1.7291666666666667,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.3125,
+      "ticks": 51.854166666666664
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "rage-joker",
+        "double-effective"
+      ],
+      "name": "clones [double-effective + rage-joker]",
+      "games": 48,
+      "winRate": 0.5416666666666666,
+      "winPct": 54.2,
+      "apples": 2.2083333333333335,
+      "checkpoints": 3.6666666666666665,
+      "boards": 0.3958333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.10416666666666667,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 106.52083333333333
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "trail-growth",
+        "extra-life"
+      ],
+      "name": "clones [extra-life + trail-growth]",
+      "games": 48,
+      "winRate": 0.5416666666666666,
+      "winPct": 54.2,
+      "apples": 2.9375,
+      "checkpoints": 2.9375,
+      "boards": 0.3125,
+      "ttt": 0,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.375,
+      "ticks": 85.79166666666667
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "charge-plus",
+        "trail-growth"
+      ],
+      "name": "clones [charge-plus + trail-growth]",
+      "games": 48,
+      "winRate": 0.5416666666666666,
+      "winPct": 54.2,
+      "apples": 3.1458333333333335,
+      "checkpoints": 2.7291666666666665,
+      "boards": 0.2916666666666667,
+      "ttt": 0.020833333333333332,
+      "hungerDeath": 0.08333333333333333,
+      "fallDeath": 0.5,
+      "ticks": 86.33333333333333
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "extra-life",
+        "disable-enemy"
+      ],
+      "name": "infinite-trails [disable-enemy + extra-life]",
+      "games": 48,
+      "winRate": 0.5416666666666666,
+      "winPct": 54.2,
+      "apples": 1.5,
+      "checkpoints": 1.6875,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.14583333333333334,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 104.125
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "charge-plus",
+        "rage-joker"
+      ],
+      "name": "clones [charge-plus + rage-joker]",
+      "games": 48,
+      "winRate": 0.5208333333333334,
+      "winPct": 52.1,
+      "apples": 1.4375,
+      "checkpoints": 3.3125,
+      "boards": 0.3958333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.3333333333333333,
+      "ticks": 85.22916666666667
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "friend-blocks",
+        "trail-growth"
+      ],
+      "name": "clones [friend-blocks + trail-growth]",
+      "games": 48,
+      "winRate": 0.5208333333333334,
+      "winPct": 52.1,
+      "apples": 3.1875,
+      "checkpoints": 3.3125,
+      "boards": 0.3333333333333333,
+      "ttt": 0.020833333333333332,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.5833333333333334,
+      "ticks": 78.85416666666667
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "trail-growth",
+        "disable-enemy"
+      ],
+      "name": "clones [disable-enemy + trail-growth]",
+      "games": 48,
+      "winRate": 0.5208333333333334,
+      "winPct": 52.1,
+      "apples": 2.4375,
+      "checkpoints": 2.9583333333333335,
+      "boards": 0.22916666666666666,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.4166666666666667,
+      "ticks": 66.41666666666667
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "rage-joker",
+        "extra-life"
+      ],
+      "name": "infinite-charge [extra-life + rage-joker]",
+      "games": 48,
+      "winRate": 0.5208333333333334,
+      "winPct": 52.1,
+      "apples": 1.25,
+      "checkpoints": 1.8958333333333333,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.3333333333333333,
+      "ticks": 79.125
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "dash-cooldown",
+        "disable-enemy"
+      ],
+      "name": "invisible [dash-cooldown + disable-enemy]",
+      "games": 48,
+      "winRate": 0.5208333333333334,
+      "winPct": 52.1,
+      "apples": 0.4166666666666667,
+      "checkpoints": 1.6458333333333333,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.1875,
+      "ticks": 36.833333333333336
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "no-hunger",
+        "double-effective"
+      ],
+      "name": "clones [double-effective + no-hunger]",
+      "games": 48,
+      "winRate": 0.5,
+      "winPct": 50,
+      "apples": 1.9583333333333333,
+      "checkpoints": 2.9583333333333335,
+      "boards": 0.375,
+      "ttt": 0,
+      "hungerDeath": 0.08333333333333333,
+      "fallDeath": 0.4583333333333333,
+      "ticks": 104.125
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "rage-joker",
+        "friend-blocks"
+      ],
+      "name": "clones [friend-blocks + rage-joker]",
+      "games": 48,
+      "winRate": 0.4791666666666667,
+      "winPct": 47.9,
+      "apples": 2.5833333333333335,
+      "checkpoints": 4.020833333333333,
+      "boards": 0.5416666666666666,
+      "ttt": 0.020833333333333332,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.5,
+      "ticks": 108.1875
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "no-hunger",
+        "disable-enemy"
+      ],
+      "name": "clones [disable-enemy + no-hunger]",
+      "games": 48,
+      "winRate": 0.4791666666666667,
+      "winPct": 47.9,
+      "apples": 0.7708333333333334,
+      "checkpoints": 2.875,
+      "boards": 0.22916666666666666,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.5208333333333334,
+      "ticks": 71.10416666666667
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "no-hunger",
+        "disable-enemy"
+      ],
+      "name": "infinite-trails [disable-enemy + no-hunger]",
+      "games": 48,
+      "winRate": 0.4791666666666667,
+      "winPct": 47.9,
+      "apples": 0.9166666666666666,
+      "checkpoints": 1.875,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0.08333333333333333,
+      "fallDeath": 0.3541666666666667,
+      "ticks": 94.85416666666667
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "friend-blocks",
+        "disable-enemy"
+      ],
+      "name": "infinite-trails [disable-enemy + friend-blocks]",
+      "games": 48,
+      "winRate": 0.4791666666666667,
+      "winPct": 47.9,
+      "apples": 0.6875,
+      "checkpoints": 1.5625,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.22916666666666666,
+      "ticks": 71.125
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "charge-plus",
+        "extra-life"
+      ],
+      "name": "laser [charge-plus + extra-life]",
+      "games": 48,
+      "winRate": 0.4791666666666667,
+      "winPct": 47.9,
+      "apples": 0.8125,
+      "checkpoints": 1.875,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3541666666666667,
+      "ticks": 41.1875
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "rage-joker",
+        "trail-growth"
+      ],
+      "name": "laser [rage-joker + trail-growth]",
+      "games": 48,
+      "winRate": 0.4791666666666667,
+      "winPct": 47.9,
+      "apples": 0.6666666666666666,
+      "checkpoints": 1.4583333333333333,
+      "boards": 0,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 29.291666666666668
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "dash-cooldown",
+        "double-effective"
+      ],
+      "name": "clones [dash-cooldown + double-effective]",
+      "games": 48,
+      "winRate": 0.4583333333333333,
+      "winPct": 45.8,
+      "apples": 1.4583333333333333,
+      "checkpoints": 2.7708333333333335,
+      "boards": 0.22916666666666666,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.4583333333333333,
+      "ticks": 77.875
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "dash-cooldown",
+        "disable-enemy"
+      ],
+      "name": "infinite-trails [dash-cooldown + disable-enemy]",
+      "games": 48,
+      "winRate": 0.4583333333333333,
+      "winPct": 45.8,
+      "apples": 0.75,
+      "checkpoints": 2.125,
+      "boards": 0.14583333333333334,
+      "ttt": 0,
+      "hungerDeath": 0.20833333333333334,
+      "fallDeath": 0.1875,
+      "ticks": 113.25
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "charge-plus",
+        "extra-life"
+      ],
+      "name": "infinite-charge [charge-plus + extra-life]",
+      "games": 48,
+      "winRate": 0.4583333333333333,
+      "winPct": 45.8,
+      "apples": 1.3541666666666667,
+      "checkpoints": 1.9791666666666667,
+      "boards": 0.14583333333333334,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.5,
+      "ticks": 61.604166666666664
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "no-hunger",
+        "rage-joker"
+      ],
+      "name": "infinite-trails [no-hunger + rage-joker]",
+      "games": 48,
+      "winRate": 0.4583333333333333,
+      "winPct": 45.8,
+      "apples": 1.1041666666666667,
+      "checkpoints": 2,
+      "boards": 0.125,
+      "ttt": 0,
+      "hungerDeath": 0.10416666666666667,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 122.33333333333333
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "rage-joker",
+        "dash-cooldown"
+      ],
+      "name": "invisible [dash-cooldown + rage-joker]",
+      "games": 48,
+      "winRate": 0.4583333333333333,
+      "winPct": 45.8,
+      "apples": 0.8958333333333334,
+      "checkpoints": 1.9166666666666667,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.3541666666666667,
+      "ticks": 46.5
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "charge-plus",
+        "no-hunger"
+      ],
+      "name": "laser [charge-plus + no-hunger]",
+      "games": 48,
+      "winRate": 0.4583333333333333,
+      "winPct": 45.8,
+      "apples": 0.8125,
+      "checkpoints": 1.8333333333333333,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.375,
+      "ticks": 35.5625
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "double-effective",
+        "disable-enemy"
+      ],
+      "name": "laser [disable-enemy + double-effective]",
+      "games": 48,
+      "winRate": 0.4583333333333333,
+      "winPct": 45.8,
+      "apples": 0.5208333333333334,
+      "checkpoints": 1.7083333333333333,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.22916666666666666,
+      "ticks": 30.1875
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "rage-joker",
+        "friend-blocks"
+      ],
+      "name": "invisible [friend-blocks + rage-joker]",
+      "games": 48,
+      "winRate": 0.4583333333333333,
+      "winPct": 45.8,
+      "apples": 0.5208333333333334,
+      "checkpoints": 1.6875,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3333333333333333,
+      "ticks": 35.958333333333336
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "no-hunger",
+        "disable-enemy"
+      ],
+      "name": "laser [disable-enemy + no-hunger]",
+      "games": 48,
+      "winRate": 0.4583333333333333,
+      "winPct": 45.8,
+      "apples": 0.7291666666666666,
+      "checkpoints": 1.625,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.375,
+      "ticks": 34.458333333333336
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "no-hunger",
+        "friend-blocks"
+      ],
+      "name": "invisible [friend-blocks + no-hunger]",
+      "games": 48,
+      "winRate": 0.4583333333333333,
+      "winPct": 45.8,
+      "apples": 0.5833333333333334,
+      "checkpoints": 1.3541666666666667,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 36.75
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "charge-plus",
+        "no-hunger"
+      ],
+      "name": "clones [charge-plus + no-hunger]",
+      "games": 48,
+      "winRate": 0.4375,
+      "winPct": 43.8,
+      "apples": 1.375,
+      "checkpoints": 3.2291666666666665,
+      "boards": 0.375,
+      "ttt": 0.020833333333333332,
+      "hungerDeath": 0,
+      "fallDeath": 0.4375,
+      "ticks": 76.22916666666667
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "no-hunger",
+        "trail-growth"
+      ],
+      "name": "clones [no-hunger + trail-growth]",
+      "games": 48,
+      "winRate": 0.4375,
+      "winPct": 43.8,
+      "apples": 2.6458333333333335,
+      "checkpoints": 3.125,
+      "boards": 0.3333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.5208333333333334,
+      "ticks": 79.60416666666667
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "charge-plus",
+        "disable-enemy"
+      ],
+      "name": "clones [charge-plus + disable-enemy]",
+      "games": 48,
+      "winRate": 0.4375,
+      "winPct": 43.8,
+      "apples": 0.875,
+      "checkpoints": 2.5625,
+      "boards": 0.16666666666666666,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.6041666666666666,
+      "ticks": 57.770833333333336
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "charge-plus",
+        "no-hunger"
+      ],
+      "name": "infinite-trails [charge-plus + no-hunger]",
+      "games": 48,
+      "winRate": 0.4375,
+      "winPct": 43.8,
+      "apples": 0.7708333333333334,
+      "checkpoints": 1.75,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.10416666666666667,
+      "fallDeath": 0.14583333333333334,
+      "ticks": 118.70833333333333
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "dash-cooldown",
+        "double-effective"
+      ],
+      "name": "invisible [dash-cooldown + double-effective]",
+      "games": 48,
+      "winRate": 0.4375,
+      "winPct": 43.8,
+      "apples": 0.6041666666666666,
+      "checkpoints": 1.5625,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.20833333333333334,
+      "ticks": 32.229166666666664
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "rage-joker",
+        "friend-blocks"
+      ],
+      "name": "laser [friend-blocks + rage-joker]",
+      "games": 48,
+      "winRate": 0.4375,
+      "winPct": 43.8,
+      "apples": 0.5833333333333334,
+      "checkpoints": 1.7708333333333333,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.25,
+      "ticks": 32.833333333333336
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "rage-joker",
+        "disable-enemy"
+      ],
+      "name": "infinite-trails [disable-enemy + rage-joker]",
+      "games": 48,
+      "winRate": 0.4166666666666667,
+      "winPct": 41.7,
+      "apples": 1.4583333333333333,
+      "checkpoints": 2.875,
+      "boards": 0.2916666666666667,
+      "ttt": 0,
+      "hungerDeath": 0.16666666666666666,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 122.8125
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "charge-plus",
+        "double-effective"
+      ],
+      "name": "clones [charge-plus + double-effective]",
+      "games": 48,
+      "winRate": 0.4166666666666667,
+      "winPct": 41.7,
+      "apples": 1.1458333333333333,
+      "checkpoints": 2.7083333333333335,
+      "boards": 0.2708333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.10416666666666667,
+      "fallDeath": 0.5,
+      "ticks": 90.47916666666667
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "dash-cooldown",
+        "friend-blocks"
+      ],
+      "name": "infinite-trails [dash-cooldown + friend-blocks]",
+      "games": 48,
+      "winRate": 0.4166666666666667,
+      "winPct": 41.7,
+      "apples": 1.875,
+      "checkpoints": 2.2708333333333335,
+      "boards": 0.16666666666666666,
+      "ttt": 0,
+      "hungerDeath": 0.14583333333333334,
+      "fallDeath": 0.25,
+      "ticks": 110.97916666666667
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "charge-plus",
+        "rage-joker"
+      ],
+      "name": "infinite-trails [charge-plus + rage-joker]",
+      "games": 48,
+      "winRate": 0.4166666666666667,
+      "winPct": 41.7,
+      "apples": 1.4791666666666667,
+      "checkpoints": 2.1666666666666665,
+      "boards": 0.16666666666666666,
+      "ttt": 0,
+      "hungerDeath": 0.14583333333333334,
+      "fallDeath": 0.22916666666666666,
+      "ticks": 94.89583333333333
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "dash-cooldown",
+        "friend-blocks"
+      ],
+      "name": "clones [dash-cooldown + friend-blocks]",
+      "games": 48,
+      "winRate": 0.4166666666666667,
+      "winPct": 41.7,
+      "apples": 1.25,
+      "checkpoints": 2.6666666666666665,
+      "boards": 0.14583333333333334,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 53.75
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "no-hunger",
+        "dash-cooldown"
+      ],
+      "name": "infinite-trails [dash-cooldown + no-hunger]",
+      "games": 48,
+      "winRate": 0.4166666666666667,
+      "winPct": 41.7,
+      "apples": 1.4583333333333333,
+      "checkpoints": 2.2291666666666665,
+      "boards": 0.14583333333333334,
+      "ttt": 0,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.22916666666666666,
+      "ticks": 105.875
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "no-hunger",
+        "double-effective"
+      ],
+      "name": "infinite-trails [double-effective + no-hunger]",
+      "games": 48,
+      "winRate": 0.4166666666666667,
+      "winPct": 41.7,
+      "apples": 0.875,
+      "checkpoints": 1.7708333333333333,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0.125,
+      "fallDeath": 0.22916666666666666,
+      "ticks": 124.3125
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "dash-cooldown",
+        "friend-blocks"
+      ],
+      "name": "laser [dash-cooldown + friend-blocks]",
+      "games": 48,
+      "winRate": 0.4166666666666667,
+      "winPct": 41.7,
+      "apples": 0.8125,
+      "checkpoints": 2.0208333333333335,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3125,
+      "ticks": 33.729166666666664
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "no-hunger",
+        "dash-cooldown"
+      ],
+      "name": "invisible [dash-cooldown + no-hunger]",
+      "games": 48,
+      "winRate": 0.4166666666666667,
+      "winPct": 41.7,
+      "apples": 0.6875,
+      "checkpoints": 1.75,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3541666666666667,
+      "ticks": 60.6875
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "rage-joker",
+        "friend-blocks"
+      ],
+      "name": "infinite-trails [friend-blocks + rage-joker]",
+      "games": 48,
+      "winRate": 0.4166666666666667,
+      "winPct": 41.7,
+      "apples": 0.8958333333333334,
+      "checkpoints": 1.7083333333333333,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0.10416666666666667,
+      "fallDeath": 0.14583333333333334,
+      "ticks": 75.25
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "double-effective",
+        "disable-enemy"
+      ],
+      "name": "invisible [disable-enemy + double-effective]",
+      "games": 48,
+      "winRate": 0.4166666666666667,
+      "winPct": 41.7,
+      "apples": 0.8125,
+      "checkpoints": 1.375,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.3125,
+      "ticks": 42.958333333333336
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "no-hunger",
+        "disable-enemy"
+      ],
+      "name": "invisible [disable-enemy + no-hunger]",
+      "games": 48,
+      "winRate": 0.4166666666666667,
+      "winPct": 41.7,
+      "apples": 0.3541666666666667,
+      "checkpoints": 1.3125,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 39.875
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "double-effective",
+        "friend-blocks"
+      ],
+      "name": "clones [double-effective + friend-blocks]",
+      "games": 48,
+      "winRate": 0.3958333333333333,
+      "winPct": 39.6,
+      "apples": 1.5416666666666667,
+      "checkpoints": 2.9791666666666665,
+      "boards": 0.4166666666666667,
+      "ttt": 0.020833333333333332,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.4375,
+      "ticks": 77.52083333333333
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "double-effective",
+        "disable-enemy"
+      ],
+      "name": "infinite-trails [disable-enemy + double-effective]",
+      "games": 48,
+      "winRate": 0.3958333333333333,
+      "winPct": 39.6,
+      "apples": 0.7083333333333334,
+      "checkpoints": 2.25,
+      "boards": 0.125,
+      "ttt": 0.020833333333333332,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 73.16666666666667
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "rage-joker",
+        "disable-enemy"
+      ],
+      "name": "invisible [disable-enemy + rage-joker]",
+      "games": 48,
+      "winRate": 0.3958333333333333,
+      "winPct": 39.6,
+      "apples": 0.6458333333333334,
+      "checkpoints": 1.7916666666666667,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.3333333333333333,
+      "ticks": 50.375
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "rage-joker",
+        "dash-cooldown"
+      ],
+      "name": "laser [dash-cooldown + rage-joker]",
+      "games": 48,
+      "winRate": 0.3958333333333333,
+      "winPct": 39.6,
+      "apples": 0.5208333333333334,
+      "checkpoints": 2.0625,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 35.25
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "no-hunger",
+        "rage-joker"
+      ],
+      "name": "laser [no-hunger + rage-joker]",
+      "games": 48,
+      "winRate": 0.3958333333333333,
+      "winPct": 39.6,
+      "apples": 0.7083333333333334,
+      "checkpoints": 1.7916666666666667,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.4375,
+      "ticks": 34.8125
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "dash-cooldown",
+        "trail-growth"
+      ],
+      "name": "invisible [dash-cooldown + trail-growth]",
+      "games": 48,
+      "winRate": 0.3958333333333333,
+      "winPct": 39.6,
+      "apples": 1.4583333333333333,
+      "checkpoints": 1.4583333333333333,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 47.9375
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "charge-plus",
+        "dash-cooldown"
+      ],
+      "name": "invisible [charge-plus + dash-cooldown]",
+      "games": 48,
+      "winRate": 0.3958333333333333,
+      "winPct": 39.6,
+      "apples": 0.625,
+      "checkpoints": 1.6041666666666667,
+      "boards": 0,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3333333333333333,
+      "ticks": 35.416666666666664
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "double-effective",
+        "trail-growth"
+      ],
+      "name": "clones [double-effective + trail-growth]",
+      "games": 48,
+      "winRate": 0.375,
+      "winPct": 37.5,
+      "apples": 5.166666666666667,
+      "checkpoints": 3.0208333333333335,
+      "boards": 0.3125,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.5416666666666666,
+      "ticks": 80.91666666666667
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "friend-blocks",
+        "disable-enemy"
+      ],
+      "name": "infinite-charge [disable-enemy + friend-blocks]",
+      "games": 48,
+      "winRate": 0.375,
+      "winPct": 37.5,
+      "apples": 0.7083333333333334,
+      "checkpoints": 1.7916666666666667,
+      "boards": 0.14583333333333334,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.25,
+      "ticks": 46.604166666666664
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "charge-plus",
+        "double-effective"
+      ],
+      "name": "infinite-trails [charge-plus + double-effective]",
+      "games": 48,
+      "winRate": 0.375,
+      "winPct": 37.5,
+      "apples": 1.0625,
+      "checkpoints": 1.7291666666666667,
+      "boards": 0.125,
+      "ttt": 0,
+      "hungerDeath": 0.20833333333333334,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 120.02083333333333
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "charge-plus",
+        "dash-cooldown"
+      ],
+      "name": "laser [charge-plus + dash-cooldown]",
+      "games": 48,
+      "winRate": 0.375,
+      "winPct": 37.5,
+      "apples": 0.6458333333333334,
+      "checkpoints": 1.8125,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 31.166666666666668
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "no-hunger",
+        "dash-cooldown"
+      ],
+      "name": "laser [dash-cooldown + no-hunger]",
+      "games": 48,
+      "winRate": 0.375,
+      "winPct": 37.5,
+      "apples": 0.75,
+      "checkpoints": 1.7291666666666667,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3125,
+      "ticks": 33.354166666666664
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "charge-plus",
+        "disable-enemy"
+      ],
+      "name": "invisible [charge-plus + disable-enemy]",
+      "games": 48,
+      "winRate": 0.375,
+      "winPct": 37.5,
+      "apples": 0.7916666666666666,
+      "checkpoints": 1.6875,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.25,
+      "ticks": 43.5625
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "charge-plus",
+        "rage-joker"
+      ],
+      "name": "laser [charge-plus + rage-joker]",
+      "games": 48,
+      "winRate": 0.375,
+      "winPct": 37.5,
+      "apples": 0.5208333333333334,
+      "checkpoints": 1.7916666666666667,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 30.708333333333332
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "no-hunger",
+        "double-effective"
+      ],
+      "name": "invisible [double-effective + no-hunger]",
+      "games": 48,
+      "winRate": 0.375,
+      "winPct": 37.5,
+      "apples": 1.2083333333333333,
+      "checkpoints": 1.9375,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.4166666666666667,
+      "ticks": 68.97916666666667
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "charge-plus",
+        "friend-blocks"
+      ],
+      "name": "laser [charge-plus + friend-blocks]",
+      "games": 48,
+      "winRate": 0.375,
+      "winPct": 37.5,
+      "apples": 0.7291666666666666,
+      "checkpoints": 1.7916666666666667,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3125,
+      "ticks": 33.5625
+    },
+    {
+      "skill": "clones",
+      "jokers": [
+        "no-hunger",
+        "friend-blocks"
+      ],
+      "name": "clones [friend-blocks + no-hunger]",
+      "games": 48,
+      "winRate": 0.3541666666666667,
+      "winPct": 35.4,
+      "apples": 1.0208333333333333,
+      "checkpoints": 2.4791666666666665,
+      "boards": 0.16666666666666666,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.4166666666666667,
+      "ticks": 60.6875
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "rage-joker",
+        "dash-cooldown"
+      ],
+      "name": "infinite-trails [dash-cooldown + rage-joker]",
+      "games": 48,
+      "winRate": 0.3541666666666667,
+      "winPct": 35.4,
+      "apples": 1.1875,
+      "checkpoints": 2.3958333333333335,
+      "boards": 0.16666666666666666,
+      "ttt": 0,
+      "hungerDeath": 0.14583333333333334,
+      "fallDeath": 0.125,
+      "ticks": 109.20833333333333
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "charge-plus",
+        "friend-blocks"
+      ],
+      "name": "infinite-trails [charge-plus + friend-blocks]",
+      "games": 48,
+      "winRate": 0.3541666666666667,
+      "winPct": 35.4,
+      "apples": 0.9375,
+      "checkpoints": 1.8958333333333333,
+      "boards": 0.16666666666666666,
+      "ttt": 0,
+      "hungerDeath": 0.16666666666666666,
+      "fallDeath": 0.14583333333333334,
+      "ticks": 99.08333333333333
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "charge-plus",
+        "no-hunger"
+      ],
+      "name": "invisible [charge-plus + no-hunger]",
+      "games": 48,
+      "winRate": 0.3541666666666667,
+      "winPct": 35.4,
+      "apples": 0.7708333333333334,
+      "checkpoints": 1.8541666666666667,
+      "boards": 0.14583333333333334,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.3958333333333333,
+      "ticks": 40.604166666666664
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "dash-cooldown",
+        "double-effective"
+      ],
+      "name": "infinite-trails [dash-cooldown + double-effective]",
+      "games": 48,
+      "winRate": 0.3541666666666667,
+      "winPct": 35.4,
+      "apples": 1.1875,
+      "checkpoints": 2.4375,
+      "boards": 0.125,
+      "ttt": 0,
+      "hungerDeath": 0.16666666666666666,
+      "fallDeath": 0.25,
+      "ticks": 109.72916666666667
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "dash-cooldown",
+        "trail-growth"
+      ],
+      "name": "laser [dash-cooldown + trail-growth]",
+      "games": 48,
+      "winRate": 0.3541666666666667,
+      "winPct": 35.4,
+      "apples": 1.2291666666666667,
+      "checkpoints": 1.75,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.4791666666666667,
+      "ticks": 34.520833333333336
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "double-effective",
+        "friend-blocks"
+      ],
+      "name": "laser [double-effective + friend-blocks]",
+      "games": 48,
+      "winRate": 0.3541666666666667,
+      "winPct": 35.4,
+      "apples": 0.7083333333333334,
+      "checkpoints": 1.6458333333333333,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3125,
+      "ticks": 31.375
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "rage-joker",
+        "double-effective"
+      ],
+      "name": "invisible [double-effective + rage-joker]",
+      "games": 48,
+      "winRate": 0.3541666666666667,
+      "winPct": 35.4,
+      "apples": 0.7916666666666666,
+      "checkpoints": 1.75,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3541666666666667,
+      "ticks": 40.458333333333336
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "dash-cooldown",
+        "disable-enemy"
+      ],
+      "name": "infinite-charge [dash-cooldown + disable-enemy]",
+      "games": 48,
+      "winRate": 0.3541666666666667,
+      "winPct": 35.4,
+      "apples": 0.5208333333333334,
+      "checkpoints": 1.4791666666666667,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 41.25
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "friend-blocks",
+        "disable-enemy"
+      ],
+      "name": "invisible [disable-enemy + friend-blocks]",
+      "games": 48,
+      "winRate": 0.3541666666666667,
+      "winPct": 35.4,
+      "apples": 0.7083333333333334,
+      "checkpoints": 1.4166666666666667,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3125,
+      "ticks": 36.583333333333336
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "trail-growth",
+        "disable-enemy"
+      ],
+      "name": "invisible [disable-enemy + trail-growth]",
+      "games": 48,
+      "winRate": 0.3541666666666667,
+      "winPct": 35.4,
+      "apples": 0.6875,
+      "checkpoints": 1.0416666666666667,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 31.416666666666668
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "charge-plus",
+        "rage-joker"
+      ],
+      "name": "invisible [charge-plus + rage-joker]",
+      "games": 48,
+      "winRate": 0.3333333333333333,
+      "winPct": 33.3,
+      "apples": 0.7291666666666666,
+      "checkpoints": 2.0416666666666665,
+      "boards": 0.14583333333333334,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 50.604166666666664
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "rage-joker",
+        "double-effective"
+      ],
+      "name": "infinite-trails [double-effective + rage-joker]",
+      "games": 48,
+      "winRate": 0.3333333333333333,
+      "winPct": 33.3,
+      "apples": 1.125,
+      "checkpoints": 1.8958333333333333,
+      "boards": 0.125,
+      "ttt": 0,
+      "hungerDeath": 0.125,
+      "fallDeath": 0.14583333333333334,
+      "ticks": 94.875
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "no-hunger",
+        "rage-joker"
+      ],
+      "name": "invisible [no-hunger + rage-joker]",
+      "games": 48,
+      "winRate": 0.3333333333333333,
+      "winPct": 33.3,
+      "apples": 1.1041666666666667,
+      "checkpoints": 1.7083333333333333,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3125,
+      "ticks": 61.395833333333336
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "no-hunger",
+        "double-effective"
+      ],
+      "name": "laser [double-effective + no-hunger]",
+      "games": 48,
+      "winRate": 0.3333333333333333,
+      "winPct": 33.3,
+      "apples": 0.3333333333333333,
+      "checkpoints": 1.5416666666666667,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.25,
+      "ticks": 34.3125
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "double-effective",
+        "friend-blocks"
+      ],
+      "name": "invisible [double-effective + friend-blocks]",
+      "games": 48,
+      "winRate": 0.3333333333333333,
+      "winPct": 33.3,
+      "apples": 0.5625,
+      "checkpoints": 1.5,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.3125,
+      "ticks": 38
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "rage-joker",
+        "disable-enemy"
+      ],
+      "name": "laser [disable-enemy + rage-joker]",
+      "games": 48,
+      "winRate": 0.3333333333333333,
+      "winPct": 33.3,
+      "apples": 0.3958333333333333,
+      "checkpoints": 1.7291666666666667,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3541666666666667,
+      "ticks": 30.166666666666668
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "charge-plus",
+        "friend-blocks"
+      ],
+      "name": "invisible [charge-plus + friend-blocks]",
+      "games": 48,
+      "winRate": 0.3333333333333333,
+      "winPct": 33.3,
+      "apples": 0.9375,
+      "checkpoints": 1.5208333333333333,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 45
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "charge-plus",
+        "trail-growth"
+      ],
+      "name": "invisible [charge-plus + trail-growth]",
+      "games": 48,
+      "winRate": 0.3125,
+      "winPct": 31.3,
+      "apples": 0.5208333333333334,
+      "checkpoints": 1.3958333333333333,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 28.0625
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "friend-blocks",
+        "disable-enemy"
+      ],
+      "name": "laser [disable-enemy + friend-blocks]",
+      "games": 48,
+      "winRate": 0.3125,
+      "winPct": 31.3,
+      "apples": 0.5208333333333334,
+      "checkpoints": 1.7916666666666667,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3333333333333333,
+      "ticks": 29.229166666666668
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "charge-plus",
+        "double-effective"
+      ],
+      "name": "invisible [charge-plus + double-effective]",
+      "games": 48,
+      "winRate": 0.3125,
+      "winPct": 31.3,
+      "apples": 0.8541666666666666,
+      "checkpoints": 1.75,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 37.354166666666664
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "no-hunger",
+        "trail-growth"
+      ],
+      "name": "invisible [no-hunger + trail-growth]",
+      "games": 48,
+      "winRate": 0.3125,
+      "winPct": 31.3,
+      "apples": 1.4166666666666667,
+      "checkpoints": 1.6041666666666667,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3541666666666667,
+      "ticks": 44.0625
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "charge-plus",
+        "double-effective"
+      ],
+      "name": "laser [charge-plus + double-effective]",
+      "games": 48,
+      "winRate": 0.3125,
+      "winPct": 31.3,
+      "apples": 0.625,
+      "checkpoints": 1.6458333333333333,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3958333333333333,
+      "ticks": 32.75
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "dash-cooldown",
+        "disable-enemy"
+      ],
+      "name": "laser [dash-cooldown + disable-enemy]",
+      "games": 48,
+      "winRate": 0.3125,
+      "winPct": 31.3,
+      "apples": 0.7291666666666666,
+      "checkpoints": 1.3333333333333333,
+      "boards": 0,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3958333333333333,
+      "ticks": 31.25
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "charge-plus",
+        "dash-cooldown"
+      ],
+      "name": "infinite-trails [charge-plus + dash-cooldown]",
+      "games": 48,
+      "winRate": 0.2916666666666667,
+      "winPct": 29.2,
+      "apples": 1.0625,
+      "checkpoints": 2.3541666666666665,
+      "boards": 0.16666666666666666,
+      "ttt": 0.020833333333333332,
+      "hungerDeath": 0.16666666666666666,
+      "fallDeath": 0.125,
+      "ticks": 110.60416666666667
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "no-hunger",
+        "trail-growth"
+      ],
+      "name": "laser [no-hunger + trail-growth]",
+      "games": 48,
+      "winRate": 0.2916666666666667,
+      "winPct": 29.2,
+      "apples": 0.8541666666666666,
+      "checkpoints": 1.8958333333333333,
+      "boards": 0.125,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3125,
+      "ticks": 34.958333333333336
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "double-effective",
+        "trail-growth"
+      ],
+      "name": "laser [double-effective + trail-growth]",
+      "games": 48,
+      "winRate": 0.2916666666666667,
+      "winPct": 29.2,
+      "apples": 1.6041666666666667,
+      "checkpoints": 1.7291666666666667,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.4166666666666667,
+      "ticks": 33.604166666666664
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "charge-plus",
+        "disable-enemy"
+      ],
+      "name": "infinite-trails [charge-plus + disable-enemy]",
+      "games": 48,
+      "winRate": 0.2916666666666667,
+      "winPct": 29.2,
+      "apples": 0.5,
+      "checkpoints": 1.4583333333333333,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.16666666666666666,
+      "fallDeath": 0.20833333333333334,
+      "ticks": 91.47916666666667
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "charge-plus",
+        "trail-growth"
+      ],
+      "name": "laser [charge-plus + trail-growth]",
+      "games": 48,
+      "winRate": 0.2916666666666667,
+      "winPct": 29.2,
+      "apples": 0.9375,
+      "checkpoints": 1.7708333333333333,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 33.041666666666664
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "rage-joker",
+        "trail-growth"
+      ],
+      "name": "infinite-charge [rage-joker + trail-growth]",
+      "games": 48,
+      "winRate": 0.2916666666666667,
+      "winPct": 29.2,
+      "apples": 0.9375,
+      "checkpoints": 1.625,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.22916666666666666,
+      "ticks": 36.416666666666664
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "no-hunger",
+        "friend-blocks"
+      ],
+      "name": "laser [friend-blocks + no-hunger]",
+      "games": 48,
+      "winRate": 0.2916666666666667,
+      "winPct": 29.2,
+      "apples": 0.6458333333333334,
+      "checkpoints": 1.6458333333333333,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 29.854166666666668
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "charge-plus",
+        "no-hunger"
+      ],
+      "name": "infinite-charge [charge-plus + no-hunger]",
+      "games": 48,
+      "winRate": 0.2916666666666667,
+      "winPct": 29.2,
+      "apples": 0.7708333333333334,
+      "checkpoints": 1.5833333333333333,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 59.416666666666664
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "trail-growth",
+        "disable-enemy"
+      ],
+      "name": "laser [disable-enemy + trail-growth]",
+      "games": 48,
+      "winRate": 0.2916666666666667,
+      "winPct": 29.2,
+      "apples": 0.5208333333333334,
+      "checkpoints": 1.6875,
+      "boards": 0,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.375,
+      "ticks": 30.770833333333332
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "dash-cooldown",
+        "double-effective"
+      ],
+      "name": "laser [dash-cooldown + double-effective]",
+      "games": 48,
+      "winRate": 0.2708333333333333,
+      "winPct": 27.1,
+      "apples": 0.7291666666666666,
+      "checkpoints": 1.75,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3541666666666667,
+      "ticks": 33.5625
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "rage-joker",
+        "double-effective"
+      ],
+      "name": "laser [double-effective + rage-joker]",
+      "games": 48,
+      "winRate": 0.2708333333333333,
+      "winPct": 27.1,
+      "apples": 0.8125,
+      "checkpoints": 1.7708333333333333,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 32.854166666666664
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "no-hunger",
+        "double-effective"
+      ],
+      "name": "infinite-charge [double-effective + no-hunger]",
+      "games": 48,
+      "winRate": 0.2708333333333333,
+      "winPct": 27.1,
+      "apples": 0.7916666666666666,
+      "checkpoints": 1.375,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.25,
+      "ticks": 37.3125
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "rage-joker",
+        "double-effective"
+      ],
+      "name": "infinite-charge [double-effective + rage-joker]",
+      "games": 48,
+      "winRate": 0.25,
+      "winPct": 25,
+      "apples": 0.7291666666666666,
+      "checkpoints": 1.6666666666666667,
+      "boards": 0.125,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 43.583333333333336
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "rage-joker",
+        "friend-blocks"
+      ],
+      "name": "infinite-charge [friend-blocks + rage-joker]",
+      "games": 48,
+      "winRate": 0.25,
+      "winPct": 25,
+      "apples": 0.5208333333333334,
+      "checkpoints": 1.5833333333333333,
+      "boards": 0.125,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.1875,
+      "ticks": 35.875
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "charge-plus",
+        "disable-enemy"
+      ],
+      "name": "infinite-charge [charge-plus + disable-enemy]",
+      "games": 48,
+      "winRate": 0.25,
+      "winPct": 25,
+      "apples": 0.75,
+      "checkpoints": 1.5625,
+      "boards": 0.125,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.16666666666666666,
+      "ticks": 41.0625
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "rage-joker",
+        "trail-growth"
+      ],
+      "name": "invisible [rage-joker + trail-growth]",
+      "games": 48,
+      "winRate": 0.25,
+      "winPct": 25,
+      "apples": 1.2291666666666667,
+      "checkpoints": 1.7916666666666667,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3541666666666667,
+      "ticks": 42.916666666666664
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "double-effective",
+        "trail-growth"
+      ],
+      "name": "infinite-charge [double-effective + trail-growth]",
+      "games": 48,
+      "winRate": 0.25,
+      "winPct": 25,
+      "apples": 2.2708333333333335,
+      "checkpoints": 1.6041666666666667,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.25,
+      "ticks": 35.916666666666664
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "friend-blocks",
+        "trail-growth"
+      ],
+      "name": "infinite-charge [friend-blocks + trail-growth]",
+      "games": 48,
+      "winRate": 0.25,
+      "winPct": 25,
+      "apples": 1.25,
+      "checkpoints": 1.5833333333333333,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 40.791666666666664
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "dash-cooldown",
+        "friend-blocks"
+      ],
+      "name": "invisible [dash-cooldown + friend-blocks]",
+      "games": 48,
+      "winRate": 0.25,
+      "winPct": 25,
+      "apples": 0.5208333333333334,
+      "checkpoints": 1.5,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.375,
+      "ticks": 33.354166666666664
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "no-hunger",
+        "trail-growth"
+      ],
+      "name": "infinite-charge [no-hunger + trail-growth]",
+      "games": 48,
+      "winRate": 0.25,
+      "winPct": 25,
+      "apples": 2.5208333333333335,
+      "checkpoints": 1.8125,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.25,
+      "ticks": 65.70833333333333
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "double-effective",
+        "friend-blocks"
+      ],
+      "name": "infinite-charge [double-effective + friend-blocks]",
+      "games": 48,
+      "winRate": 0.25,
+      "winPct": 25,
+      "apples": 0.6458333333333334,
+      "checkpoints": 1.7083333333333333,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.22916666666666666,
+      "ticks": 33.6875
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "charge-plus",
+        "rage-joker"
+      ],
+      "name": "infinite-charge [charge-plus + rage-joker]",
+      "games": 48,
+      "winRate": 0.25,
+      "winPct": 25,
+      "apples": 0.4166666666666667,
+      "checkpoints": 1.6041666666666667,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.25,
+      "ticks": 28.583333333333332
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "trail-growth",
+        "disable-enemy"
+      ],
+      "name": "infinite-charge [disable-enemy + trail-growth]",
+      "games": 48,
+      "winRate": 0.25,
+      "winPct": 25,
+      "apples": 0.5625,
+      "checkpoints": 1.3541666666666667,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.125,
+      "ticks": 28.333333333333332
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "double-effective",
+        "trail-growth"
+      ],
+      "name": "invisible [double-effective + trail-growth]",
+      "games": 48,
+      "winRate": 0.22916666666666666,
+      "winPct": 22.9,
+      "apples": 1.7291666666666667,
+      "checkpoints": 1.625,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3333333333333333,
+      "ticks": 35.9375
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "rage-joker",
+        "dash-cooldown"
+      ],
+      "name": "infinite-charge [dash-cooldown + rage-joker]",
+      "games": 48,
+      "winRate": 0.22916666666666666,
+      "winPct": 22.9,
+      "apples": 0.7916666666666666,
+      "checkpoints": 1.7916666666666667,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 31.645833333333332
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "no-hunger",
+        "friend-blocks"
+      ],
+      "name": "infinite-charge [friend-blocks + no-hunger]",
+      "games": 48,
+      "winRate": 0.22916666666666666,
+      "winPct": 22.9,
+      "apples": 0.75,
+      "checkpoints": 1.5625,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.25,
+      "ticks": 50.3125
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "dash-cooldown",
+        "trail-growth"
+      ],
+      "name": "infinite-charge [dash-cooldown + trail-growth]",
+      "games": 48,
+      "winRate": 0.22916666666666666,
+      "winPct": 22.9,
+      "apples": 1,
+      "checkpoints": 1.7291666666666667,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2916666666666667,
+      "ticks": 34.041666666666664
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "double-effective",
+        "disable-enemy"
+      ],
+      "name": "infinite-charge [disable-enemy + double-effective]",
+      "games": 48,
+      "winRate": 0.22916666666666666,
+      "winPct": 22.9,
+      "apples": 0.5208333333333334,
+      "checkpoints": 1.5,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.16666666666666666,
+      "ticks": 37.958333333333336
+    },
+    {
+      "skill": "invisible",
+      "jokers": [
+        "friend-blocks",
+        "trail-growth"
+      ],
+      "name": "invisible [friend-blocks + trail-growth]",
+      "games": 48,
+      "winRate": 0.22916666666666666,
+      "winPct": 22.9,
+      "apples": 0.9375,
+      "checkpoints": 1.5,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3541666666666667,
+      "ticks": 34.25
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "charge-plus",
+        "disable-enemy"
+      ],
+      "name": "laser [charge-plus + disable-enemy]",
+      "games": 48,
+      "winRate": 0.22916666666666666,
+      "winPct": 22.9,
+      "apples": 0.375,
+      "checkpoints": 1.5208333333333333,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.375,
+      "ticks": 28.604166666666668
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "dash-cooldown",
+        "friend-blocks"
+      ],
+      "name": "infinite-charge [dash-cooldown + friend-blocks]",
+      "games": 48,
+      "winRate": 0.20833333333333334,
+      "winPct": 20.8,
+      "apples": 0.8958333333333334,
+      "checkpoints": 1.8958333333333333,
+      "boards": 0.14583333333333334,
+      "ttt": 0.020833333333333332,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.16666666666666666,
+      "ticks": 50.0625
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "charge-plus",
+        "double-effective"
+      ],
+      "name": "infinite-charge [charge-plus + double-effective]",
+      "games": 48,
+      "winRate": 0.20833333333333334,
+      "winPct": 20.8,
+      "apples": 0.75,
+      "checkpoints": 1.7083333333333333,
+      "boards": 0.14583333333333334,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.1875,
+      "ticks": 39.0625
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "rage-joker",
+        "disable-enemy"
+      ],
+      "name": "infinite-charge [disable-enemy + rage-joker]",
+      "games": 48,
+      "winRate": 0.20833333333333334,
+      "winPct": 20.8,
+      "apples": 0.4166666666666667,
+      "checkpoints": 1.5,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.3541666666666667,
+      "ticks": 37.125
+    },
+    {
+      "skill": "infinite-trails",
+      "jokers": [
+        "double-effective",
+        "friend-blocks"
+      ],
+      "name": "infinite-trails [double-effective + friend-blocks]",
+      "games": 48,
+      "winRate": 0.20833333333333334,
+      "winPct": 20.8,
+      "apples": 0.7083333333333334,
+      "checkpoints": 1.5625,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0.10416666666666667,
+      "fallDeath": 0.1875,
+      "ticks": 77.125
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "no-hunger",
+        "disable-enemy"
+      ],
+      "name": "infinite-charge [disable-enemy + no-hunger]",
+      "games": 48,
+      "winRate": 0.20833333333333334,
+      "winPct": 20.8,
+      "apples": 0.5416666666666666,
+      "checkpoints": 1.5,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3333333333333333,
+      "ticks": 41.3125
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "dash-cooldown",
+        "double-effective"
+      ],
+      "name": "infinite-charge [dash-cooldown + double-effective]",
+      "games": 48,
+      "winRate": 0.1875,
+      "winPct": 18.8,
+      "apples": 0.5416666666666666,
+      "checkpoints": 1.5625,
+      "boards": 0.0625,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.25,
+      "ticks": 33.020833333333336
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "charge-plus",
+        "friend-blocks"
+      ],
+      "name": "infinite-charge [charge-plus + friend-blocks]",
+      "games": 48,
+      "winRate": 0.16666666666666666,
+      "winPct": 16.7,
+      "apples": 0.9583333333333334,
+      "checkpoints": 1.4583333333333333,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.20833333333333334,
+      "ticks": 46.1875
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "charge-plus",
+        "trail-growth"
+      ],
+      "name": "infinite-charge [charge-plus + trail-growth]",
+      "games": 48,
+      "winRate": 0.16666666666666666,
+      "winPct": 16.7,
+      "apples": 1.0833333333333333,
+      "checkpoints": 1.625,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3125,
+      "ticks": 34.75
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "no-hunger",
+        "rage-joker"
+      ],
+      "name": "infinite-charge [no-hunger + rage-joker]",
+      "games": 48,
+      "winRate": 0.14583333333333334,
+      "winPct": 14.6,
+      "apples": 0.9375,
+      "checkpoints": 1.6458333333333333,
+      "boards": 0.08333333333333333,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 63.666666666666664
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "no-hunger",
+        "dash-cooldown"
+      ],
+      "name": "infinite-charge [dash-cooldown + no-hunger]",
+      "games": 48,
+      "winRate": 0.125,
+      "winPct": 12.5,
+      "apples": 0.3333333333333333,
+      "checkpoints": 1.5833333333333333,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.16666666666666666,
+      "ticks": 26.520833333333332
+    },
+    {
+      "skill": "laser",
+      "jokers": [
+        "friend-blocks",
+        "trail-growth"
+      ],
+      "name": "laser [friend-blocks + trail-growth]",
+      "games": 48,
+      "winRate": 0.125,
+      "winPct": 12.5,
+      "apples": 0.875,
+      "checkpoints": 1.5208333333333333,
+      "boards": 0.041666666666666664,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.3125,
+      "ticks": 31.333333333333332
+    },
+    {
+      "skill": "infinite-charge",
+      "jokers": [
+        "charge-plus",
+        "dash-cooldown"
+      ],
+      "name": "infinite-charge [charge-plus + dash-cooldown]",
+      "games": 48,
+      "winRate": 0.10416666666666667,
+      "winPct": 10.4,
+      "apples": 0.7916666666666666,
+      "checkpoints": 1.9791666666666667,
+      "boards": 0.1875,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.20833333333333334,
+      "ticks": 39.708333333333336
+    }
+  ],
+  "top3PerSkill": {
+    "clones": [
+      {
+        "rank": 1,
+        "skill": "clones",
+        "jokers": [
+          "rage-joker",
+          "extra-life"
+        ],
+        "name": "clones [extra-life + rage-joker]",
+        "games": 48,
+        "winRate": 0.7083333333333334,
+        "winPct": 70.8,
+        "apples": 1.8541666666666667,
+        "checkpoints": 3.7916666666666665,
+        "boards": 0.5833333333333334,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.375,
+        "ticks": 111.625
+      },
+      {
+        "rank": 2,
+        "skill": "clones",
+        "jokers": [
+          "no-hunger",
+          "extra-life"
+        ],
+        "name": "clones [extra-life + no-hunger]",
+        "games": 48,
+        "winRate": 0.7083333333333334,
+        "winPct": 70.8,
+        "apples": 1.1666666666666667,
+        "checkpoints": 3.0416666666666665,
+        "boards": 0.3125,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.4375,
+        "ticks": 76.39583333333333
+      },
+      {
+        "rank": 3,
+        "skill": "clones",
+        "jokers": [
+          "charge-plus",
+          "dash-cooldown"
+        ],
+        "name": "clones [charge-plus + dash-cooldown]",
+        "games": 48,
+        "winRate": 0.7083333333333334,
+        "winPct": 70.8,
+        "apples": 1.8333333333333333,
+        "checkpoints": 3.1875,
+        "boards": 0.22916666666666666,
+        "ttt": 0.020833333333333332,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.5,
+        "ticks": 79.3125
+      }
+    ],
+    "infinite-charge": [
+      {
+        "rank": 1,
+        "skill": "infinite-charge",
+        "jokers": [
+          "double-effective",
+          "extra-life"
+        ],
+        "name": "infinite-charge [double-effective + extra-life]",
+        "games": 48,
+        "winRate": 0.6041666666666666,
+        "winPct": 60.4,
+        "apples": 0.8541666666666666,
+        "checkpoints": 1.7916666666666667,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.25,
+        "ticks": 53.479166666666664
+      },
+      {
+        "rank": 2,
+        "skill": "infinite-charge",
+        "jokers": [
+          "no-hunger",
+          "extra-life"
+        ],
+        "name": "infinite-charge [extra-life + no-hunger]",
+        "games": 48,
+        "winRate": 0.5833333333333334,
+        "winPct": 58.3,
+        "apples": 0.9166666666666666,
+        "checkpoints": 2.1666666666666665,
+        "boards": 0.22916666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.4166666666666667,
+        "ticks": 81.9375
+      },
+      {
+        "rank": 3,
+        "skill": "infinite-charge",
+        "jokers": [
+          "friend-blocks",
+          "extra-life"
+        ],
+        "name": "infinite-charge [extra-life + friend-blocks]",
+        "games": 48,
+        "winRate": 0.5625,
+        "winPct": 56.3,
+        "apples": 0.8541666666666666,
+        "checkpoints": 1.7083333333333333,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 45.166666666666664
+      }
+    ],
+    "laser": [
+      {
+        "rank": 1,
+        "skill": "laser",
+        "jokers": [
+          "double-effective",
+          "extra-life"
+        ],
+        "name": "laser [double-effective + extra-life]",
+        "games": 48,
+        "winRate": 0.8125,
+        "winPct": 81.3,
+        "apples": 0.6666666666666666,
+        "checkpoints": 1.7083333333333333,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 41.75
+      },
+      {
+        "rank": 2,
+        "skill": "laser",
+        "jokers": [
+          "rage-joker",
+          "extra-life"
+        ],
+        "name": "laser [extra-life + rage-joker]",
+        "games": 48,
+        "winRate": 0.7083333333333334,
+        "winPct": 70.8,
+        "apples": 1,
+        "checkpoints": 1.7291666666666667,
+        "boards": 0.041666666666666664,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.16666666666666666,
+        "ticks": 39.666666666666664
+      },
+      {
+        "rank": 3,
+        "skill": "laser",
+        "jokers": [
+          "dash-cooldown",
+          "extra-life"
+        ],
+        "name": "laser [dash-cooldown + extra-life]",
+        "games": 48,
+        "winRate": 0.6666666666666666,
+        "winPct": 66.7,
+        "apples": 0.5625,
+        "checkpoints": 1.6666666666666667,
+        "boards": 0.020833333333333332,
+        "ttt": 0,
+        "hungerDeath": 0,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 33.270833333333336
+      }
+    ],
+    "invisible": [
+      {
+        "rank": 1,
+        "skill": "invisible",
+        "jokers": [
+          "double-effective",
+          "extra-life"
+        ],
+        "name": "invisible [double-effective + extra-life]",
+        "games": 48,
+        "winRate": 0.8125,
+        "winPct": 81.3,
+        "apples": 0.8333333333333334,
+        "checkpoints": 1.5833333333333333,
+        "boards": 0.10416666666666667,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.1875,
+        "ticks": 57.3125
+      },
+      {
+        "rank": 2,
+        "skill": "invisible",
+        "jokers": [
+          "rage-joker",
+          "extra-life"
+        ],
+        "name": "invisible [extra-life + rage-joker]",
+        "games": 48,
+        "winRate": 0.6875,
+        "winPct": 68.8,
+        "apples": 0.8541666666666666,
+        "checkpoints": 2.0416666666666665,
+        "boards": 0.16666666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.020833333333333332,
+        "fallDeath": 0.4166666666666667,
+        "ticks": 65.125
+      },
+      {
+        "rank": 3,
+        "skill": "invisible",
+        "jokers": [
+          "extra-life",
+          "disable-enemy"
+        ],
+        "name": "invisible [disable-enemy + extra-life]",
+        "games": 48,
+        "winRate": 0.6875,
+        "winPct": 68.8,
+        "apples": 0.8958333333333334,
+        "checkpoints": 1.7083333333333333,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0.041666666666666664,
+        "fallDeath": 0.22916666666666666,
+        "ticks": 55.9375
+      }
+    ],
+    "infinite-trails": [
+      {
+        "rank": 1,
+        "skill": "infinite-trails",
+        "jokers": [
+          "friend-blocks",
+          "extra-life"
+        ],
+        "name": "infinite-trails [extra-life + friend-blocks]",
+        "games": 48,
+        "winRate": 0.7708333333333334,
+        "winPct": 77.1,
+        "apples": 1.4583333333333333,
+        "checkpoints": 1.9375,
+        "boards": 0.125,
+        "ttt": 0,
+        "hungerDeath": 0.0625,
+        "fallDeath": 0.3125,
+        "ticks": 79.8125
+      },
+      {
+        "rank": 2,
+        "skill": "infinite-trails",
+        "jokers": [
+          "no-hunger",
+          "extra-life"
+        ],
+        "name": "infinite-trails [extra-life + no-hunger]",
+        "games": 48,
+        "winRate": 0.6875,
+        "winPct": 68.8,
+        "apples": 1.2916666666666667,
+        "checkpoints": 2.0416666666666665,
+        "boards": 0.16666666666666666,
+        "ttt": 0,
+        "hungerDeath": 0.125,
+        "fallDeath": 0.25,
+        "ticks": 151.70833333333334
+      },
+      {
+        "rank": 3,
+        "skill": "infinite-trails",
+        "jokers": [
+          "dash-cooldown",
+          "extra-life"
+        ],
+        "name": "infinite-trails [dash-cooldown + extra-life]",
+        "games": 48,
+        "winRate": 0.6666666666666666,
+        "winPct": 66.7,
+        "apples": 1.1041666666666667,
+        "checkpoints": 2.2916666666666665,
+        "boards": 0.1875,
+        "ttt": 0,
+        "hungerDeath": 0.10416666666666667,
+        "fallDeath": 0.2708333333333333,
+        "ticks": 102.3125
+      }
+    ]
+  },
+  "top5Overall": [
+    {
+      "rank": 1,
+      "skill": "invisible",
+      "jokers": [
+        "double-effective",
+        "extra-life"
+      ],
+      "name": "invisible [double-effective + extra-life]",
+      "games": 48,
+      "winRate": 0.8125,
+      "winPct": 81.3,
+      "apples": 0.8333333333333334,
+      "checkpoints": 1.5833333333333333,
+      "boards": 0.10416666666666667,
+      "ttt": 0,
+      "hungerDeath": 0.020833333333333332,
+      "fallDeath": 0.1875,
+      "ticks": 57.3125
+    },
+    {
+      "rank": 2,
+      "skill": "laser",
+      "jokers": [
+        "double-effective",
+        "extra-life"
+      ],
+      "name": "laser [double-effective + extra-life]",
+      "games": 48,
+      "winRate": 0.8125,
+      "winPct": 81.3,
+      "apples": 0.6666666666666666,
+      "checkpoints": 1.7083333333333333,
+      "boards": 0.020833333333333332,
+      "ttt": 0,
+      "hungerDeath": 0,
+      "fallDeath": 0.2708333333333333,
+      "ticks": 41.75
+    },
+    {
+      "rank": 3,
+      "skill": "infinite-trails",
+      "jokers": [
+        "friend-blocks",
+        "extra-life"
+      ],
+      "name": "infinite-trails [extra-life + friend-blocks]",
+      "games": 48,
+      "winRate": 0.7708333333333334,
+      "winPct": 77.1,
+      "apples": 1.4583333333333333,
+      "checkpoints": 1.9375,
+      "boards": 0.125,
+      "ttt": 0,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.3125,
+      "ticks": 79.8125
+    },
+    {
+      "rank": 4,
+      "skill": "clones",
+      "jokers": [
+        "rage-joker",
+        "extra-life"
+      ],
+      "name": "clones [extra-life + rage-joker]",
+      "games": 48,
+      "winRate": 0.7083333333333334,
+      "winPct": 70.8,
+      "apples": 1.8541666666666667,
+      "checkpoints": 3.7916666666666665,
+      "boards": 0.5833333333333334,
+      "ttt": 0,
+      "hungerDeath": 0.0625,
+      "fallDeath": 0.375,
+      "ticks": 111.625
+    },
+    {
+      "rank": 5,
+      "skill": "clones",
+      "jokers": [
+        "no-hunger",
+        "extra-life"
+      ],
+      "name": "clones [extra-life + no-hunger]",
+      "games": 48,
+      "winRate": 0.7083333333333334,
+      "winPct": 70.8,
+      "apples": 1.1666666666666667,
+      "checkpoints": 3.0416666666666665,
+      "boards": 0.3125,
+      "ttt": 0,
+      "hungerDeath": 0.041666666666666664,
+      "fallDeath": 0.4375,
+      "ticks": 76.39583333333333
+    }
+  ]
+}

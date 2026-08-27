@@ -1,0 +1,12 @@
+---
+description: Always end replies with the local game URL
+alwaysApply: true
+---
+
+# Local play URL
+
+When finishing any user-facing response in this RonkBonk `game-source` project, always include:
+
+http://localhost:8888
+
+If the user asked for localhost / to open the game, ensure the server is up (`node _local_serve.js` if needed) and open that URL.

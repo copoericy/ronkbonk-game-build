@@ -1,0 +1,32 @@
+api_name,display_name,description,hidden
+ACH_TUTORIAL,First Steps,Complete the tutorial by beating the training bot.,0
+ACH_TUTORIAL_COMPLETE,Tutorial Cleared,Finish or clear tutorial progress.,0
+ACH_FIRST_WIN,First Victory,Win your first match.,0
+ACH_WIN_EASY,Warmup,Win a match against an Easy bot.,0
+ACH_WIN_MEDIUM,Getting Serious,Win a match against a Medium bot.,0
+ACH_WIN_HARD,Hard Mode,Win a match against a Hard bot.,0
+ACH_WIN_INVINCIBLE,Impossible?,Win a match against an Elite bot.,0
+ACH_INVINCIBLE_SLAYER,Slayer,Defeat an Elite bot.,0
+ACH_WIN_PVP,Rivalry,Win a local multiplayer or online match.,0
+ACH_ONLINE_VICTORY,Online Victory,Win an online match.,0
+ACH_LOCAL_DUELIST,Local Duelist,Win a local multiplayer match.,0
+ACH_FIRST_APPLE,Hungry,Eat an apple.,0
+ACH_FIRST_DASH,Quick Feet,Use Dash.,0
+ACH_FIRST_CHARGE,Full Send,Use Charge.,0
+ACH_FIRST_SKILL,Special Move,Activate a special skill.,0
+ACH_SKILL_COLLECTOR,Loadout Thief,Unlock a skill by beating an opponent.,0
+ACH_FULL_SKILLS,Complete Toolkit,Unlock every special skill.,0
+ACH_FULL_JOKERS,Joker Poker,Unlock every joker.,0
+ACH_TTT_WIN,Three in a Row,Win a match by connecting 3 boards like tic-tac-toe.,0
+ACH_SPECTATE_FRIEND,Watch Party,Open Spectate Friend from the menu.,0
+ACH_PERFECT_MATCH,Clean Sweep,Win a match without losing a single round.,0
+ACH_APPLE_GLUTTON,Apple Glutton,Eat 10 apples in a single match.,0
+ACH_DASH_MACHINE,Dash Demon,Dash 20 times in a single match.,0
+ACH_CHARGE_SPAM,Full Battery,Charge 10 times in a single match.,0
+ACH_BOARD_HOPPER,Board Hopper,Travel from one board to another.,0
+ACH_THEME_HOPPER,Mood Swing,Change the visual theme.,0
+ACH_ALL_THEMES,Fashion Victim,Try every visual theme at least once.,0
+ACH_COMEBACK,Comeback Kid,Win a match after losing at least one round.,0
+ACH_SPECTATE_AI,Couch Critic,Spectate an AI vs AI match.,0
+ACH_LONG_TRAIL,Long Boy,Grow your trail by eating 15 apples in one match.,0
+ACH_ONLINE_QUEUE,In Queue,Start online matchmaking.,0

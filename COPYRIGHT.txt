@@ -1,0 +1,24 @@
+RonkBonk — Copyright & License Notice
+======================================
+
+Copyright (c) 2026 copoeric. All Rights Reserved.
+
+Product:     RonkBonk
+Steam App ID: 4887920
+Depot ID:     4887921
+
+This game and all associated source code, art, audio, AI models, scripts,
+and assets are proprietary and protected by copyright law.
+
+You MAY NOT, without written permission from the copyright holder:
+  - Copy, redistribute, or republish the game or any part of its code/assets
+  - Decompile, reverse engineer, or extract source from shipped builds
+  - Remove or alter copyright notices
+  - Use RonkBonk code, assets, or branding in derivative works
+
+Licensed distribution is through authorized channels only (e.g. Steam).
+
+Third-party libraries included in this product remain under their respective
+licenses (see LICENSES.chromium.html in the game build output).
+
+For permissions: contact the RonkBonk / copoeric rights holder.

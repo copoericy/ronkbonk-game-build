@@ -1,0 +1,13 @@
+---
+description: Enemy laser lines must always be drawn / visible to both players
+alwaysApply: true
+---
+
+# Enemy lasers always show
+
+Laser lines from **either** player must remain visible to everyone.
+
+- Draw all `laserLines` on the view board and visible neighbor peeks (owner color). Do **not** hide opponent lasers for “fairness,” performance, fog-of-war, or invisible kits.
+- Warning strip + solid flash stay; both sides see enemy lasers the same way they see their own.
+- Collision already skips friendly fire (`laser.owner` / same army). Visibility is separate — enemies still see the beams.
+- Perf / draw-path work must not cull enemy lasers. If you throttle FX, keep laser draws.
