@@ -33,3 +33,8 @@ credentials*.json
 !build/
 !build/entitlements.mac.plist
 
+
+steam-marketing/trailer/_tmp/
+steam-marketing/trailer/_work/
+*.webm
+
